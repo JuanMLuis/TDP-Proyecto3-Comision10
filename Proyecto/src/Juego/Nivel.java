@@ -5,7 +5,7 @@ import LogicaAbstracta.Enemigo;
 
 public class Nivel {
 	
-	protected []Enemigo Enemigos;
+	protected Enemigo[] Enemigos;
 	protected Jugador jugador  ;
 	
 	
