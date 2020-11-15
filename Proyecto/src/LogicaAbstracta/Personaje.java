@@ -11,6 +11,6 @@ public abstract class Personaje extends Entidad  {
 	public abstract void disparar();
 	
 	public  void cambiarEstado(Estado est) {
-	
+		EstadoActual=est;
 	}
 }
