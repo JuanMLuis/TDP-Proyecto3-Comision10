@@ -7,7 +7,9 @@ public abstract class EntidadGrafica {
 		
 		protected JLabel miGrafico;
 	
-	public abstract void AvtualizarPosicion();
+	public void ActualizarPosicion(int posX,int posY) {
+		miGrafico.setLocation(posX, posY);
+	}
 	
 	public void setGrafico(ImageIcon i) {
 		miGrafico.setIcon(i);

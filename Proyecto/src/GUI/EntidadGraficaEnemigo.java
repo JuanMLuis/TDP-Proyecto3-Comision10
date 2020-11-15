@@ -1,5 +1,7 @@
 package GUI;
 
-public class EntidadGraficaEnemigo {
+public class EntidadGraficaEnemigo extends EntidadGrafica {
+	
+	
 
 }
