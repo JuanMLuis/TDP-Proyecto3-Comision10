@@ -15,4 +15,10 @@ public abstract class EntidadGrafica {
 		miGrafico.setIcon(i);
 		
 	}
+
+	public void eliminar() {
+		miGrafico.setIcon(null);
+												//redefinir metodo para casos con animaciones
+		
+	}
 }
