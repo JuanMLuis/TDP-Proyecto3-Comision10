@@ -6,6 +6,7 @@ public abstract class Personaje extends Entidad  {
 	protected int rango;
 	protected int cooldown;
 	protected Estado EstadoActual;
+	protected char direccionActual;
 	
 	
 	public abstract void disparar();

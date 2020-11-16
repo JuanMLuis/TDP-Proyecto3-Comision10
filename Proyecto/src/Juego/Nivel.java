@@ -15,6 +15,10 @@ public class Nivel {
 		
 	}
 	
+	public boolean comprobarMovimiento(char d) { 
+		return false; //volver a hacer 
+	}
+	
 	
 
 }

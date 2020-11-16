@@ -7,5 +7,5 @@ public abstract class Enemigo extends Personaje  {
 		// TODO Auto-generated method stub
 		
 	}
-
+	
 }
