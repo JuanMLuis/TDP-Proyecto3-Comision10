@@ -16,13 +16,4 @@ public class Juego {
 		return miGui;
 	}
 
-
-
-
-
-
-	public static void eliminar(Entidad entidad) {
-		Nivel.remove(entidad);
-		
-	}
 }
