@@ -10,7 +10,7 @@ public class Nivel1 extends Nivel{
 	public Nivel1 (Juego j) {
 		miJuego=j;
 		Enemigos= new ArrayList<Entidad>();
-		jugador=new Jugador();
+		jugador=new Jugador(this);
 		
 	}
 

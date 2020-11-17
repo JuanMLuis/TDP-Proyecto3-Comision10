@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Juego.Juego;
+
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;

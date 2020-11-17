@@ -30,7 +30,7 @@ public abstract class EntidadGrafica {
 	}
 	
 	protected void acomodarImagen(String img) {
-		ImageIcon aux=new ImageIcon(this.getClass().getResource("1.png"));
+		ImageIcon aux=new ImageIcon(this.getClass().getResource(img));
 		Icon toChange= new ImageIcon(aux.getImage().getScaledInstance(miGrafico.getWidth(), miGrafico.getHeight(), Image.SCALE_DEFAULT));
 		miGrafico.setIcon(toChange);
 		
