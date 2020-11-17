@@ -25,8 +25,5 @@ public class Jugador extends Personaje  {
 		if(nivel.comprobarMovimiento(d))
 			puedeMoverse = true; 
 		return puedeMoverse;
-	}
-
-	
-	
+	} 
 }
