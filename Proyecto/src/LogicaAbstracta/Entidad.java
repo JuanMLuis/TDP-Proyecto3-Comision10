@@ -12,7 +12,7 @@ public abstract class Entidad {
 	protected int posX;						//creo que la logica deberia tener su posicion como parametro
 	protected int posY;	
 	protected Nivel miNivel;
-	
+										//protected int tamaño?
 	public void Eliminar() {//se elimina a si mismo junto con la parte grafica
 		MiGrafico.eliminar();
 		miNivel.remove(this);
@@ -20,5 +20,12 @@ public abstract class Entidad {
 	}
 	public Nivel getNivel() {
 		return miNivel;
+	}
+	
+	public int getCorx() {
+		return posX;
+	}
+	public int getCorY() {
+		return posY;
 	}
 }
