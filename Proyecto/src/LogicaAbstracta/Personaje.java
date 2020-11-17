@@ -15,7 +15,7 @@ public abstract class Personaje extends Entidad  {
 		estadoActual=est;
 	}
 	
-	public void RecivirDaño(int dmg) {
+	public void RecibirDaño(int dmg) {
 		vida=vida-dmg;
 	}
 }
