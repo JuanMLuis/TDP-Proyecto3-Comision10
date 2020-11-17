@@ -12,7 +12,7 @@ public class Jugador extends Personaje  {
 	}
 	
 	public void disparar() {
-	
+		
 	}
 
 	public void moverse(char d) { 
