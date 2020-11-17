@@ -4,6 +4,7 @@ import Logica.Jugador;
 import Logica.ProyectilEnemigo;
 
 public abstract class VisitorAbstracto{
+	protected Entidad miEntidad;
 	
 	public void aceptarJugador(Jugador j) {
 		

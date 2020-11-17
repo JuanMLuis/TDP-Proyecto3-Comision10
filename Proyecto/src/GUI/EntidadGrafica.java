@@ -1,11 +1,17 @@
 package GUI;
 
+import java.awt.Image;
+
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+
+import LogicaAbstracta.Entidad;
 
 public abstract class EntidadGrafica {
 		
 		protected JLabel miGrafico;
+		protected Entidad miEntidad;
 	
 	public void ActualizarPosicion(int posX,int posY) {
 		miGrafico.setLocation(posX, posY);
@@ -18,7 +24,19 @@ public abstract class EntidadGrafica {
 
 	public void eliminar() {
 		miGrafico.setIcon(null);
-												//redefinir metodo para casos con animaciones
+		miEntidad.getNivel().getJuego().getGui().remove(miGrafico);//borrar toda referencia del label de la grafica (quizas no funcione asi, depende de como funcione la GUI)
+		//redefinir metodo para casos con animaciones
 		
+	}
+	
+	protected void acomodarImagen(String img) {
+		ImageIcon aux=new ImageIcon(this.getClass().getResource("1.png"));
+		Icon toChange= new ImageIcon(aux.getImage().getScaledInstance(miGrafico.getWidth(), miGrafico.getHeight(), Image.SCALE_DEFAULT));
+		miGrafico.setIcon(toChange);
+		
+		//para que esto funcione habria que cambiar el nombre de la imgen con la direccion a esta o traer la imagen a la carpeta donde se le llama
+	}
+	public JLabel getLabel() {
+		return miGrafico;
 	}
 }

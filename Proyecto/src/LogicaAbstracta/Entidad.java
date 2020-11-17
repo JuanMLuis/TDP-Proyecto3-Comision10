@@ -16,5 +16,9 @@ public abstract class Entidad {
 	public void Eliminar() {//se elimina a si mismo junto con la parte grafica
 		MiGrafico.eliminar();
 		miNivel.remove(this);
+		
+	}
+	public Nivel getNivel() {
+		return miNivel;
 	}
 }
