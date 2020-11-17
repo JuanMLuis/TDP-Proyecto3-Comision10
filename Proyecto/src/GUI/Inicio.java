@@ -45,7 +45,7 @@ public class Inicio extends JFrame {
 		setTitle("Star Wars: Rise of the empire ");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 674, 373);
+		setBounds(100, 100, 674, 393);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -53,11 +53,11 @@ public class Inicio extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("img\\cartelInicio.jpg"));
-		lblNewLabel.setBounds(0, 0, 668, 344);
+		lblNewLabel.setBounds(0, 0, 668, 358);
 		contentPane.add(lblNewLabel);
 		
 		JButton Boton_iniciar = new JButton("Iniciar");
-		Boton_iniciar.setBounds(0, 296, 668, 37);
+		Boton_iniciar.setBounds(0, 321, 668, 37);
 		contentPane.add(Boton_iniciar);
 		
 		
