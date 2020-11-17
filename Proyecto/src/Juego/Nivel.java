@@ -8,7 +8,7 @@ public abstract class Nivel {
 	
 	protected  ArrayList<Entidad> Enemigos;		//use una lista para no tener que coprobar null
 	protected Jugador jugador  ;
-	protected Juego Mijuego;
+	protected Juego miJuego;
 	
 	
 	public void remove(Entidad entidad) {
@@ -21,9 +21,6 @@ public abstract class Nivel {
 	}
 	
 	public Juego getJuego() {
-		return Mijuego;
+		return miJuego;
 	}
-	
-	
-
 }
