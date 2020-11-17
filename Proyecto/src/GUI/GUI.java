@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import java.awt.Toolkit;
 
 public class GUI extends JFrame {
 
@@ -31,14 +34,19 @@ public class GUI extends JFrame {
 	 * Create the frame.
 	 */
 	public GUI() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\rodri\\Documents\\GitHub\\TDP-Proyecto3-Comision10\\Proyecto\\img\\hiclipart.com (2).png"));
 		setResizable(false);
 		setTitle("Star Wars: Rise of the empire");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 752, 543);
+		setBounds(100, 100, 783, 569);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\rodri\\Documents\\GitHub\\TDP-Proyecto3-Comision10\\Proyecto\\img\\fondoNivel1.jpg"));
+		lblNewLabel.setBounds(0, 0, 770, 540);
+		contentPane.add(lblNewLabel);
 	}
-
 }
