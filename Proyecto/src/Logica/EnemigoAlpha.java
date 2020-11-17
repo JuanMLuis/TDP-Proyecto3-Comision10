@@ -13,7 +13,7 @@ public class EnemigoAlpha extends Enemigo {
 		posY=y;
 		miNivel=n;
 		Velocidad=3;
-		MiGrafico=new EntidadGraficaEnemigoAlpha(x,y);
+		MiGrafico=new EntidadGraficaEnemigoAlpha(x,y,this);
 		MiVisitor=new VisitorEnemigo(this);
 	}
 
