@@ -38,7 +38,7 @@ public class Inicio extends JFrame {
 	 * Create the frame.
 	 */
 	public Inicio() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\rodri\\Documents\\GitHub\\TDP-Proyecto3-Comision10\\Proyecto\\img\\cartelInicio.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\rodri\\Documents\\GitHub\\TDP-Proyecto3-Comision10\\Proyecto\\img\\hiclipart.com (2).png"));
 		setTitle("Star Wars: Rise of the empire ");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
