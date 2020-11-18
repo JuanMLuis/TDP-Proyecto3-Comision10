@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Juego.Juego;
+
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
@@ -13,6 +16,7 @@ import java.awt.Toolkit;
 public class GUI extends JFrame {
 
 	private JPanel contentPane;
+	private JLabel lblNewLabel;
 
 	/**
 	 * Launch the application.
@@ -44,9 +48,15 @@ public class GUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("img\\fondoNivel1.jpg"));
 		lblNewLabel.setBounds(0, 0, 770, 540);
 		contentPane.add(lblNewLabel);
+		
+		Juego j=new Juego(this);
+	}
+	
+	public JLabel getlabel() {
+		return lblNewLabel;
 	}
 }
