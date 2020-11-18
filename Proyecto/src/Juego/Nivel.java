@@ -9,6 +9,7 @@ public abstract class Nivel {
 	protected  ArrayList<Entidad> Enemigos;		//use una lista para no tener que coprobar null
 	protected Jugador jugador  ;
 	protected Juego miJuego;
+	protected int CantEnemigosVivos;
 	
 	
 	public void remove(Entidad entidad) {
@@ -23,4 +24,13 @@ public abstract class Nivel {
 	public Juego getJuego() {
 		return miJuego;
 	}
+	
+	public abstract boolean run();		//quizas se podria hacer el Nivel como un hilo y no tenerlo como clase aparte, nunca hablamos de esto solo lo dejo como idea
+	
+
+	protected void moverEnemigo() {
+		
+	}
+	
 }
+	
