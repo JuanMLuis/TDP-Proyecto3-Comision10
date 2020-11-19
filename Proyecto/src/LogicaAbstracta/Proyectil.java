@@ -9,4 +9,10 @@ public class Proyectil extends Entidad  {
 		
 	}
 
+	@Override
+	public void colisionar(Entidad e) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

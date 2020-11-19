@@ -3,14 +3,14 @@ package LogicaAbstracta;
 import Logica.Jugador;
 import Logica.ProyectilEnemigo;
 
-public abstract class VisitorAbstracto{
+public abstract class VisitorAbstracto extends Thread{
 	protected Entidad miEntidad;
 	
 	public void aceptarJugador(Jugador j) {
 		
 	}
 	
-	public void AceptarEnemigo(Enemigo ene) {
+	public void aceptarEnemigo(Enemigo ene) {
 		
 	}
 	
@@ -18,12 +18,11 @@ public abstract class VisitorAbstracto{
 		
 	}
 	
-	public void AceptarProyectil(Proyectil L) {
+	public void aceptarProyectil(Proyectil L) {
 		
 	}
 	
 	public void aceptarProyectilEnemigo(ProyectilEnemigo p) {
 		
 	}
-
 }

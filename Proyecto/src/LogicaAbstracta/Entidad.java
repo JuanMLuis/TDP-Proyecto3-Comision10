@@ -58,4 +58,6 @@ public abstract class Entidad {
 		//--pedrile al mapa que revise colision
 	}
 	public abstract void turno();
+	
+	public abstract void colisionar(Entidad e); 
 }
