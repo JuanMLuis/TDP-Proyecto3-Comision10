@@ -4,7 +4,7 @@ import Logica.Jugador;
 import LogicaAbstracta.Entidad;
 import java.util.ArrayList;
 
-public abstract class Nivel {
+public abstract class Nivel extends Thread{
 	
 	protected  ArrayList<Entidad> Enemigos;		//use una lista para no tener que coprobar null
 	protected Jugador jugador  ;
@@ -25,7 +25,7 @@ public abstract class Nivel {
 		return miJuego;
 	}
 	
-	public abstract boolean run();		//quizas se podria hacer el Nivel como un hilo y no tenerlo como clase aparte, nunca hablamos de esto solo lo dejo como idea
+			//quizas se podria hacer el Nivel como un hilo y no tenerlo como clase aparte, nunca hablamos de esto solo lo dejo como idea
 	
 
 	protected void moverEnemigo() {

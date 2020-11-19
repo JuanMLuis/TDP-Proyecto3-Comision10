@@ -59,5 +59,5 @@ public abstract class Entidad {
 	}
 	public abstract void turno();
 	
-	public abstract void colisionar(Entidad e); 
+	public abstract void colisionar(Entidad e); //mas que un colicionar generico, habria que hacer uno para cada clace en colision, se usan los visitor para eso
 }

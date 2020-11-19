@@ -23,6 +23,7 @@ public class Inicio extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private Juego miJ;
 
 	/**
 	 * Launch the application.
@@ -71,7 +72,12 @@ public class Inicio extends JFrame {
 				contentPane.setVisible(false);
 				g.setVisible(true);
 				dispose();
+				miJ=new Juego(g);
 			}
 		});
+	}
+	
+	public Juego rJ() {
+		return miJ;
 	}
 }

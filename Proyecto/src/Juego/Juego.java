@@ -11,7 +11,6 @@ public class Juego {
 	public Juego(GUI g) {
 		miGui=g;
 		miNivel=new Nivel1(this);
-		
 	}
 	
 	
@@ -21,6 +20,10 @@ public class Juego {
 	}
 	public GUI getGui() {
 		return miGui;
+	}
+	
+	public void startJuego() {
+		miNivel.run();
 	}
 
 }

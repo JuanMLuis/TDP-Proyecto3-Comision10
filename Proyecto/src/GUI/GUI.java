@@ -53,7 +53,6 @@ public class GUI extends JFrame {
 		lblNewLabel.setBounds(0, 0, 770, 540);
 		contentPane.add(lblNewLabel);
 		
-		Juego j=new Juego(this);
 	}
 	
 	public JLabel getlabel() {

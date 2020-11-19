@@ -3,6 +3,7 @@ package Logica;
 import Estados.EstadoOriginal;
 import GUI.EntidadGraficaJugador;
 import Juego.Nivel;
+import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Personaje;
 import VisitorsConcretos.VisitorJugador;
 
@@ -41,5 +42,10 @@ public class Jugador extends Personaje  {
 	
 	public void turno() {
 		cooldown--;
+	}
+	
+	public void colisionar(Entidad e) {
+		// TODO Auto-generated method stub
+		
 	}
 }

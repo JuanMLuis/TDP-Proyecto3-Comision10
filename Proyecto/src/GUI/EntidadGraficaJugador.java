@@ -12,7 +12,7 @@ public class EntidadGraficaJugador extends EntidadGrafica {
 		miGrafico.setBounds(343,400,70, 70);//buscar el tamaño que convenga
 		acomodarImagen("nave_jugador.png");
 		e.getNivel().getJuego().getGui().getlabel().add(miGrafico);
-		miGrafico.setVisible(true);//algo fallo
+		miGrafico.setVisible(true);
 	}
 
 }
