@@ -27,4 +27,35 @@ public abstract class Entidad {
 	public int getCorY() {
 		return posY;
 	}
+	
+	public void moverse(char s) {//hacer controles de direccion para actualizar posC y posY
+		switch(s) {					//en general si no estamos en el limite, aumento en la direccion, en casos verticales vuelo a origen
+		case('a'):
+		{
+			if(posX>0)				//limite izquierdo es 0, creo
+				posX--;
+		}break;
+		case('s'):
+		{
+			if(posY<550) {
+				posY++;
+			}else posY=0;;
+		}break;
+		case('d'):
+		{
+			if(posX<780)			//limite derecho es 780(creo)
+				posX++;
+		}break;
+		case('w'):					//no creo que lo usemos nunca, pero para completar con la 4 direcciones posibles lo dejo
+		{
+			if(posY>0) {
+				posY++;
+			}else posY=550;
+		}break;
+		}
+		miGrafico.ActualizarPosicion(posX, posY);
+		
+		//--pedrile al mapa que revise colision
+	}
+	public abstract void turno();
 }

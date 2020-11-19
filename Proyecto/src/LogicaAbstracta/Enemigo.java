@@ -13,4 +13,18 @@ public abstract class Enemigo extends Personaje  {
 		
 	}
 	
+	public void turno() {
+		if(cooldown>=0)					//reduccion del cooldown
+			cooldown--;
+		estadoActual.movimiento('s',Velocidad);
+		if(comprobarRango() && cooldown==0)		{		//si esta a rango y tiene el cooldown en 0 dispara
+			estadoActual.disparar(rango);
+			cooldown=cooldownOriginal;
+		}
+	}
+	
+	private boolean comprobarRango() {				//revisa si esta a rango de disparo
+		return true;
+	}
+	
 }

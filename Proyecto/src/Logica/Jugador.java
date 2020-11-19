@@ -38,4 +38,8 @@ public class Jugador extends Personaje  {
 			puedeMoverse = true; 
 		return puedeMoverse;
 	} 
+	
+	public void turno() {
+		cooldown--;
+	}
 }

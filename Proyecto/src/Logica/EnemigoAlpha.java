@@ -16,6 +16,8 @@ public class EnemigoAlpha extends Enemigo {
 		miGrafico=new EntidadGraficaEnemigoAlpha(x,y,this);
 		miVisitor=new VisitorEnemigo(this);
 	}
+	
+	
 
 
 }

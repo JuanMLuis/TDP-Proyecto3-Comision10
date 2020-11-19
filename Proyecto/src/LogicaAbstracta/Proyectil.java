@@ -2,9 +2,11 @@ package LogicaAbstracta;
 
 public class Proyectil extends Entidad  {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+	@Override
+	public void turno() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
