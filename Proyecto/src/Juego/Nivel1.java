@@ -18,7 +18,6 @@ public class Nivel1 extends Nivel{
 	
 	
 	public void  run() {//basicamente el movimiento de los enemigos mas otros controles
-		System.out.println("HOLA");
 		boolean ganar=false;
 		boolean fin=false;
 		while(!ganar && !fin){
