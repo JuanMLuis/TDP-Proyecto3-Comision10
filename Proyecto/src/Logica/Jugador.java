@@ -48,4 +48,12 @@ public class Jugador extends Personaje  {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public int getVida() { 
+		return vida;
+	}
+	
+	public void setVida(int v) { 
+		vida = v;
+	}
 }
