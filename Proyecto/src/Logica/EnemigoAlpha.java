@@ -20,11 +20,6 @@ public class EnemigoAlpha extends Enemigo {
 		estadoActual= new EstadoEnemigo(this);
 	}
 
-	@Override
-	public void colisionar(Entidad e) {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	
 

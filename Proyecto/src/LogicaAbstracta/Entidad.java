@@ -2,6 +2,8 @@ package LogicaAbstracta;
 
 import GUI.EntidadGrafica;
 import Juego.Nivel;
+import Logica.Jugador;
+import Logica.ProyectilEnemigo;
 
 public abstract class Entidad {
 
@@ -59,5 +61,20 @@ public abstract class Entidad {
 	}
 	public abstract void turno();
 	
-	public abstract void colisionar(Entidad e); //mas que un colicionar generico, habria que hacer uno para cada clace en colision, se usan los visitor para eso
+	public void aceptarEnemigo(Enemigo e) {
+		miVisitor.aceptarEnemigo(e);
+	}
+	public void aceptarJugador(Jugador j) {
+		miVisitor.aceptarJugador(j);
+	}
+	public void aceptarPremio(Premio p) {
+		miVisitor.aceptarPremio(p);
+	}
+	public void AceptarProyectil(Proyectil p) {
+		miVisitor.aceptarProyectil(p);
+	}
+	public void AceptarProyectilEnemigo(ProyectilEnemigo p) {
+		miVisitor.aceptarProyectilEnemigo(p);
+	}
+	
 }
