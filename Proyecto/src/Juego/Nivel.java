@@ -34,13 +34,11 @@ public abstract class Nivel extends Thread{
 	
 	public Entidad Colicion(Entidad e) {//retorna null si no hay colicion, retona la primera entidad con la que coliciona
 		Entidad toReturn=null;
-		boolean encontrado=false;
-		int a;
-		int b;
+	
 		for(Entidad r: Enemigos) {
-			a=r.getCorx();
-			b=r.getCorY();
-			if()
+			if((toReturn==null) && r.getHitbox().intersects(e.getHitbox()))
+				toReturn=r;
+			
 		}
 		return toReturn;
 	}

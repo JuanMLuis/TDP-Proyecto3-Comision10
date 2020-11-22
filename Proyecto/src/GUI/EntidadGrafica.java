@@ -1,6 +1,7 @@
 package GUI;
 
 import java.awt.Image;
+import java.awt.Rectangle;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -38,5 +39,10 @@ public abstract class EntidadGrafica {
 	}
 	public JLabel getLabel() {
 		return miGrafico;
+	}
+	
+	public Rectangle hitbox() {
+		return miGrafico.getBounds();
+		//miGrafico.getBounds().intersect();
 	}
 }
