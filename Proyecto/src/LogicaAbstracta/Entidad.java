@@ -13,6 +13,8 @@ public abstract class Entidad {
 	protected int posX;						//creo que la logica deberia tener su posicion como parametro
 	protected int posY;	
 	protected Nivel miNivel;
+	protected int largoX;
+	protected int largoY;
 										//protected int tamaño?
 	public void Eliminar() {//se elimina a si mismo junto con la parte grafica
 		miGrafico.eliminar();
@@ -75,6 +77,14 @@ public abstract class Entidad {
 	}
 	public void AceptarProyectilEnemigo(ProyectilEnemigo p) {
 		miVisitor.aceptarProyectilEnemigo(p);
+	}
+	
+	public int largox() {
+		return largoX;
+	}
+	
+	public int largoY() {
+		return largoY;
 	}
 	
 }
