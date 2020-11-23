@@ -10,7 +10,8 @@ public class EstadoOriginal extends Estado {
 
 	@Override
 	public void disparar(int r) {		//por ahora no lo necesitamos implementado
-	
+		int x = miEntidad.getCorx();
+		int y = miEntidad.getCorY();
 		
 	}
 

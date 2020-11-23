@@ -8,6 +8,7 @@ public abstract class Personaje extends Entidad  {
 	protected int cooldownOriginal;   // guardamos el valor orginal para los reset del cooldown
 	protected Estado estadoActual;
 	protected char direccionActual;
+	protected int dmg; 					//los personajes disparan y mandan su daño a los proyectiles
 	
 	
 	

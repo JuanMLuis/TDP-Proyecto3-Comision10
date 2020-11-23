@@ -11,7 +11,8 @@ public class EstadoEnemigo extends Estado{
 
 	@Override
 	public void disparar(int r) {
-	
+		int x; int y;
+		new ProyectilEnemigo(x,y,miEntidad.getNivel(),r);
 	}
 
 	@Override
