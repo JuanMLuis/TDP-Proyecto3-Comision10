@@ -14,11 +14,11 @@ public class Nivel1 extends Nivel{
 		jugador=new Jugador(this);
 		CantEnemigosVivos=20;
 		Enemigos.add(new EnemigoAlpha(this, 60, 60));
+		ganar=false;
 	}
 	
 	
 	public void  run() {//basicamente el movimiento de los enemigos mas otros controles
-		boolean ganar=false;
 		boolean fin=false;
 		while(!ganar && !fin){
 			try {

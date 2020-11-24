@@ -10,6 +10,7 @@ public abstract class Nivel extends Thread{
 	protected Jugador jugador  ;
 	protected Juego miJuego;
 	protected int CantEnemigosVivos;
+	protected boolean ganar;
 	
 	
 	public void remove(Entidad entidad) {
@@ -41,6 +42,12 @@ public abstract class Nivel extends Thread{
 			
 		}
 		return toReturn;
+	}
+	
+	protected void ReducirEnemigos() {
+		CantEnemigosVivos--;
+		if(CantEnemigosVivos==0)
+			ganar=true;
 	}
 	
 }
