@@ -3,10 +3,11 @@ package Estados;
 import Logica.ProyectilEnemigo;
 import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Estado;
+import LogicaAbstracta.Personaje;
 
 public class EstadoEnemigo extends Estado{
 	
-	public EstadoEnemigo(Entidad e) {
+	public EstadoEnemigo(Personaje e) {
 		miEntidad=e;
 	}
 
@@ -22,6 +23,16 @@ public class EstadoEnemigo extends Estado{
 		for(int i=0;i<=v;i++) {
 			miEntidad.moverse(c);//se mueve v veces en direccion c
 		}
+	}
+
+	@Override
+	public void recivirDaño(int dmg) {
+		int aux=(miEntidad.getVida()-dmg);
+		if(aux<=0) {
+			miEntidad.Eliminar();
+		}else
+			miEntidad.setVida(aux);
+		
 	}
 
 }
