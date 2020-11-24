@@ -11,8 +11,10 @@ public class EntidadGraficaEnemigoBeta extends EntidadGrafica {
 	public EntidadGraficaEnemigoBeta(int x, int y,Entidad e) {
 		miEntidad=e;
 		miGrafico=new JLabel();
-		miGrafico.setSize(20, 20);//buscar el tamaño que convenga
+		miGrafico.setBounds(x,y,40, 40);//buscar el tamaño que convenga
 		acomodarImagen("interceptor.png");
+		e.getNivel().getJuego().getGui().getlabel().add(miGrafico);
+		miGrafico.setVisible(true);
 		
 	}
 	

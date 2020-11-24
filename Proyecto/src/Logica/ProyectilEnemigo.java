@@ -26,8 +26,10 @@ public class ProyectilEnemigo extends Proyectil {
 		//chequeo de colision
 		for(int i=0;i<velocidad;i++) {
 			moverse('s');
-			//chequeo de colision
+			rango--;
 		}
+		if(rango<=0)
+			Eliminar();
 		
 	}
 }
