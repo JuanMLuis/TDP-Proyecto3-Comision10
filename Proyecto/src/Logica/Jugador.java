@@ -19,7 +19,7 @@ public class Jugador extends Personaje  {
 		miVisitor= new VisitorJugador(this);
 		posX=385;
 		posY=500;
-		Velocidad=2;
+		velocidad=2;
 		miNivel=l;
 		miGrafico=new EntidadGraficaJugador(posX,posY,this);
 	}
@@ -45,7 +45,6 @@ public class Jugador extends Personaje  {
 	}
 	
 	public void colisionar(Entidad e) {
-		// TODO Auto-generated method stub
 		
 	}
 	

@@ -19,7 +19,7 @@ public abstract class Personaje extends Entidad  {
 	}
 	
 	public void RecibirDaño(int dmg) {
-		estadoActual.recivirDaño(dmg);
+		estadoActual.recibirDaño(dmg);
 	}
 	
 	public void setVida(int v) {

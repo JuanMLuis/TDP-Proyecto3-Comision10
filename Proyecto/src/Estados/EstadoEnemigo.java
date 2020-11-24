@@ -26,7 +26,7 @@ public class EstadoEnemigo extends Estado{
 	}
 
 	@Override
-	public void recivirDaño(int dmg) {
+	public void recibirDaño(int dmg) {
 		int aux=(miEntidad.getVida()-dmg);
 		if(aux<=0) {
 			miEntidad.Eliminar();

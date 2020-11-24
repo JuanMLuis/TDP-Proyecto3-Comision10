@@ -10,7 +10,7 @@ import Logica.ProyectilEnemigo;
 public abstract class Entidad {
 
 	protected VisitorAbstracto miVisitor;
-	protected int Velocidad;
+	protected int velocidad;
 	protected EntidadGrafica miGrafico;
 	protected int posX;						//creo que la logica deberia tener su posicion como parametro
 	protected int posY;	

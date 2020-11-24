@@ -1,5 +1,6 @@
 package Logica;
 
+import Estados.EstadoArmaSanitaria;
 import Estados.EstadoEnemigo;
 import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Estado;
@@ -9,7 +10,6 @@ public class EfectoTemporal extends Premio{
 	protected Enemigo enemigo;
 	
 	public void turno() {
-		
 		
 	}
 	
@@ -34,7 +34,7 @@ public class EfectoTemporal extends Premio{
 	public Estado superArmaSanitaria(float r1, float r2) { 
 		float empieza;
 		float termina;
-		Estado arma = new EstadoEnemigo(this); 
+		Estado arma = new EstadoArmaSanitaria(); 
 		if(r1 < r2) { 
 			empieza = r1;
 			termina = r2;
