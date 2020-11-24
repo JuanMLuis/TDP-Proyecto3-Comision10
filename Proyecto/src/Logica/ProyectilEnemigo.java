@@ -23,12 +23,10 @@ public class ProyectilEnemigo extends Proyectil {
 	
 	
 	public void turno(){
-<<<<<<< Updated upstream
+
 		//chequeo de colision
 		for(int i=0;i<velocidad;i++) {
-=======
-		for(int i=0;i<Velocidad;i++) {
->>>>>>> Stashed changes
+
 			moverse('s');
 			rango--;
 		}
