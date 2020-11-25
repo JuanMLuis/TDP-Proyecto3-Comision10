@@ -14,6 +14,7 @@ import Logica.Jugador;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 
 public class GUI extends JFrame {
 
@@ -57,7 +58,7 @@ public class GUI extends JFrame {
 		lblNewLabel.setBounds(0, 0, 770, 540);
 		contentPane.add(lblNewLabel);
 		
-		//jugador= new Jugador(juego.getNivel());
+		
 		
 		
 	}
@@ -66,5 +67,16 @@ public class GUI extends JFrame {
 		return lblNewLabel;
 	}
 	
+	public void moverJugador(KeyEvent e) {
+		int x=jugador.getCorx();
+		int y=jugador.getCorY();
+		
+		switch(e.getExtendedKeyCode()) {
+		case KeyEvent.VK_RIGHT:jugador.moverse('d');
+		case KeyEvent.VK_LEFT:jugador.moverse('a');
+		case KeyEvent.VK_D:jugador.moverse('d');
+		case KeyEvent.VK_A:jugador.moverse('a');
+		}
+	}
 	
 }
