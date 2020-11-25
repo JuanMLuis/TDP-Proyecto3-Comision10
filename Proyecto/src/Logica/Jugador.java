@@ -29,24 +29,14 @@ public class Jugador extends Personaje  {
 	}
 
 	public void moverse(char d) { 
-		if(puedeDesplazarse(d))
 			direccionActual = d;
 	}
 	
-	public boolean puedeDesplazarse(char d) { 
-		puedeMoverse = false;
-		if(nivel.comprobarMovimiento(d))
-			puedeMoverse = true; 
-		return puedeMoverse;
-	} 
 	
 	public void turno() {
 		cooldown--;
 	}
 	
-	public void colisionar(Entidad e) {
-		
-	}
 	
 	public int getVida() { 
 		return vida;

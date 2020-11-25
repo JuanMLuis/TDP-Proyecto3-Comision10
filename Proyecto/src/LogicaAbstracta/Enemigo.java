@@ -9,7 +9,7 @@ public abstract class Enemigo extends Personaje  {
 	
 	
 	public void disparar() {
-		// TODO Auto-generated method stub
+		estadoActual.disparar(rango);
 		
 	}
 	
@@ -17,16 +17,9 @@ public abstract class Enemigo extends Personaje  {
 		if(cooldown>=0)					//reduccion del cooldown
 			cooldown--;
 		estadoActual.movimiento('s',velocidad);
-		if(comprobarRango() && cooldown==0)		{		//si esta a rango y tiene el cooldown en 0 dispara
-			estadoActual.disparar(rango);
-			cooldown=cooldownOriginal;
-		}
 		
 	}
 	
-	private boolean comprobarRango() {				//revisa si esta a rango de disparo
-		return false;
-	}
 	
 	public void moverse(char s) {
 		super.moverse(s);
