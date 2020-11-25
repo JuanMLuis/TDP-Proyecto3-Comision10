@@ -68,8 +68,6 @@ public class GUI extends JFrame {
 	}
 	
 	public void moverJugador(KeyEvent e) {
-		int x=jugador.getCorx();
-		int y=jugador.getCorY();
 		
 		switch(e.getExtendedKeyCode()) {
 		case KeyEvent.VK_RIGHT:jugador.moverse('d');
@@ -77,6 +75,7 @@ public class GUI extends JFrame {
 		case KeyEvent.VK_D:jugador.moverse('d');
 		case KeyEvent.VK_A:jugador.moverse('a');
 		}
+		
 	}
 	
 }

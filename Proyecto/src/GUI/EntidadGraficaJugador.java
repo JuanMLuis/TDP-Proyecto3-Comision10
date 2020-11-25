@@ -13,6 +13,7 @@ public class EntidadGraficaJugador extends EntidadGrafica {
 		acomodarImagen("nave_jugador.png");
 		e.getNivel().getJuego().getGui().getlabel().add(miGrafico);
 		miGrafico.setVisible(true);
+		miGrafico.setFocusable(true);
 	}
 
 }

@@ -29,14 +29,18 @@ public class Jugador extends Personaje  {
 	}
 
 	public void moverse(char d) { 
-			super.moverse(d);
+			direccionActual=d;
 	}
 	
 	
 	public void turno() {
 		if(cooldown>=0)			
 			cooldown--;
-		estadoActual.movimiento('d',velocidad);
+		estadoActual.movimiento(direccionActual,velocidad);
+		
+		
+		
+		estadoActual.movimiento('+', velocidad);
 	}
 	
 	
