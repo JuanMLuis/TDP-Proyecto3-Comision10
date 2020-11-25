@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Juego.Juego;
+import Juego.Nivel;
+import Logica.Jugador;
 
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -17,7 +19,8 @@ public class GUI extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
-
+	private Jugador jugador;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -52,6 +55,8 @@ public class GUI extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon("img\\fondoNivel1.jpg"));
 		lblNewLabel.setBounds(0, 0, 770, 540);
 		contentPane.add(lblNewLabel);
+		
+		
 		
 	}
 	
