@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public abstract class Nivel extends Thread{
 	
 	protected  ArrayList<Entidad> Enemigos;		//use una lista para no tener que coprobar null
-	protected Jugador jugador  ;
+	protected Jugador jugador  ;//Poner get y mandarlo a Juego y de ahi mandarlo a la GUI
 	protected Juego miJuego;
 	protected int CantEnemigosVivos;
 	protected boolean ganar;
@@ -49,6 +49,8 @@ public abstract class Nivel extends Thread{
 		if(CantEnemigosVivos==0)
 			ganar=true;
 	}
+	
+	
 	
 }
 	

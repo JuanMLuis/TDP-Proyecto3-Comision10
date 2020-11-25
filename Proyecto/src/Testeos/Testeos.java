@@ -19,7 +19,6 @@ public class Testeos {//se creo con el unico fin de probar cosas, son libres de 
 			try {		//si no pones nada en el medio no podes parar el ciclo
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

@@ -3,6 +3,7 @@ package Juego;
 import java.util.ArrayList;
 
 import Logica.EnemigoAlpha;
+import Logica.EnemigoBeta;
 import Logica.Jugador;
 import LogicaAbstracta.Entidad;
 
@@ -14,6 +15,14 @@ public class Nivel1 extends Nivel{
 		jugador=new Jugador(this);
 		CantEnemigosVivos=20;
 		Enemigos.add(new EnemigoAlpha(this, 60, 60));
+		Enemigos.add(new EnemigoAlpha(this,150,60));
+		Enemigos.add(new EnemigoAlpha(this,200,60));
+		Enemigos.add(new EnemigoAlpha(this,260,60));
+		Enemigos.add(new EnemigoAlpha(this,310,60));
+		Enemigos.add(new EnemigoBeta(this, 380, 60));
+		Enemigos.add(new EnemigoBeta(this, 460, 60));
+		Enemigos.add(new EnemigoBeta(this, 530, 60));
+		Enemigos.add(new EnemigoBeta(this, 670, 60));
 		ganar=false;
 	}
 	
@@ -29,8 +38,6 @@ public class Nivel1 extends Nivel{
 			}
 			for(Entidad e: Enemigos)
 				e.turno();
-			
-			
 			jugador.turno();
 				
 		}
@@ -38,7 +45,9 @@ public class Nivel1 extends Nivel{
 		
 	}
 
-	
+	public Jugador getJugador() {
+		return jugador;
+	}
 	
 
 }

@@ -20,6 +20,7 @@ public class GUI extends JFrame {
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
 	private Jugador jugador;
+	private Juego juego;
 	
 	/**
 	 * Launch the application.
@@ -56,6 +57,7 @@ public class GUI extends JFrame {
 		lblNewLabel.setBounds(0, 0, 770, 540);
 		contentPane.add(lblNewLabel);
 		
+		//jugador= new Jugador(juego.getNivel());
 		
 		
 	}
@@ -63,4 +65,6 @@ public class GUI extends JFrame {
 	public JLabel getlabel() {
 		return lblNewLabel;
 	}
+	
+	
 }

@@ -13,7 +13,7 @@ public class EnemigoBeta extends Enemigo {
 		posX=x;
 		posY=y;
 		miNivel=n;
-		velocidad=3;
+		velocidad=5;
 		miGrafico=new EntidadGraficaEnemigoAlpha(x,y,this);
 		miVisitor=new VisitorEnemigo(this);
 		estadoActual= new EstadoEnemigo(this);
