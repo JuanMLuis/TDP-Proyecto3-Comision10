@@ -1,5 +1,7 @@
 package GUI;
 
+import java.awt.event.KeyEvent;
+
 import javax.swing.JLabel;
 
 import LogicaAbstracta.Entidad;
@@ -15,5 +17,7 @@ public class EntidadGraficaJugador extends EntidadGrafica {
 		miGrafico.setVisible(true);
 		miGrafico.setFocusable(true);
 	}
+	
+
 
 }
