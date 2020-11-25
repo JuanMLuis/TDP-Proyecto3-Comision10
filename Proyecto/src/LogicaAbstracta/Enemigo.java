@@ -29,4 +29,12 @@ public abstract class Enemigo extends Personaje  {
 		return false;
 	}
 	
+	public void moverse(char s) {
+		super.moverse(s);
+	
+	Entidad aux =miNivel.Colicion(this); 
+	if(aux!=null) {
+		aux.aceptarEnemigo(this);
+		}
+	}
 }
