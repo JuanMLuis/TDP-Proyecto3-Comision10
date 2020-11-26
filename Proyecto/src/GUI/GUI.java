@@ -55,7 +55,7 @@ public class GUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("img\\fondoNivel1.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("img\\fondoNivel2 .jpg"));
 		lblNewLabel.setBounds(0, 0, 770, 540);
 		contentPane.add(lblNewLabel);
 				

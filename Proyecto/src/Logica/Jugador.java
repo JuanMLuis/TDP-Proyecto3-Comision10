@@ -55,4 +55,10 @@ public class Jugador extends Personaje  {
 	public void setVida(int v) { 
 		vida = v;
 	}
+
+	@Override
+	protected void Aceptame(Entidad e) {
+		e.aceptarJugador(this);
+		
+	}
 }

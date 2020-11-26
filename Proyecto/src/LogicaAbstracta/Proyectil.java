@@ -15,5 +15,11 @@ public class Proyectil extends Entidad  {
 		return daño;
 	}
 
+	@Override
+	protected void Aceptame(Entidad e) {
+		e.AceptarProyectil(this);
+		
+	}
+
 	
 }

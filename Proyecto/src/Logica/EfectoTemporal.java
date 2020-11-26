@@ -4,6 +4,7 @@ import java.util.Timer;
 
 import Estados.EstadoArmaSanitaria;
 import LogicaAbstracta.Enemigo;
+import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Premio;
 
@@ -55,5 +56,13 @@ public class EfectoTemporal extends Premio{ //cada uno de los metodos separarlos
 		}
 		return arma;
 	}
+
+	@Override
+	protected void Aceptame(Entidad e) {
+		e.aceptarPremio(this);
+		
+	}
+	
+	
 
 }

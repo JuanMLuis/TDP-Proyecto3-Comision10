@@ -1,5 +1,7 @@
 package LogicaAbstracta;
 
+import java.util.ArrayList;
+
 public abstract class Enemigo extends Personaje  {
 
 
@@ -19,13 +21,11 @@ public abstract class Enemigo extends Personaje  {
 		estadoActual.movimiento('s',velocidad);
 
 	}
-
-
-	public void moverse(char s) {//Cambiar a dirreccion para el efecto temporal.
-		super.moverse(s);
-		Entidad aux =miNivel.Colicion(this); 
-		if(aux!=null) {
-			aux.aceptarEnemigo(this);
-		}
+	
+	protected  void Aceptame(Entidad e) {
+		e.aceptarEnemigo(this);
 	}
+
+
+	
 }

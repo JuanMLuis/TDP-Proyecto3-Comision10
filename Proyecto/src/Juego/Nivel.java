@@ -33,15 +33,15 @@ public abstract class Nivel extends Thread{
 		
 	}
 	
-	public Entidad Colicion(Entidad e) {//retorna null si no hay colicion, retona la primera entidad con la que coliciona
-		Entidad toReturn=null;
-	
+	public ArrayList<Entidad> Colicion(Entidad e) {//retorna null si no hay colicion, retona la primera entidad con la que coliciona
+		ArrayList<Entidad> colisiones = new ArrayList<Entidad>();
 		for(Entidad r: Enemigos) {
-			if((toReturn==null) && r.getHitbox().intersects(e.getHitbox()))
-				toReturn=r;
-			
+			if( r.getHitbox().intersects(e.getHitbox()))
+				colisiones.add(r);
 		}
-		return toReturn;
+		if(jugador.getHitbox().intersects(e.getHitbox()))
+			colisiones.add(jugador);
+		return colisiones;
 	}
 	
 	protected void ReducirEnemigos() {
