@@ -52,9 +52,9 @@ public class HiloTeclado extends Thread implements KeyListener {
 		break;
 		case KeyEvent.VK_LEFT:jugador.setDireccion('a');
 		break;
-		case KeyEvent.VK_A:jugador.setDireccion('d');
+		case KeyEvent.VK_D:jugador.setDireccion('d');
 		break;
-		case KeyEvent.VK_D:jugador.setDireccion('a');
+		case KeyEvent.VK_A:jugador.setDireccion('a');
 		break;
 	        }
 	}
