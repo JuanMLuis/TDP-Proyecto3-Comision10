@@ -2,6 +2,7 @@ package Logica;
 
 import Estados.EstadoEnemigo;
 import GUI.EntidadGraficaEnemigoAlpha;
+import GUI.EntidadGraficaEnemigoBeta;
 import Juego.Nivel;
 import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Entidad;
@@ -14,7 +15,7 @@ public class EnemigoBeta extends Enemigo {
 		posY=y;
 		miNivel=n;
 		velocidad=5;
-		miGrafico=new EntidadGraficaEnemigoAlpha(x,y,this);
+		miGrafico=new EntidadGraficaEnemigoBeta(x,y,this);
 		miVisitor=new VisitorEnemigo(this);
 		estadoActual= new EstadoEnemigo(this);
 	}
