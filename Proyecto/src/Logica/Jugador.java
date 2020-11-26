@@ -75,7 +75,7 @@ public class Jugador extends Personaje  {
 		
 		super.moverse(s);
 		
-		mandarSeñal();
+		//mandarSeñal();
 		
 		
 		
