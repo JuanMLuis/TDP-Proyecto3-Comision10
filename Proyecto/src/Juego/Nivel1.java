@@ -26,23 +26,7 @@ public class Nivel1 extends Nivel{
 	}
 	
 	
-	public void  run() {//basicamente el movimiento de los enemigos mas otros controles
-		boolean fin=false;
-		while(!ganar && !fin){
-			try {
-				Thread.sleep(100);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			for(Entidad e: Enemigos)
-				e.turno();
-			
-			jugador.turno();
-		}
-		
-		
-	}
+	
 
 	public Jugador getJugador() {
 		return jugador;
