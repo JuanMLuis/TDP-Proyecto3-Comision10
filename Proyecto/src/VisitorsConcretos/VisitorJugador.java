@@ -8,12 +8,16 @@ import LogicaAbstracta.VisitorAbstracto;
 
 public class VisitorJugador extends VisitorAbstracto {
 	protected Jugador miJugador;
+
 	public VisitorJugador(Jugador j) {
 		miJugador=j;
 	}
 	
 	public void aceptarEnemigo(Enemigo ene) {
-		
+
+		miJugador.RecibirDaño(5);
+		System.out.println(miJugador.getVida());
+
 	}
 	
 	public void aceptarPremio(Premio p) {

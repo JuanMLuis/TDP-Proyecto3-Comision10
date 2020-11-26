@@ -12,7 +12,7 @@ public class Jugador extends Personaje  {
 	
 	
 	public Jugador(Nivel l) { 
-		vida = 0;
+		vida = 30;
 		rango=100; //creo que el rango seria solo para enemigos, despues se cambia si todos lo vemos asi
 		cooldown=0;
 		estadoActual=new EstadoOriginal(this);

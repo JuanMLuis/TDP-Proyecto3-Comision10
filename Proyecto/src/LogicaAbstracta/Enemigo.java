@@ -19,7 +19,9 @@ public abstract class Enemigo extends Personaje  {
 		if(cooldown>=0)					//reduccion del cooldown
 			cooldown--;
 		estadoActual.movimiento('s',velocidad);
+
 		disparar();
+
 	}
 	
 	protected  void Aceptame(Entidad e) {

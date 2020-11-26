@@ -1,10 +1,11 @@
 package Juego;
 
 import Logica.Jugador;
+import Logica.ProyectilEnemigo;
 import LogicaAbstracta.Entidad;
 import java.util.ArrayList;
 
-public abstract class Nivel extends Thread{
+public abstract class Nivel{
 	
 	protected  ArrayList<Entidad> Enemigos;		//use una lista para no tener que coprobar null
 	protected  ArrayList<Entidad> Proyectiles;
@@ -59,9 +60,20 @@ public abstract class Nivel extends Thread{
 	public void Turno() {
 		for(Entidad e: Enemigos)
 			e.turno();
+
 		for(Entidad e: Proyectiles)
 			e.turno();
 		jugador.turno();
+		
+	}
+
+	public void addEnemigo(Entidad e) {
+		Enemigos.add(e);
+		
+	}
+
+	public void addProyectil(Entidad p) {
+		Proyectiles.add(p);
 		
 	}
 	

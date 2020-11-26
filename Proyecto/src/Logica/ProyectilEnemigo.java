@@ -16,7 +16,8 @@ public class ProyectilEnemigo extends Proyectil {
 		miGrafico= new EntidadGraficaProyectilEnemigo(x,y,this);
 		miVisitor=new VisitorProyectilEnemigo(this);
 		miNivel=p;
-		p.addProyectiles(this);
+		miNivel.addProyectil(this);
+
 	}
 	
 	
@@ -32,7 +33,12 @@ public class ProyectilEnemigo extends Proyectil {
 			moverse('s');
 			rango--;
 		}
+
 		
+
+		//if(rango<=0)
+			//Eliminar();
+
 		
 	}
 }
