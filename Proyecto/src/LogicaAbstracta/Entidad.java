@@ -48,7 +48,7 @@ public abstract class Entidad {
 		}break;
 		case('d'):
 		{
-			if(posX<780)			//limite derecho es 780(creo)
+			if(posX<735)			//limite derecho es 780(creo)
 				posX++;
 		}break;
 		case('w'):					//no creo que lo usemos nunca, pero para completar con la 4 direcciones posibles lo dejo
