@@ -49,6 +49,11 @@ public abstract class Nivel extends Thread{
 		if(CantEnemigosVivos==0)
 			ganar=true;
 	}
+
+	public void setJugador(Jugador jugador2) {
+		jugador=jugador2;
+		
+	}
 	
 	
 	

@@ -64,6 +64,7 @@ public class Inicio extends JFrame {
 		JButton Boton_iniciar = new JButton("Iniciar");
 		Boton_iniciar.setBounds(0, 321, 668, 37);
 		contentPane.add(Boton_iniciar);
+		Boton_iniciar.setFocusable(false);
 		
 		
 		Boton_iniciar.addMouseListener(new MouseAdapter() {

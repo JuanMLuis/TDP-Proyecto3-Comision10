@@ -15,6 +15,7 @@ public class Juego {
 		miGui=g;
 		miNivel=new Nivel1(this);
 		jugador= new Jugador(miNivel);
+		miNivel.setJugador(jugador);
 	}
 	
 	
@@ -29,7 +30,7 @@ public class Juego {
 	public void startJuego() {
 		HiloTeclado ht=new HiloTeclado(miGui,jugador);
 		ht.start();
-		miNivel.run();
+		miNivel.start();
 	}
 
 }

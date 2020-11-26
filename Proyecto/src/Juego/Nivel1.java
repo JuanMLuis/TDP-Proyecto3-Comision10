@@ -38,7 +38,7 @@ public class Nivel1 extends Nivel{
 			for(Entidad e: Enemigos)
 				e.turno();
 			
-				
+			jugador.turno();
 		}
 		
 		

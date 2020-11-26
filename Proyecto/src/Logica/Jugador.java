@@ -19,7 +19,7 @@ public class Jugador extends Personaje  {
 		miVisitor= new VisitorJugador(this);
 		posX=385;
 		posY=430;
-		velocidad=2;
+		velocidad=7;
 		miNivel=l;
 		miGrafico=new EntidadGraficaJugador(posX,posY,this);
 	}
@@ -34,11 +34,13 @@ public class Jugador extends Personaje  {
 	
 	
 	public void turno() {
+	
 		if(cooldown>=0)			
 			cooldown--;
 		
 		estadoActual.movimiento(direccionActual,velocidad);
 		
+		direccionActual=('+');
 		
 		
 		//estadoActual.movimiento('+', velocidad);

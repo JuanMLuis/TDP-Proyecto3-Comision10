@@ -58,8 +58,11 @@ public class GUI extends JFrame implements KeyListener{
 		lblNewLabel.setIcon(new ImageIcon("img\\fondoNivel1.jpg"));
 		lblNewLabel.setBounds(0, 0, 770, 540);
 		contentPane.add(lblNewLabel);
-		contentPane.addKeyListener(this);
+		//contentPane.addKeyListener(this);
 		
+		
+		
+		requestFocusInWindow();
 		
 	}
 	
@@ -88,6 +91,11 @@ public class GUI extends JFrame implements KeyListener{
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public void agregarOyenteTeclas(KeyListener kl) {
+		requestFocus();
+		addKeyListener(kl);
 	}
 	
 }
