@@ -19,7 +19,7 @@ public class Jugador extends Personaje  {
 		miVisitor= new VisitorJugador(this);
 		posX=385;
 		posY=430;
-		velocidad=7;
+		velocidad=15;
 		miNivel=l;
 		miGrafico=new EntidadGraficaJugador(posX,posY,this);
 	}

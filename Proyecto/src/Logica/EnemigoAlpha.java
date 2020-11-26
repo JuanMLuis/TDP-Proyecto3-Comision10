@@ -10,8 +10,8 @@ import VisitorsConcretos.VisitorEnemigo;
 public class EnemigoAlpha extends Enemigo {
 	
 	
-	public EnemigoAlpha(Nivel n,int x,int y) {
-		posX=x;
+	public EnemigoAlpha(Nivel n,int x,int y) {//Cuando llega al 20% de la vida duplica su velocidad de movimiento
+		posX=x;  //tienen memos vida pero hacen mas daño
 		posY=y;
 		miNivel=n;
 		velocidad=2;
