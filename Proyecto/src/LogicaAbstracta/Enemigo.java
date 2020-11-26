@@ -12,21 +12,31 @@ public abstract class Enemigo extends Personaje  {
 
 	public void disparar() {
 		estadoActual.disparar(rango);
+		resetCooldown();
 
 	}
 
 	public void turno() {
-		if(cooldown>=0)					//reduccion del cooldown
+		if(cooldown>0)					//reduccion del cooldown
 			cooldown--;
 		estadoActual.movimiento('s',velocidad);
 
-		disparar();
 
 	}
 	
 	protected  void Aceptame(Entidad e) {
 		e.aceptarEnemigo(this);
 	}
+	
+	public int getRango() {
+		return rango;
+	}
+
+
+	public int getcooldown() {
+		return cooldown;
+	}
+	public abstract void resetCooldown();
 
 
 	

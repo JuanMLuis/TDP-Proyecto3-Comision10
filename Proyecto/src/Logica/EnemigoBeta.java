@@ -18,6 +18,14 @@ public class EnemigoBeta extends Enemigo {
 		miGrafico=new EntidadGraficaEnemigoBeta(x,y,this);
 		miVisitor=new VisitorEnemigo(this);
 		estadoActual= new EstadoEnemigo(this);
+		rango=150;
+		cooldown=0;
+	}
+
+	@Override
+	public void resetCooldown() {
+		cooldown=40;
+		
 	}
 
 	

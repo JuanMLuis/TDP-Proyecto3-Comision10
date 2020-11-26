@@ -18,6 +18,14 @@ public class EnemigoAlpha extends Enemigo {
 		miGrafico=new EntidadGraficaEnemigoAlpha(x,y,this);
 		miVisitor=new VisitorEnemigo(this);
 		estadoActual= new EstadoEnemigo(this);
+		rango=100;
+		cooldown=0;
+	}
+
+	@Override
+	public void resetCooldown() {
+		cooldown=50;
+		
 	}
 
 	

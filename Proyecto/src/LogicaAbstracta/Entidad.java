@@ -93,7 +93,9 @@ public abstract class Entidad {
 	
 	protected abstract void Aceptame(Entidad e); 
 		
-	
+	public int getVelocidad() {
+		return velocidad;
+	}
 
 	
 }

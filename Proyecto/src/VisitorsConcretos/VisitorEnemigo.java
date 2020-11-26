@@ -17,9 +17,10 @@ public class VisitorEnemigo  extends VisitorAbstracto {
 	}
 	
 	public void aceptarSeñalJuegador(Jugador j) {
-		
-		
-		
+		if(miEnemigo.getcooldown()==0 && miEnemigo.getCorY()+miEnemigo.getRango()*miEnemigo.getVelocidad()>=j.getCorY())
+			
+			miEnemigo.disparar();
+			
 		
 		
 		

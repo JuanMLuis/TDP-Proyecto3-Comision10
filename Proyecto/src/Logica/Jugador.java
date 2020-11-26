@@ -44,7 +44,7 @@ public class Jugador extends Personaje  {
 		
 		direccionActual=('+');
 		
-		
+		mandarSeñal();
 		//estadoActual.movimiento('+', velocidad);
 	}
 	
@@ -67,7 +67,20 @@ public class Jugador extends Personaje  {
 	public void mandarSeñal() {
 		ArrayList<Entidad> aux=miNivel.mandarSeñal(this);
 		for(Entidad e: aux) {
-			aux.ace
+			e.aceptarSeñalJugador(this);
 		}
 	}
+	
+	public void moverse(char s) {
+		
+		super.moverse(s);
+		
+		mandarSeñal();
+		
+		
+		
+		
+		
+	}
+	
 }
