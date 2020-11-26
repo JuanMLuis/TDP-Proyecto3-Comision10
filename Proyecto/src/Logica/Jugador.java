@@ -1,5 +1,7 @@
 package Logica;
 
+import java.util.ArrayList;
+
 import Estados.EstadoOriginal;
 import GUI.EntidadGraficaJugador;
 import Juego.Nivel;
@@ -60,5 +62,12 @@ public class Jugador extends Personaje  {
 	protected void Aceptame(Entidad e) {
 		e.aceptarJugador(this);
 		
+	}
+	
+	public void mandarSeñal() {
+		ArrayList<Entidad> aux=miNivel.mandarSeñal(this);
+		for(Entidad e: aux) {
+			aux.ace
+		}
 	}
 }

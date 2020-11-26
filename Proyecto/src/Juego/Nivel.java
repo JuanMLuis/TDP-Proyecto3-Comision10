@@ -80,6 +80,16 @@ public abstract class Nivel{
 	public void addProyectiles(Entidad p) {
 		Proyectiles.add(p);
 	}
+
+	public ArrayList<Entidad> mandarSeñal(Entidad e) {
+		ArrayList<Entidad> toReturn = new ArrayList<Entidad>();
+		for(Entidad r: Enemigos) {
+			if(r.getCorx()<=e.getCorx()&&r.getCorx()+10>=e.getCorx()) {
+				toReturn.add(r);
+			}
+		}
+		return toReturn;
+	}
 	
 	
 	

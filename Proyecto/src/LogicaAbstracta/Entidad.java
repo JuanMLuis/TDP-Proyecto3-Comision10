@@ -83,6 +83,10 @@ public abstract class Entidad {
 	public void AceptarProyectilEnemigo(ProyectilEnemigo p) {
 		miVisitor.aceptarProyectilEnemigo(p);
 	}
+	
+	public void aceptarSeñalJugador(Jugador j) {
+		miVisitor.aceptarSeñalJuegador(j);
+	}
 	public Rectangle getHitbox() {
 		return miGrafico.hitbox();
 	}
