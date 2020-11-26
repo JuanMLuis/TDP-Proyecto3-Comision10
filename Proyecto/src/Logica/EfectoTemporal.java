@@ -1,18 +1,25 @@
 package Logica;
 
+import java.util.Timer;
+
 import Estados.EstadoArmaSanitaria;
 import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Premio;
 
-public class EfectoTemporal extends Premio{
+public class EfectoTemporal extends Premio{ //cada uno de los metodos separarlos en 2 clases didtintas
 	protected Enemigo enemigo;
+	protected Timer timer;
+	
+	public EfectoTemporal() { 
+		timer = new Timer(); 
+	}
 	
 	public void turno() {
 		
 	}
 	
-	public void cuarentenaObligatoria(float r1, float r2) { //Usar Timer de java Util
+	public void cuarentenaObligatoria(float r1, float r2) { //Usar Timer de java Util (paralisis)
 		float empieza;
 		float termina;
 		if(r1 < r2) { 
