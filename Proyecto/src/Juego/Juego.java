@@ -1,16 +1,20 @@
 package Juego;
 
 import GUI.GUI;
-import LogicaAbstracta.Entidad;
+import Hilos.HiloTeclado;
+import Logica.Jugador;
+
 
 public class Juego {
 	protected GUI miGui;
 	protected Nivel miNivel;
+	protected Jugador jugador;
 	
 	
 	public Juego(GUI g) {
 		miGui=g;
 		miNivel=new Nivel1(this);
+		jugador= new Jugador(miNivel);
 	}
 	
 	
@@ -23,6 +27,8 @@ public class Juego {
 	}
 	
 	public void startJuego() {
+		HiloTeclado ht=new HiloTeclado(miGui,jugador);
+		ht.start();
 		miNivel.run();
 	}
 

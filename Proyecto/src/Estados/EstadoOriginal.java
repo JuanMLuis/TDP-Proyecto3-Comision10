@@ -1,12 +1,14 @@
 package Estados;
 
 import LogicaAbstracta.Estado;
+import LogicaAbstracta.Personaje;
 
 public class EstadoOriginal extends Estado {
 	
-	public EstadoOriginal() { 
-		
+	public EstadoOriginal(Personaje e) {
+		miEntidad=e;
 	}
+
 
 	@Override
 	public void disparar(int r) {		//por ahora no lo necesitamos implementado
@@ -17,7 +19,9 @@ public class EstadoOriginal extends Estado {
 
 	@Override
 	public void movimiento(char c, int v) {
-	
+		for(int i=0;i<=v;i++) {
+			miEntidad.moverse(c);
+		}
 		
 	}
 

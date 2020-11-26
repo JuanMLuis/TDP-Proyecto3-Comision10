@@ -29,4 +29,6 @@ public abstract class Personaje extends Entidad  {
 	public int getVida() {
 		return vida;
 	}
+	
+	
 }

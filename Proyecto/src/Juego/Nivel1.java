@@ -11,8 +11,7 @@ public class Nivel1 extends Nivel{
 	
 	public Nivel1 (Juego j) {
 		miJuego=j;
-		Enemigos= new ArrayList<Entidad>();
-		jugador=new Jugador(this);
+		Enemigos= new ArrayList<Entidad>();//Recordar de eliminar los jugadores de los siguientes niveles.
 		CantEnemigosVivos=20;
 		Enemigos.add(new EnemigoAlpha(this, 60, 60));
 		Enemigos.add(new EnemigoAlpha(this,150,60));
@@ -38,7 +37,7 @@ public class Nivel1 extends Nivel{
 			}
 			for(Entidad e: Enemigos)
 				e.turno();
-			jugador.turno();
+			
 				
 		}
 		

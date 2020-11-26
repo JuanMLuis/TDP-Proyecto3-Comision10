@@ -28,6 +28,7 @@ public abstract class Entidad {
 	public int getCorx() {
 		return posX;
 	}
+	
 	public int getCorY() {
 		return posY;
 	}

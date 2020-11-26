@@ -15,8 +15,9 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class GUI extends JFrame {
+public class GUI extends JFrame implements KeyListener{
 
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
@@ -57,8 +58,7 @@ public class GUI extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon("img\\fondoNivel1.jpg"));
 		lblNewLabel.setBounds(0, 0, 770, 540);
 		contentPane.add(lblNewLabel);
-		
-		
+		contentPane.addKeyListener(this);
 		
 		
 	}
@@ -67,14 +67,26 @@ public class GUI extends JFrame {
 		return lblNewLabel;
 	}
 	
-	public void moverJugador(KeyEvent e) {
+	public void keyPressed(KeyEvent e) {
+       System.out.println("Pryeba");
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            System.out.println("Right key pressed");
+        }
+        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            System.out.println("Left key pressed");
+        }
+
+    }
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
 		
-		switch(e.getExtendedKeyCode()) {
-		case KeyEvent.VK_RIGHT:jugador.moverse('d');
-		case KeyEvent.VK_LEFT:jugador.moverse('a');
-		case KeyEvent.VK_D:jugador.moverse('d');
-		case KeyEvent.VK_A:jugador.moverse('a');
-		}
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
 		
 	}
 	
