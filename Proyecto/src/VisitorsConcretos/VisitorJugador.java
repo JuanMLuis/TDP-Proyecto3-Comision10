@@ -16,7 +16,7 @@ public class VisitorJugador extends VisitorAbstracto {
 	public void aceptarEnemigo(Enemigo ene) {
 
 		miJugador.RecibirDaño(5);
-		System.out.println(miJugador.getVida());
+		
 
 	}
 	
