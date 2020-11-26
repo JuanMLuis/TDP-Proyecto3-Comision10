@@ -2,6 +2,7 @@ package Logica;
 
 import Estados.EstadoArmaSanitaria;
 import LogicaAbstracta.Enemigo;
+import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Premio;
 
@@ -48,5 +49,13 @@ public class EfectoTemporal extends Premio{
 		}
 		return arma;
 	}
+
+	@Override
+	protected void Aceptame(Entidad e) {
+		e.aceptarPremio(this);
+		
+	}
+	
+	
 
 }

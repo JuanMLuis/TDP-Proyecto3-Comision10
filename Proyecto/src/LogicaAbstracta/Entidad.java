@@ -1,6 +1,7 @@
 package LogicaAbstracta;
 
 import java.awt.Rectangle;
+import java.util.ArrayList;
 
 import GUI.EntidadGrafica;
 import Juego.Nivel;
@@ -59,7 +60,10 @@ public abstract class Entidad {
 		}break;
 		}
 		miGrafico.ActualizarPosicion(posX, posY);
-		
+		ArrayList<Entidad> aux =miNivel.Colicion(this); 
+		for(Entidad e:aux) {
+			e.Aceptame(this);
+		}
 		//--pedrile al mapa que revise colision
 	}
 	public abstract void turno();
@@ -82,6 +86,10 @@ public abstract class Entidad {
 	public Rectangle getHitbox() {
 		return miGrafico.hitbox();
 	}
+	
+	protected abstract void Aceptame(Entidad e); 
+		
+	
 
 	
 }
