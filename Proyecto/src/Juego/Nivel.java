@@ -63,6 +63,10 @@ public abstract class Nivel extends Thread{
 		
 	}
 	
+	public ArrayList<Entidad> getEnemigos() { 
+		return Enemigos;
+	}
+	
 	
 	
 }

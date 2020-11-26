@@ -8,4 +8,6 @@ public abstract class Estado { //estado de los premios y personajes
 	public abstract void movimiento(char c,int v);//direccion y velocidad
 
 	public abstract void recibirDaño(int dmg);
+	
+	public abstract void paralisis();
 }

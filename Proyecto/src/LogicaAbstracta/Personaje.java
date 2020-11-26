@@ -30,5 +30,8 @@ public abstract class Personaje extends Entidad  {
 		return vida;
 	}
 	
+	public Estado getEstadoActual() { 
+		return estadoActual;
+	}
 	
 }

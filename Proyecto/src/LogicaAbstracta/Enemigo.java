@@ -1,7 +1,5 @@
 package LogicaAbstracta;
 
-import java.util.ArrayList;
-
 public abstract class Enemigo extends Personaje  {
 
 

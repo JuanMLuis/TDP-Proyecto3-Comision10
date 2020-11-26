@@ -34,5 +34,4 @@ public class EstadoEnemigo extends Estado{
 			miEntidad.setVida(aux);
 		
 	}
-
 }
