@@ -10,7 +10,7 @@ import VisitorsConcretos.VisitorEnemigo;
 
 public class EnemigoBeta extends Enemigo {
 
-	public EnemigoBeta(Nivel n,int x,int y) {//LR: Modificar en base a EB
+	public EnemigoBeta(Nivel n,int x,int y) {//tienen mas vida
 		posX=x;
 		posY=y;
 		miNivel=n;
@@ -18,6 +18,14 @@ public class EnemigoBeta extends Enemigo {
 		miGrafico=new EntidadGraficaEnemigoBeta(x,y,this);
 		miVisitor=new VisitorEnemigo(this);
 		estadoActual= new EstadoEnemigo(this);
+		rango=150;
+		cooldown=0;
+	}
+
+	@Override
+	public void resetCooldown() {
+		cooldown=40;
+		
 	}
 
 	

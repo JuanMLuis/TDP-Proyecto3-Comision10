@@ -83,13 +83,17 @@ public abstract class Entidad {
 	public void AceptarProyectilEnemigo(ProyectilEnemigo p) {
 		miVisitor.aceptarProyectilEnemigo(p);
 	}
+	
+	public void aceptarSeñalJugador(Jugador j) {
+		miVisitor.aceptarSeñalJuegador(j);
+	}
 	public Rectangle getHitbox() {
 		return miGrafico.hitbox();
 	}
 	
 	protected abstract void Aceptame(Entidad e); 
-		
-	public int getVelocidad() { 
+	
+	public int getVelocidad() {
 		return velocidad;
 	}
 

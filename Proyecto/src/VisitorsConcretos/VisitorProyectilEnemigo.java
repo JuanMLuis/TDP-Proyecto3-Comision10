@@ -6,10 +6,10 @@ import LogicaAbstracta.VisitorAbstracto;
 
 public class VisitorProyectilEnemigo  extends VisitorAbstracto {
 
+	protected ProyectilEnemigo MiProyectilEnemigo;
 	public VisitorProyectilEnemigo(ProyectilEnemigo e) {
-		miEntidad=e;
+		MiProyectilEnemigo=e;
 	}
-	
 	public void aceptarJugador(Jugador j) {
 		
 	}

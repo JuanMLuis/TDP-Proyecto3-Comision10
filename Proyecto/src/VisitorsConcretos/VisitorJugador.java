@@ -7,14 +7,19 @@ import LogicaAbstracta.Premio;
 import LogicaAbstracta.VisitorAbstracto;
 
 public class VisitorJugador extends VisitorAbstracto {
-	
+	protected Jugador miJugador;
+
 	public VisitorJugador(Jugador j) {
-		miEntidad=j;
+		miJugador=j;
 	}
 	
 	public void aceptarEnemigo(Enemigo ene) {
-		System.out.println("h");
+
+		miJugador.RecibirDaño(5);
+		
+
 	}
+	
 	public void aceptarPremio(Premio p) {
 		
 	}

@@ -1,5 +1,7 @@
 package Logica;
 
+import java.util.ArrayList;
+
 import Estados.EstadoOriginal;
 import GUI.EntidadGraficaJugador;
 import Juego.Nivel;
@@ -12,14 +14,14 @@ public class Jugador extends Personaje  {
 	
 	
 	public Jugador(Nivel l) { 
-		vida = 0;
+		vida = 30;
 		rango=100; //creo que el rango seria solo para enemigos, despues se cambia si todos lo vemos asi
 		cooldown=0;
 		estadoActual=new EstadoOriginal(this);
 		miVisitor= new VisitorJugador(this);
 		posX=385;
 		posY=430;
-		velocidad=7;
+		velocidad=15;
 		miNivel=l;
 		miGrafico=new EntidadGraficaJugador(posX,posY,this);
 	}
@@ -42,7 +44,7 @@ public class Jugador extends Personaje  {
 		
 		direccionActual=('+');
 		
-		
+		mandarSeñal();
 		//estadoActual.movimiento('+', velocidad);
 	}
 	
@@ -61,4 +63,24 @@ public class Jugador extends Personaje  {
 		e.aceptarJugador(this);
 		
 	}
+	
+	public void mandarSeñal() {
+		ArrayList<Entidad> aux=miNivel.mandarSeñal(this);
+		for(Entidad e: aux) {
+			e.aceptarSeñalJugador(this);
+		}
+	}
+	
+	public void moverse(char s) {
+		
+		super.moverse(s);
+		
+		//mandarSeñal();
+		
+		
+		
+		
+		
+	}
+	
 }

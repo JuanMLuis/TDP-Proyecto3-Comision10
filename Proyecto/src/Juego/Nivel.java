@@ -1,12 +1,14 @@
 package Juego;
 
 import Logica.Jugador;
+import Logica.ProyectilEnemigo;
 import LogicaAbstracta.Entidad;
 import java.util.ArrayList;
 
-public abstract class Nivel extends Thread{
+public abstract class Nivel{
 	
 	protected  ArrayList<Entidad> Enemigos;		//use una lista para no tener que coprobar null
+	protected  ArrayList<Entidad> Proyectiles;
 	protected Jugador jugador  ;//Poner get y mandarlo a Juego y de ahi mandarlo a la GUI
 	protected Juego miJuego;
 	protected int CantEnemigosVivos;
@@ -58,9 +60,35 @@ public abstract class Nivel extends Thread{
 	public void Turno() {
 		for(Entidad e: Enemigos)
 			e.turno();
-		
+
+		for(Entidad e: Proyectiles)
+			e.turno();
 		jugador.turno();
 		
+	}
+
+	public void addEnemigo(Entidad e) {
+		Enemigos.add(e);
+		
+	}
+
+	public void addProyectil(Entidad p) {
+		Proyectiles.add(p);
+		
+	}
+	
+	public void addProyectiles(Entidad p) {
+		Proyectiles.add(p);
+	}
+
+	public ArrayList<Entidad> mandarSeñal(Entidad e) {
+		ArrayList<Entidad> toReturn = new ArrayList<Entidad>();
+		for(Entidad r: Enemigos) {
+			if(r.getCorx()<=e.getCorx()&&r.getCorx()+10>=e.getCorx()) {
+				toReturn.add(r);
+			}
+		}
+		return toReturn;
 	}
 	
 	public ArrayList<Entidad> getEnemigos() { 
