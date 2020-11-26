@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public abstract class Nivel extends Thread{
 	
 	protected  ArrayList<Entidad> Enemigos;		//use una lista para no tener que coprobar null
+	protected  ArrayList<Entidad> Proyectiles;
 	protected Jugador jugador  ;//Poner get y mandarlo a Juego y de ahi mandarlo a la GUI
 	protected Juego miJuego;
 	protected int CantEnemigosVivos;
@@ -58,9 +59,14 @@ public abstract class Nivel extends Thread{
 	public void Turno() {
 		for(Entidad e: Enemigos)
 			e.turno();
-		
+		for(Entidad e: Proyectiles)
+			e.turno();
 		jugador.turno();
 		
+	}
+	
+	public void addProyectiles(Entidad p) {
+		Proyectiles.add(p);
 	}
 	
 	

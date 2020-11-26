@@ -13,8 +13,8 @@ public class EstadoEnemigo extends Estado{
 
 	@Override
 	public void disparar(int r) {
-		int x= miEntidad.getCorx();		 //el proyectil acualmente va a estar corrido (hay que ajustarlo)
-		int y=miEntidad.getCorY();;
+		int x= miEntidad.getCorx()+10;		 //el proyectil acualmente va a estar corrido (hay que ajustarlo)
+		int y=miEntidad.getCorY()+10;
 		new ProyectilEnemigo(x,y,miEntidad.getNivel(),r);
 	}
 

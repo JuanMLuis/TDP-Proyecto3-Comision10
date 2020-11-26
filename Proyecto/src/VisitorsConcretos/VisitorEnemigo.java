@@ -6,12 +6,25 @@ import LogicaAbstracta.VisitorAbstracto;
 
 public class VisitorEnemigo  extends VisitorAbstracto {
 	
+	protected Enemigo miEnemigo;
+	
 	public VisitorEnemigo(Enemigo ene) {
-		miEntidad=ene;
+		miEnemigo=ene;
 	}
 	
 	public void aceptarJugador(Jugador j) {
-		j.disparar();
+		
 	}
+	
+	public void aceptarSeñalJuegador(Jugador j) {
+		
+		
+		
+		
+		
+		
+	} 
+		
+	
 
 }
