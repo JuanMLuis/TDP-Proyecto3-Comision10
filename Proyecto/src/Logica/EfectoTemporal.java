@@ -13,7 +13,7 @@ public class EfectoTemporal extends Premio{
 		
 	}
 	
-	public void cuarentenaObligatoria(float r1, float r2) { 
+	public void cuarentenaObligatoria(float r1, float r2) { //Usar Timer de java Util
 		float empieza;
 		float termina;
 		if(r1 < r2) { 
