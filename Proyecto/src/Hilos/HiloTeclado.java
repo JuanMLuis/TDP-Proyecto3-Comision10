@@ -8,7 +8,7 @@ import GUI.GUI;
 import Logica.Jugador;
 import LogicaAbstracta.Entidad;
 
-public class HiloTeclado extends Thread {
+public class HiloTeclado extends Thread implements KeyListener {
 
 	private Jugador jugador;
 	private GUI GUI;
@@ -17,7 +17,7 @@ public class HiloTeclado extends Thread {
 	public HiloTeclado(GUI GUI,Jugador jugador) {
 		this.jugador=jugador;
 		this.GUI=GUI;
-		GUI.agregarOyenteTeclas(new keyPresed());
+		GUI.agregarOyenteTeclas(this);
 		GUI.requestFocus();
 	}
 
@@ -43,38 +43,37 @@ public class HiloTeclado extends Thread {
 		}
 	}
 	
-	private class keyPresed implements KeyListener {
+	
 
-		@Override
-		public void keyPressed(KeyEvent e) {
-			switch(e.getKeyCode()) {
-			case 39:jugador.setDireccion('d');
-			break;
-			case 37:jugador.setDireccion('a');
-			break;
-			case 68:jugador.setDireccion('d');
-			break;
-			case 65:jugador.setDireccion('a');
-			break;
-		        }
-			
-		}
-
-		@Override
-		public void keyReleased(KeyEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void keyTyped(KeyEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-		
-	      
+	@Override
+	public void keyPressed(KeyEvent e) {
+		switch(e.getKeyCode()) {
+		case KeyEvent.VK_RIGHT:jugador.setDireccion('d');
+		break;
+		case KeyEvent.VK_LEFT:jugador.setDireccion('a');
+		break;
+		case KeyEvent.VK_A:jugador.setDireccion('d');
+		break;
+		case KeyEvent.VK_D:jugador.setDireccion('a');
+		break;
 	        }
+	}
+
+
+
+	@Override
+	public void keyReleased(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void keyTyped(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	    
 }

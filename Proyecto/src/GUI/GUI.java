@@ -17,7 +17,7 @@ import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class GUI extends JFrame implements KeyListener{
+public class GUI extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
@@ -58,10 +58,7 @@ public class GUI extends JFrame implements KeyListener{
 		lblNewLabel.setIcon(new ImageIcon("img\\fondoNivel1.jpg"));
 		lblNewLabel.setBounds(0, 0, 770, 540);
 		contentPane.add(lblNewLabel);
-		//contentPane.addKeyListener(this);
-		
-		
-		
+				
 		requestFocusInWindow();
 		
 	}
@@ -69,32 +66,8 @@ public class GUI extends JFrame implements KeyListener{
 	public JLabel getlabel() {
 		return lblNewLabel;
 	}
-	
-	public void keyPressed(KeyEvent e) {
-       System.out.println("Pryeba");
-        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            System.out.println("Right key pressed");
-        }
-        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            System.out.println("Left key pressed");
-        }
 
-    }
-
-	@Override
-	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-	
 	public void agregarOyenteTeclas(KeyListener kl) {
-		requestFocus();
 		addKeyListener(kl);
 	}
 	
