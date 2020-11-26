@@ -20,9 +20,6 @@ public class EnemigoBeta extends Enemigo {
 		estadoActual= new EstadoEnemigo(this);
 	}
 
-	public void colisionar(Entidad e) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 }
