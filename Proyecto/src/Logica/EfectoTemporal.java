@@ -1,7 +1,6 @@
 package Logica;
 
 import Estados.EstadoArmaSanitaria;
-import Estados.EstadoEnemigo;
 import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Premio;
