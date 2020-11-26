@@ -2,6 +2,7 @@ package Juego;
 
 import GUI.GUI;
 import Hilos.HiloTeclado;
+import Hilos.MovimientoDelJuego;
 import Logica.Jugador;
 
 
@@ -30,7 +31,13 @@ public class Juego {
 	public void startJuego() {
 		HiloTeclado ht=new HiloTeclado(miGui,jugador);
 		ht.start();
-		miNivel.start();
+		new MovimientoDelJuego(this).start();
+	}
+
+
+	public void TurnoEnemigos() {
+		miNivel.Turno();
+		
 	}
 
 }

@@ -54,6 +54,14 @@ public abstract class Nivel extends Thread{
 		jugador=jugador2;
 		
 	}
+
+	public void Turno() {
+		for(Entidad e: Enemigos)
+			e.turno();
+		
+		jugador.turno();
+		
+	}
 	
 	
 	
