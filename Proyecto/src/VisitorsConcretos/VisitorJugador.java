@@ -13,7 +13,7 @@ public class VisitorJugador extends VisitorAbstracto {
 	}
 	
 	public void aceptarEnemigo(Enemigo ene) {
-		ene.disparar();
+		System.out.println("h");
 	}
 	public void aceptarPremio(Premio p) {
 		
