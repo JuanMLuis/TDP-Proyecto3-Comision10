@@ -44,7 +44,7 @@ public class Jugador extends Personaje  {
 		
 		direccionActual=('+');
 		
-		mandarSeñal();
+		//mandarSeñal();
 		//estadoActual.movimiento('+', velocidad);
 	}
 	
@@ -75,7 +75,7 @@ public class Jugador extends Personaje  {
 		
 		super.moverse(s);
 		
-		//mandarSeñal();
+		mandarSeñal();
 		
 		
 		
