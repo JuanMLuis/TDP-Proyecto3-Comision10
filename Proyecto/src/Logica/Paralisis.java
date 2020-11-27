@@ -19,7 +19,7 @@ public class Paralisis extends EfectoTemporal{
 		Estado est = enemigo.getEstadoActual();
 		timer.start();
 		for(int i = 0; i < t; i++) { 
-			for(Entidad e: enemigo.getNivel().getEnemigos())
+			//for(Entidad e: enemigo.getNivel().getEnemigos())
 				
 		}
 		
