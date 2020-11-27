@@ -27,7 +27,7 @@ public class EstadoAuxiliar extends Estado {//LR: La hice para probar unas cosas
 	public void recibirDaño(int dmg) {
 		int aux=(miEntidad.getVida()-dmg);
 		if(aux<=0) {
-			miEntidad.Eliminar();
+			miEntidad.eliminar();
 		}else
 			miEntidad.setVida(aux);
 		

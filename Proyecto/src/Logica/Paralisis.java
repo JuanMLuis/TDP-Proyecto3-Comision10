@@ -22,6 +22,7 @@ public class Paralisis extends EfectoTemporal{
 		for(int i = 0; i < t; i++) { 
 			for(Enemigo e: enemigo.getNivel().getEnemigos())
 				e.cambiarEstado(parailsis);
+			//for(Entidad e: enemigo.getNivel().getEnemigos())
 		}
 		
 		timer.stop();
