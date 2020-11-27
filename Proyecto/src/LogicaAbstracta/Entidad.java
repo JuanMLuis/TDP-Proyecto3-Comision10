@@ -17,7 +17,7 @@ public abstract class Entidad {
 	protected int posY;	
 	protected Nivel miNivel;
 										//protected int tamaño?
-	public void Eliminar() {//se elimina a si mismo junto con la parte grafica
+	public void eliminar() {//se elimina a si mismo junto con la parte grafica
 		miGrafico.eliminar();
 		miNivel.remove(this);
 		
