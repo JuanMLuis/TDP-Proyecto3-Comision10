@@ -33,8 +33,8 @@ public class Proyectil extends Entidad  {
 	
 	public synchronized void moverse(char s) {
 		super.moverse(s);
-		//if(posY==0)
-		//	eliminar(); 
+		if(posY==0)
+			eliminar(); 
 	}
 	
 	

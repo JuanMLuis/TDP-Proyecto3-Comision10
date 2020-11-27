@@ -62,11 +62,12 @@ public abstract class Nivel{
 	}
 
 	public  void  Turno() {
-		for(Entidad e: Enemigos)
-			e.turno();
-
-		for(Entidad e: Entidades)
-			e.turno();
+		 ArrayList<Entidad> aux= new ArrayList<Entidad>();	
+		for(Entidad e:Enemigos)
+			aux.add(e);
+		for(Entidad r: Entidades)
+			aux.add(r);
+		MoverEntidades(aux);
 		jugador.turno();
 		
 	}
@@ -99,6 +100,12 @@ public abstract class Nivel{
 		Entidades.remove(e);
 		
 	}
+	
+	protected void MoverEntidades(ArrayList<Entidad> list) {
+		for(Entidad e: list )
+			e.turno();
+	}
+	
 	
 	
 	
