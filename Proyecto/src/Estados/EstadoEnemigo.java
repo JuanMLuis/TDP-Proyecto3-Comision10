@@ -34,8 +34,4 @@ public class EstadoEnemigo extends Estado{
 			miEntidad.setVida(aux);
 		
 	}
-	
-	public void paralisis() { 
-		miEntidad.setVelocidad(0);
-	}
 }

@@ -27,7 +27,7 @@ public class EstadoArmaSanitaria extends Estado{
 	}
 	
 	public void paralisis() { 
-		miEntidad.setVelocidad(0);
+		
 	}
 
 }

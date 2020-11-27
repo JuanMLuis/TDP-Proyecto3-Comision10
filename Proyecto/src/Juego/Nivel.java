@@ -2,12 +2,13 @@ package Juego;
 
 import Logica.Jugador;
 import Logica.ProyectilEnemigo;
+import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Entidad;
 import java.util.ArrayList;
 
 public abstract class Nivel{
 	
-	protected  ArrayList<Entidad> Enemigos;		//use una lista para no tener que coprobar null
+	protected  ArrayList<Enemigo> Enemigos;		//use una lista para no tener que coprobar null
 	protected  ArrayList<Entidad> Proyectiles;
 	protected Jugador jugador  ;//Poner get y mandarlo a Juego y de ahi mandarlo a la GUI
 	protected Juego miJuego;
@@ -67,7 +68,7 @@ public abstract class Nivel{
 		
 	}
 
-	public void addEnemigo(Entidad e) {
+	public void addEnemigo(Enemigo e) {
 		Enemigos.add(e);
 		
 	}
@@ -91,7 +92,7 @@ public abstract class Nivel{
 		return toReturn;
 	}
 	
-	public ArrayList<Entidad> getEnemigos() { 
+	public ArrayList<Enemigo> getEnemigos() { 
 		return Enemigos;
 	}
 	
