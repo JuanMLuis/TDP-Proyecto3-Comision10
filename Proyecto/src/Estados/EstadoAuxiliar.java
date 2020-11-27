@@ -32,5 +32,9 @@ public class EstadoAuxiliar extends Estado {//LR: La hice para probar unas cosas
 			miEntidad.setVida(aux);
 		
 	}
+	
+	public void paralisis() { 
+		miEntidad.setVelocidad(0);
+	}
 
 }

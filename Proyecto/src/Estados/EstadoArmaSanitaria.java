@@ -25,5 +25,9 @@ public class EstadoArmaSanitaria extends Estado{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public void paralisis() { 
+		miEntidad.setVelocidad(0);
+	}
 
 }

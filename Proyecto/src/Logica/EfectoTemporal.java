@@ -6,12 +6,14 @@ import javax.swing.Timer;
 
 import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Entidad;
+import LogicaAbstracta.Personaje;
 import LogicaAbstracta.Premio;
 
 public class EfectoTemporal extends Premio{ //cada uno de los metodos separarlos en 2 clases distintas
 	protected Enemigo enemigo;
 	protected Timer timer;
 	private ActionListener acciones; 
+	protected Personaje personaje;
 	
 	public EfectoTemporal() { 
 		timer = new Timer(10,acciones);
