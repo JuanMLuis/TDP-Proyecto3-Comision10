@@ -63,7 +63,7 @@ public abstract class Nivel{
 
 	public  void  Turno() {
 		 ArrayList<Entidad> aux= new ArrayList<Entidad>();	
-		for(Entidad e:Enemigos)
+		for(Entidad e:Enemigos)								//este paso extra evita un error que se producia
 			aux.add(e);
 		for(Entidad r: Entidades)
 			aux.add(r);
