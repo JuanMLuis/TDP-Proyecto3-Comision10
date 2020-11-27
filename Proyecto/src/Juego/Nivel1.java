@@ -6,12 +6,12 @@ import Logica.EnemigoAlpha;
 import Logica.EnemigoBeta;
 import Logica.Jugador;
 import LogicaAbstracta.Entidad;
-
+import LogicaAbstracta.Personaje;
 public class Nivel1 extends Nivel{
 	
 	public Nivel1 (Juego j) {
 		miJuego=j;
-		Enemigos= new ArrayList<Entidad>();//Recordar de eliminar los jugadores de los siguientes niveles.
+		Enemigos= new ArrayList<Personaje>();//Recordar de eliminar los jugadores de los siguientes niveles.
 		CantEnemigosVivos=20;
 		Enemigos.add(new EnemigoAlpha(this, 60, 60));
 		Enemigos.add(new EnemigoAlpha(this,150,60));
@@ -22,7 +22,7 @@ public class Nivel1 extends Nivel{
 		Enemigos.add(new EnemigoBeta(this, 460, 60));
 		Enemigos.add(new EnemigoAlpha(this, 530, 60));
 		Enemigos.add(new EnemigoBeta(this, 670, 60));
-		Proyectiles = new ArrayList<Entidad>();
+		Entidades = new ArrayList<Entidad>();
 		ganar=false;
 	}
 	

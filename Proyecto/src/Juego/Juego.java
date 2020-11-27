@@ -40,4 +40,10 @@ public class Juego {
 		
 	}
 
+
+	public void gameOver() {//si esto salta es fin del juego por derrota (aun sin programar)
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -4,6 +4,7 @@ import Estados.EstadoEnemigo;
 import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Estado;
+import LogicaAbstracta.Personaje;
 
 public class Paralisis extends EfectoTemporal{
 
@@ -20,7 +21,7 @@ public class Paralisis extends EfectoTemporal{
 		Estado parailsis = new EstadoEnemigo(enemigo); 
 		timer.start();
 		for(int i = 0; i < t; i++) { 
-			for(Enemigo e: enemigo.getNivel().getEnemigos())
+			for(Personaje e: enemigo.getNivel().getEnemigos())
 				e.cambiarEstado(parailsis);
 			//for(Entidad e: enemigo.getNivel().getEnemigos())
 		}

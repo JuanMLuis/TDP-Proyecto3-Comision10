@@ -16,7 +16,7 @@ public class ProyectilEnemigo extends Proyectil {
 		miGrafico= new EntidadGraficaProyectilEnemigo(x,y,this);
 		miVisitor=new VisitorProyectilEnemigo(this);
 		miNivel=p;
-		miNivel.addProyectil(this);
+		miNivel.addEntidad(this);
 
 	}
 	

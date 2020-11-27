@@ -36,6 +36,9 @@ public abstract class Enemigo extends Personaje  {
 	}
 	public abstract void resetCooldown();
 
-
+	public  void eliminar() {			//cuando tengamos oleadas probablemente lo cambiemos un poco
+		miGrafico.eliminar();
+		miNivel.removeEnemigo(this);
+	}
 	
 }
