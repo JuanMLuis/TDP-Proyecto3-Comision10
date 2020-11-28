@@ -76,7 +76,7 @@ public class GUI extends JFrame {
 		addKeyListener(kl);
 	}
 	public void actualizarVida(int a) {
-		String aux=("Daño Recivido:"+a+"%");
+		String aux=("Daño Recibido:"+a+"%");
 		Vida.setText(aux);
 	}
 	
