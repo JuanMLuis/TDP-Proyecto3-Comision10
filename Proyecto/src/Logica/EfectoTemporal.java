@@ -9,10 +9,10 @@ import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Personaje;
 import LogicaAbstracta.Premio;
 
-public class EfectoTemporal extends Premio{ //cada uno de los metodos separarlos en 2 clases distintas
+public abstract class EfectoTemporal extends Premio{ //cada uno de los metodos separarlos en 2 clases distintas
 	protected Enemigo enemigo;
 	protected Timer timer;
-	private ActionListener acciones; 
+	protected ActionListener acciones; 
 	protected Personaje personaje;
 	
 	public EfectoTemporal() { 
@@ -23,25 +23,7 @@ public class EfectoTemporal extends Premio{ //cada uno de los metodos separarlos
 		
 	}
 	
-	/*public void cuarentenaObligatoria(float r1, float r2) { //Usar Timer de java Util (paralisis)
-		float empieza;
-		float termina;
-		if(r1 < r2) { 
-			empieza = r1;
-			termina = r2;
-		}
-		else { 
-			empieza = r2;
-			termina = r1;
-		}
-		while(empieza < termina) {
-			enemigo.moverse('n'); //los enemigos no se mueven
-			empieza++;
-		}
-		
-	}
-	
-	public Estado superArmaSanitaria(float r1, float r2) { 
+	/*public Estado superArmaSanitaria(float r1, float r2) { 
 		float empieza;
 		float termina;
 		Estado arma = new EstadoArmaSanitaria(); 

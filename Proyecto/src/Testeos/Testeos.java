@@ -1,11 +1,7 @@
 package Testeos;
 
-import javax.swing.JFrame;
-
 import GUI.Inicio;
-import Juego.Juego;
-import Juego.Nivel;
-import Juego.Nivel1;
+
 
 public class Testeos {//se creo con el unico fin de probar cosas, son libres de hacer lo que quieran aca
 

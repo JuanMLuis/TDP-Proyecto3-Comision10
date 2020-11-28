@@ -5,13 +5,14 @@ import java.util.ArrayList;
 import Logica.EnemigoAlpha;
 import Logica.EnemigoBeta;
 import Logica.Jugador;
+import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Entidad;
 
 public class Nivel1 extends Nivel{
 	
 	public Nivel1 (Juego j) {
 		miJuego=j;
-		Enemigos= new ArrayList<Entidad>();//Recordar de eliminar los jugadores de los siguientes niveles.
+		Enemigos= new ArrayList<Enemigo>();//Recordar de eliminar los jugadores de los siguientes niveles.
 		CantEnemigosVivos=20;
 		Enemigos.add(new EnemigoAlpha(this, 60, 60));
 		Enemigos.add(new EnemigoAlpha(this,150,60));
