@@ -11,6 +11,6 @@ public class VisitorProyectilEnemigo  extends VisitorAbstracto {
 		MiProyectilEnemigo=e;
 	}
 	public void aceptarJugador(Jugador j) {
-		//MiProyectilEnemigo.ImpactarPersonaje(j);
+		//MiProyectilEnemigo.ImpactarPersonaje(j);	//si se pone coliciona 2 veces
 	}
 }
