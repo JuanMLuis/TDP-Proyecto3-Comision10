@@ -2,6 +2,7 @@ package VisitorsConcretos;
 
 import Logica.Jugador;
 import LogicaAbstracta.Enemigo;
+import LogicaAbstracta.Proyectil;
 import LogicaAbstracta.VisitorAbstracto;
 
 public class VisitorEnemigo  extends VisitorAbstracto {
@@ -17,14 +18,18 @@ public class VisitorEnemigo  extends VisitorAbstracto {
 	}
 	
 	public void aceptarSeñalJuegador(Jugador j) {
-		if(miEnemigo.getcooldown()==0 && miEnemigo.getCorY()+miEnemigo.getRango()*miEnemigo.getVelocidad()>=j.getCorY())
+		if(miEnemigo.getCorY()+miEnemigo.getRango()*miEnemigo.getVelocidad()>=j.getCorY())
 			
 			miEnemigo.disparar();
 			
 		
-		
+	
 		
 	} 
+	public void aceptarProyectil(Proyectil L) {
+		L.ImpactarPersonaje(miEnemigo);
+
+	}
 		
 	
 

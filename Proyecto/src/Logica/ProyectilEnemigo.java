@@ -2,12 +2,13 @@ package Logica;
 
 import GUI.EntidadGraficaProyectilEnemigo;
 import Juego.Nivel;
+import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Proyectil;
 import VisitorsConcretos.VisitorProyectilEnemigo;
 
 public class ProyectilEnemigo extends Proyectil {
 	
-	public ProyectilEnemigo(int x,int y,Nivel p,int r){//demaciados parametros quizas?
+	public ProyectilEnemigo(int x,int y,Nivel p){//demaciados parametros quizas?
 		daño=15;
 		velocidad=14;					//de lo posible la velocidad deve ser mayor que la del que disparo
 		miNivel=p;
@@ -16,12 +17,14 @@ public class ProyectilEnemigo extends Proyectil {
 		miGrafico= new EntidadGraficaProyectilEnemigo(x,y,this);
 		miVisitor=new VisitorProyectilEnemigo(this);
 		miNivel=p;
-		miNivel.addProyectil(this);
+		miNivel.addEntidad(this);
 
 	}
 	
 	
-	
+	protected void Aceptame(Entidad e) {
+		e.AceptarProyectilEnemigo(this);
+	}
 	
 	
 	
@@ -29,15 +32,10 @@ public class ProyectilEnemigo extends Proyectil {
 
 		//chequeo de colision
 		for(int i=0;i<velocidad;i++) {
-
 			moverse('s');
-			rango--;
 		}
 
 		
-
-		//if(rango<=0)
-			//Eliminar();
 
 		
 	}

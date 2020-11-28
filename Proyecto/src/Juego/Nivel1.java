@@ -7,7 +7,7 @@ import Logica.EnemigoBeta;
 import Logica.Jugador;
 import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Entidad;
-
+import LogicaAbstracta.Personaje;
 public class Nivel1 extends Nivel{
 	
 	public Nivel1 (Juego j) {
@@ -23,7 +23,7 @@ public class Nivel1 extends Nivel{
 		Enemigos.add(new EnemigoBeta(this, 460, 60));
 		Enemigos.add(new EnemigoAlpha(this, 530, 60));
 		Enemigos.add(new EnemigoBeta(this, 670, 60));
-		Proyectiles = new ArrayList<Entidad>();
+		Entidades = new ArrayList<Entidad>();
 		ganar=false;
 	}
 	

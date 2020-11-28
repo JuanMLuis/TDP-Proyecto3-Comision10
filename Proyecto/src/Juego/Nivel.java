@@ -4,19 +4,22 @@ import Logica.Jugador;
 import Logica.ProyectilEnemigo;
 import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Entidad;
+import LogicaAbstracta.Personaje;
+import LogicaAbstracta.Proyectil;
+
 import java.util.ArrayList;
 
 public abstract class Nivel{
 	
-	protected  ArrayList<Enemigo> Enemigos;		//use una lista para no tener que coprobar null
-	protected  ArrayList<Entidad> Proyectiles;
+	protected  ArrayList<Personaje> Enemigos;		//use una lista para no tener que coprobar null
+	protected  ArrayList<Entidad> Entidades;		//dira de poner aca a todas las entidades menos Enemigos y al jugador
 	protected Jugador jugador  ;//Poner get y mandarlo a Juego y de ahi mandarlo a la GUI
 	protected Juego miJuego;
 	protected int CantEnemigosVivos;
 	protected boolean ganar;
 	
 	
-	public void remove(Entidad entidad) {
+	public void removeEnemigo(Entidad entidad) {
 		Enemigos.remove(entidad);
 		
 	}
@@ -42,8 +45,10 @@ public abstract class Nivel{
 			if( r.getHitbox().intersects(e.getHitbox()))
 				colisiones.add(r);
 		}
-		if(jugador.getHitbox().intersects(e.getHitbox()))
-			colisiones.add(jugador);
+		for(Entidad r: Entidades) {
+			if( r.getHitbox().intersects(e.getHitbox()))
+				colisiones.add(r);
+		}
 		return colisiones;
 	}
 	
@@ -58,12 +63,13 @@ public abstract class Nivel{
 		
 	}
 
-	public void Turno() {
-		for(Entidad e: Enemigos)
-			e.turno();
-
-		for(Entidad e: Proyectiles)
-			e.turno();
+	public  void  Turno() {
+		 ArrayList<Entidad> aux= new ArrayList<Entidad>();	
+		for(Entidad e:Enemigos)								//este paso extra evita un error que se producia
+			aux.add(e);
+		for(Entidad r: Entidades)
+			aux.add(r);
+		MoverEntidades(aux);
 		jugador.turno();
 		
 	}
@@ -73,13 +79,9 @@ public abstract class Nivel{
 		
 	}
 
-	public void addProyectil(Entidad p) {
-		Proyectiles.add(p);
+	public void addEntidad(Entidad p) {
+		Entidades.add(p);
 		
-	}
-	
-	public void addProyectiles(Entidad p) {
-		Proyectiles.add(p);
 	}
 
 	public ArrayList<Entidad> mandarSeñal(Entidad e) {
@@ -92,9 +94,20 @@ public abstract class Nivel{
 		return toReturn;
 	}
 	
-	public ArrayList<Enemigo> getEnemigos() { 
+	public ArrayList<Personaje> getEnemigos() { 
 		return Enemigos;
 	}
+
+	public void removeEntidad(Entidad e) {
+		Entidades.remove(e);
+		
+	}
+	
+	protected void MoverEntidades(ArrayList<Entidad> list) {
+		for(Entidad e: list )
+			e.turno();
+	}
+	
 	
 	
 	

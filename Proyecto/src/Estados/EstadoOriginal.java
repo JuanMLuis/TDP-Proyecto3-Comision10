@@ -1,7 +1,10 @@
 package Estados;
 
+import Logica.ProyectilEnemigo;
+import Logica.proyectilAliado;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Personaje;
+import LogicaAbstracta.Proyectil;
 
 public class EstadoOriginal extends Estado {
 	
@@ -12,26 +15,12 @@ public class EstadoOriginal extends Estado {
 
 	@Override
 	public void disparar(int r) {		//por ahora no lo necesitamos implementado
-		int x = miEntidad.getCorx();
-		int y = miEntidad.getCorY();
-		
+		int x=miEntidad.getCorx()+10;		 //el proyectil acualmente va a estar corrido (hay que ajustarlo)
+		int y=miEntidad.getCorY()+10;
+		new proyectilAliado(x,y,miEntidad.getNivel());
 	}
 
-	@Override
-	public void movimiento(char c, int v) {
-		for(int i=0;i<=v;i++) {
-			miEntidad.moverse(c);
-		}
-		
-	}
 
-	@Override
-	public void recibirDaño(int dmg) {
-		int aux=(miEntidad.getVida()-dmg);
-		if(aux<=0) {
-			miEntidad.eliminar();
-		}else
-			miEntidad.setVida(aux);
-		
-	}
+
+	
 }

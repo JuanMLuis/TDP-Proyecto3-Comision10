@@ -8,11 +8,6 @@ public abstract class Enemigo extends Personaje  {
 	}
 
 
-	public void disparar() {
-		estadoActual.disparar(rango);
-		resetCooldown();
-
-	}
 
 	public void turno() {
 		if(cooldown>0)					//reduccion del cooldown
@@ -36,6 +31,9 @@ public abstract class Enemigo extends Personaje  {
 	}
 	public abstract void resetCooldown();
 
-
+	public  void eliminar() {			//cuando tengamos oleadas probablemente lo cambiemos un poco
+		miGrafico.eliminar();
+		miNivel.removeEnemigo(this);
+	}
 	
 }

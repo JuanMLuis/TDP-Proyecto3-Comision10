@@ -12,8 +12,16 @@ public abstract class Personaje extends Entidad  {
 	
 	
 	
-	public abstract void disparar();
+	public void disparar() {
+			if(cooldown==0) {
+			estadoActual.disparar(rango);
+			resetCooldown();
+			}
+		
+	}
 	
+	protected abstract void resetCooldown();
+
 	public  void cambiarEstado(Estado est) {
 		estadoActual=est;
 	}

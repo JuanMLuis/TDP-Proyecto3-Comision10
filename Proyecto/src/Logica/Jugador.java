@@ -11,7 +11,7 @@ import VisitorsConcretos.VisitorJugador;
 
 public class Jugador extends Personaje  {
 	protected boolean puedeMoverse;
-	
+	protected int invencibilidad;
 	
 	public Jugador(Nivel l) { 
 		vida = 30;
@@ -24,11 +24,9 @@ public class Jugador extends Personaje  {
 		velocidad=15;
 		miNivel=l;
 		miGrafico=new EntidadGraficaJugador(posX,posY,this);
+		invencibilidad=0;
 	}
 	
-	public void disparar() {
-		
-	}
 
 	public void setDireccion(char d) { 
 		direccionActual=d;
@@ -36,8 +34,9 @@ public class Jugador extends Personaje  {
 	
 	
 	public void turno() {
-	
-		if(cooldown>=0)			
+		if(invencibilidad>0)
+			invencibilidad--;
+		if(cooldown>0)			
 			cooldown--;
 		
 		estadoActual.movimiento(direccionActual,velocidad);
@@ -76,11 +75,28 @@ public class Jugador extends Personaje  {
 		super.moverse(s);
 		
 		mandarSeñal();
-		
-		
-		
-		
+
+	}
+	
+	public void RecibirDaño(int dmg) {
+		if(invencibilidad==0) {
+			super.RecibirDaño(dmg);
+			invencibilidad=30;				//30 ciclos, son 3 segundos 
+			System.out.println(vida);
+		}
+	}
+	
+public  void eliminar() {
+		miGrafico.eliminar();
+		miNivel.getJuego().gameOver();
+	}
+
+
+
+	protected void resetCooldown() {
+		cooldown=5;
 		
 	}
 	
 }
+

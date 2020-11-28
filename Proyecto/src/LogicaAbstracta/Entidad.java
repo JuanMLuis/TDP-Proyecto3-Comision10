@@ -17,11 +17,10 @@ public abstract class Entidad {
 	protected int posY;	
 	protected Nivel miNivel;
 										//protected int tamaño?
-	public void eliminar() {//se elimina a si mismo junto con la parte grafica
-		miGrafico.eliminar();
-		miNivel.remove(this);
+	public abstract void eliminar();	//se elimina a si mismo junto con la parte grafica
+	
 		
-	}
+	
 	public Nivel getNivel() {
 		return miNivel;
 	}
@@ -55,7 +54,7 @@ public abstract class Entidad {
 		case('w'):					//no creo que lo usemos nunca, pero para completar con la 4 direcciones posibles lo dejo
 		{
 			if(posY>0) {
-				posY++;
+				posY--;
 			}else posY=550;
 		}break;
 		}

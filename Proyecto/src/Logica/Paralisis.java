@@ -8,6 +8,7 @@ import javax.swing.Timer;
 import Estados.EstadoEnemigo;
 import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Estado;
+import LogicaAbstracta.Personaje;
 
 public class Paralisis extends EfectoTemporal{
 	

@@ -5,7 +5,18 @@ public abstract class Estado { //estado de los premios y personajes
 	
 	public abstract void disparar(int r);//recibe el rango
 	
-	public abstract void movimiento(char c,int v);//direccion y velocidad
-
-	public abstract void recibirDaño(int dmg);
+	public void movimiento(char c, int v) {
+		for(int i=0;i<=v;i++) {
+			miEntidad.moverse(c);
+		}
+		
+	}
+	public void recibirDaño(int dmg) {
+		int aux=(miEntidad.getVida()-dmg);
+		if(aux<=0) {
+			miEntidad.eliminar();
+		}else
+			miEntidad.setVida(aux);
+		
+	}
 }
