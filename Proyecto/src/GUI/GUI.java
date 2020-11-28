@@ -1,6 +1,7 @@
 package GUI;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -23,7 +24,7 @@ public class GUI extends JFrame {
 	private JLabel lblNewLabel;
 	private Jugador jugador;
 	private Juego juego;
-	
+	private JLabel Vida;
 	/**
 	 * Launch the application.
 	 */
@@ -61,6 +62,10 @@ public class GUI extends JFrame {
 				
 		requestFocusInWindow();
 		
+		Vida= new JLabel();
+		Vida.setForeground(Color.WHITE);
+		lblNewLabel.add(Vida);
+		Vida.setBounds(0,-30,130,100);
 	}
 	
 	public JLabel getlabel() {
@@ -69,6 +74,10 @@ public class GUI extends JFrame {
 
 	public void agregarOyenteTeclas(KeyListener kl) {
 		addKeyListener(kl);
+	}
+	public void actualizarVida(int a) {
+		String aux=("Daño Recivido:"+a+"%");
+		Vida.setText(aux);
 	}
 	
 }

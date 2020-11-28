@@ -14,7 +14,7 @@ public class Jugador extends Personaje  {
 	protected int invencibilidad;
 	
 	public Jugador(Nivel l) { 
-		vida = 30;
+		vida = 100;
 		rango=100; //creo que el rango seria solo para enemigos, despues se cambia si todos lo vemos asi
 		cooldown=0;
 		estadoActual=new EstadoOriginal(this);
@@ -25,6 +25,7 @@ public class Jugador extends Personaje  {
 		miNivel=l;
 		miGrafico=new EntidadGraficaJugador(posX,posY,this);
 		invencibilidad=0;
+		miNivel.getJuego().getGui().actualizarVida(0);
 	}
 	
 
@@ -82,7 +83,7 @@ public class Jugador extends Personaje  {
 		if(invencibilidad==0) {
 			super.RecibirDaño(dmg);
 			invencibilidad=30;				//30 ciclos, son 3 segundos 
-			System.out.println(vida);
+			miNivel.getJuego().getGui().actualizarVida(100-vida);
 		}
 	}
 	
