@@ -2,6 +2,7 @@ package Logica;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.Timer;
 
@@ -28,11 +29,11 @@ public class Paralisis extends EfectoTemporal{
 		Estado parailsis = new EstadoEnemigo(enemigo); 
 		timer.start();
 		for(int i = 0; i < t; i++) { 
-			for(Enemigo e: enemigo.getNivel().getEnemigos()) { //les cambio el estado a paraisis 
+			for(Personaje e: enemigo.getNivel().getEnemigos()) { //les cambio el estado a paraisis 
 				e.cambiarEstado(parailsis);
 				i++;
 			}
-			for(Enemigo e: enemigo.getNivel().getEnemigos()) //vuelven a su estado original
+			for(Personaje e: enemigo.getNivel().getEnemigos()) //vuelven a su estado original
 				e.cambiarEstado(est);
 		}
 		
