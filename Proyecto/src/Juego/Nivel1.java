@@ -12,7 +12,8 @@ public class Nivel1 extends Nivel{
 	
 	public Nivel1 (Juego j) {
 		miJuego=j;
-		Enemigos= new ArrayList<Personaje>();//Recordar de eliminar los jugadores de los siguientes niveles.
+		Oleada1= new ArrayList<Personaje>();//Recordar de eliminar los jugadores de los siguientes niveles.
+		Enemigos=Oleada1;
 		CantEnemigosVivos=20;
 		Enemigos.add(new EnemigoAlpha(this, 60, 60));
 		Enemigos.add(new EnemigoAlpha(this,150,60));
