@@ -18,20 +18,5 @@ public class EstadoEnemigo extends Estado{
 		new ProyectilEnemigo(x,y,miEntidad.getNivel(),r);
 	}
 
-	@Override
-	public void movimiento(char c, int v) {
-		for(int i=0;i<=v;i++) {
-			miEntidad.moverse(c);//se mueve v veces en direccion c
-		}
-	}
 
-	@Override
-	public void recibirDaño(int dmg) {
-		int aux=(miEntidad.getVida()-dmg);
-		if(aux<=0) {
-			miEntidad.eliminar();
-		}else
-			miEntidad.setVida(aux);
-		
-	}
 }
