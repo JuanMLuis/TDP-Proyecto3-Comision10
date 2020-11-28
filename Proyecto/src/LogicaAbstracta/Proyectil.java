@@ -18,6 +18,7 @@ public abstract class Proyectil extends Entidad  {
 	public void ImpactarPersonaje(Personaje pj) {
 		pj.RecibirDaño(daño);
 		this.eliminar();
+		System.out.println("a");
 	}
 	
 	public  void eliminar() {

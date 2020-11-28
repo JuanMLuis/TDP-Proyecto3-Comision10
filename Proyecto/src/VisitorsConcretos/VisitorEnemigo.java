@@ -14,7 +14,7 @@ public class VisitorEnemigo  extends VisitorAbstracto {
 	}
 	
 	public void aceptarJugador(Jugador j) {
-		
+		//haria algo aca?
 	}
 	
 	public void aceptarSeñalJuegador(Jugador j) {

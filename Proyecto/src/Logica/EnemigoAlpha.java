@@ -20,6 +20,7 @@ public class EnemigoAlpha extends Enemigo {
 		estadoActual= new EstadoEnemigo(this);
 		rango=100;
 		cooldown=0;
+		vida=60;
 	}
 
 	@Override

@@ -3,17 +3,11 @@ package LogicaAbstracta;
 public abstract class Enemigo extends Personaje  {
 
 
-	public Enemigo() { 
-		vida = 100;
-	}
-
-
-
 	public void turno() {
 		if(cooldown>0)					//reduccion del cooldown
 			cooldown--;
 		estadoActual.movimiento('s',velocidad);
-
+		
 
 	}
 	
