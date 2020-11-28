@@ -2,6 +2,7 @@ package Logica;
 
 import GUI.EntidadGraficaProyectilEnemigo;
 import Juego.Nivel;
+import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Proyectil;
 import VisitorsConcretos.VisitorProyectilEnemigo;
 
@@ -21,7 +22,9 @@ public class ProyectilEnemigo extends Proyectil {
 	}
 	
 	
-	
+	protected void Aceptame(Entidad e) {
+		e.AceptarProyectilEnemigo(this);
+	}
 	
 	
 	

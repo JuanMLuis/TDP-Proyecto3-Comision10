@@ -20,12 +20,12 @@ public class VisitorJugador extends VisitorAbstracto {
 
 	}
 	
-	public void aceptarPremio(Premio p) {
+	public void aceptarPremio(Premio p) {//aun nada
 		
 	}
 	
 	public void aceptarProyectilEnemigo(ProyectilEnemigo p) {
-		
+		p.ImpactarPersonaje(miJugador);
 	}
 	
 }

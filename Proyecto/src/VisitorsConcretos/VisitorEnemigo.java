@@ -2,6 +2,7 @@ package VisitorsConcretos;
 
 import Logica.Jugador;
 import LogicaAbstracta.Enemigo;
+import LogicaAbstracta.Proyectil;
 import LogicaAbstracta.VisitorAbstracto;
 
 public class VisitorEnemigo  extends VisitorAbstracto {
@@ -22,9 +23,13 @@ public class VisitorEnemigo  extends VisitorAbstracto {
 			miEnemigo.disparar();
 			
 		
-		
+	
 		
 	} 
+	public void aceptarProyectil(Proyectil L) {
+		L.ImpactarPersonaje(miEnemigo);
+
+	}
 		
 	
 

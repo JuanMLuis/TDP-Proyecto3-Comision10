@@ -3,11 +3,7 @@ package LogicaAbstracta;
 public abstract class Proyectil extends Entidad  {
 	
 	protected int daño;
-	protected int rango;//cuando rango llega a 0 se elimina, de esta manera evitamos tener proyectiles actualizandoce en el infinito
 
-	@Override
-	public void turno() {
-	}
 	
 	public int miDaño() {
 		return daño;
@@ -15,6 +11,7 @@ public abstract class Proyectil extends Entidad  {
 
 	@Override
 	protected void Aceptame(Entidad e) {
+		
 		e.AceptarProyectil(this);
 	}
 	

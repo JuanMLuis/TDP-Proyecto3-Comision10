@@ -45,8 +45,10 @@ public abstract class Nivel{
 			if( r.getHitbox().intersects(e.getHitbox()))
 				colisiones.add(r);
 		}
-		if(jugador.getHitbox().intersects(e.getHitbox()))
-			colisiones.add(jugador);
+		for(Entidad r: Entidades) {
+			if( r.getHitbox().intersects(e.getHitbox()))
+				colisiones.add(r);
+		}
 		return colisiones;
 	}
 	
