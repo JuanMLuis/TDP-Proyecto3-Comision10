@@ -19,7 +19,7 @@ public abstract class Entidad {
 										//protected int tamaño?
 	public abstract void eliminar();	//se elimina a si mismo junto con la parte grafica
 	
-		
+	
 	
 	public Nivel getNivel() {
 		return miNivel;

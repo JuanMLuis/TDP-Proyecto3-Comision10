@@ -79,5 +79,13 @@ public class GUI extends JFrame {
 		String aux=("Daño Recibido:"+a+"%");
 		Vida.setText(aux);
 	}
+
+	public void Perder() {
+		JLabel aAgregar= new JLabel("perdistes"); //poner imagen de game over
+		aAgregar.setBounds(50,50,300,300);			//agregar botones de Game Over 
+		aAgregar.setForeground(Color.white);
+		lblNewLabel.add(aAgregar);
+		
+	}
 	
 }

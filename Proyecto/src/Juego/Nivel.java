@@ -108,6 +108,18 @@ public abstract class Nivel{
 		for(Entidad e: list )
 			e.turno();
 	}
+
+	public void reset() {
+		 ArrayList<Entidad> aux= new ArrayList<Entidad>();
+		for(Entidad e:Oleada1)
+			aux.add(e);
+		for(Entidad e:Entidades)
+			aux.add(e);
+		
+		for(Entidad e:aux)
+			e.eliminar();
+		
+	}
 	
 	
 	

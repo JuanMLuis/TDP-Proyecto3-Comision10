@@ -43,9 +43,7 @@ public class Jugador extends Personaje  {
 		estadoActual.movimiento(direccionActual,velocidad);
 		
 		direccionActual=('+');
-		
-		//mandarSeñal();
-		//estadoActual.movimiento('+', velocidad);
+	
 	}
 	
 	
