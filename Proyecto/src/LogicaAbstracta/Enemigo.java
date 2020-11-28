@@ -8,11 +8,6 @@ public abstract class Enemigo extends Personaje  {
 	}
 
 
-	public void disparar() {
-		estadoActual.disparar(rango);
-		resetCooldown();
-
-	}
 
 	public void turno() {
 		if(cooldown>0)					//reduccion del cooldown

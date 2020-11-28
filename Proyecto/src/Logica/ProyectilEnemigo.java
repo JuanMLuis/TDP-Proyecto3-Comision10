@@ -7,7 +7,7 @@ import VisitorsConcretos.VisitorProyectilEnemigo;
 
 public class ProyectilEnemigo extends Proyectil {
 	
-	public ProyectilEnemigo(int x,int y,Nivel p,int r){//demaciados parametros quizas?
+	public ProyectilEnemigo(int x,int y,Nivel p){//demaciados parametros quizas?
 		daño=15;
 		velocidad=14;					//de lo posible la velocidad deve ser mayor que la del que disparo
 		miNivel=p;
@@ -29,15 +29,10 @@ public class ProyectilEnemigo extends Proyectil {
 
 		//chequeo de colision
 		for(int i=0;i<velocidad;i++) {
-
 			moverse('s');
-			rango--;
 		}
 
 		
-
-		//if(rango<=0)
-			//Eliminar();
 
 		
 	}

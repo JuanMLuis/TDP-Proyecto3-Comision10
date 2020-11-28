@@ -27,9 +27,6 @@ public class Jugador extends Personaje  {
 		invencibilidad=0;
 	}
 	
-	public void disparar() {
-		
-	}
 
 	public void setDireccion(char d) { 
 		direccionActual=d;
@@ -92,6 +89,13 @@ public class Jugador extends Personaje  {
 public  void eliminar() {
 		miGrafico.eliminar();
 		miNivel.getJuego().gameOver();
+	}
+
+
+
+	protected void resetCooldown() {
+		cooldown=5;
+		
 	}
 	
 }

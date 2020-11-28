@@ -54,7 +54,7 @@ public abstract class Entidad {
 		case('w'):					//no creo que lo usemos nunca, pero para completar con la 4 direcciones posibles lo dejo
 		{
 			if(posY>0) {
-				posY++;
+				posY--;
 			}else posY=550;
 		}break;
 		}
