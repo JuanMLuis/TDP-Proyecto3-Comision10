@@ -2,41 +2,38 @@ package Logica;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-
 import javax.swing.Timer;
 
 import Estados.EstadoEnemigo;
-import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Personaje;
 
 public class Paralisis extends EfectoTemporal{
-	
+
 	protected int segundos; 
 
-	public Paralisis() { //timer r000 (esta en milisegundo)
+	public Paralisis() {
 		velocidad = 2; //ponerlo con un random
-		posX = enemigo.getCorx();
-		posY = enemigo.getCorY();
-		miNivel = enemigo.getNivel();
+		posX = personaje.getCorx();
+		posY = personaje.getCorY();
+		miNivel = personaje.getNivel();
 		timer = new Timer(10,acciones);
 		segundos = 0;
 	}
 
-	public void activar(int t) { //t000
-		Estado est = enemigo.getEstadoActual();
-		Estado parailsis = new EstadoEnemigo(enemigo); 
+	public void activar(int t) { 
+		Estado est = personaje.getEstadoActual();
+		Estado parailsis = new EstadoEnemigo(personaje); 
 		timer.start();
 		for(int i = 0; i < t; i++) { 
-			for(Personaje e: enemigo.getNivel().getEnemigos()) { //les cambio el estado a paraisis 
-				e.cambiarEstado(parailsis);
+			for(Personaje p: personaje.getNivel().getEnemigos()) { //les cambio el estado a paraisis 
+				p.cambiarEstado(parailsis);
 				i++;
 			}
-			for(Personaje e: enemigo.getNivel().getEnemigos()) //vuelven a su estado original
-				e.cambiarEstado(est);
+			for(Personaje p: personaje.getNivel().getEnemigos()) //vuelven a su estado original
+				p.cambiarEstado(est);
 		}
-		
+
 		timer.stop();
 		acciones = new ActionListener(){ 
 			public void actionPerformed(ActionEvent ae) { 
@@ -45,5 +42,3 @@ public class Paralisis extends EfectoTemporal{
 		};
 	}
 }
-
-//por cada enemigo cambio el estado

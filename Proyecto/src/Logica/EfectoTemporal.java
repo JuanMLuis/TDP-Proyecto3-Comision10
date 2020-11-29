@@ -10,19 +10,18 @@ import LogicaAbstracta.Personaje;
 import LogicaAbstracta.Premio;
 
 public abstract class EfectoTemporal extends Premio{ //cada uno de los metodos separarlos en 2 clases distintas
-	protected Enemigo enemigo;
 	protected Timer timer;
 	protected ActionListener acciones; 
 	protected Personaje personaje;
-	
+
 	public EfectoTemporal() { 
 		timer = new Timer(10,acciones);
 	}
-	
+
 	public void turno() {
-		
+
 	}
-	
+
 	/*public Estado superArmaSanitaria(float r1, float r2) { 
 		float empieza;
 		float termina;
@@ -42,9 +41,9 @@ public abstract class EfectoTemporal extends Premio{ //cada uno de los metodos s
 		return arma;
 	}*/
 
-	
+
 	protected void Aceptame(Entidad e) {
 		e.aceptarPremio(this);
-		
+
 	}
 }
