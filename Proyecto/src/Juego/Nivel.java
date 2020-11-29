@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public abstract class Nivel{
 	
 	protected  ArrayList<Personaje> Oleada1;		//use una lista para no tener que coprobar null
-	protected  ArrayList<Personaje> Enemigos;		//mi idea es que Enemigos haga referencia a la oleada que esta actualmente en uso
+	protected  ArrayList<Personaje> Enemigos;		//mi idea es que Enemigos haga referencia a la oleada que esta actualmente en uso o tener un metodo que cargue oleadas
 	protected  ArrayList<Entidad> Entidades;		//dira de poner aca a todas las entidades menos Enemigos y al jugador
 	protected Jugador jugador  ;//Poner get y mandarlo a Juego y de ahi mandarlo a la GUI
 	protected Juego miJuego;
