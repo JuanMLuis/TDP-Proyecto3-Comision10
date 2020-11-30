@@ -21,10 +21,11 @@ import java.awt.event.KeyListener;
 public class GUI extends JFrame {
 
 	private JPanel contentPane;
-	private JLabel lblNewLabel;
+	private JLabel l_fondo;
 	private Jugador jugador;
 	private Juego juego;
 	private JLabel Vida;
+	private JLabel aAgregar;
 	/**
 	 * Launch the application.
 	 */
@@ -55,21 +56,21 @@ public class GUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("img\\fondoNivel2 .jpg"));
-		lblNewLabel.setBounds(0, 0, 770, 540);
-		contentPane.add(lblNewLabel);
+		l_fondo = new JLabel("");
+		l_fondo.setIcon(new ImageIcon("img\\fondoNivel2 .jpg"));
+		l_fondo.setBounds(0, 0, 770, 540);
+		contentPane.add(l_fondo);
 				
 		requestFocusInWindow();
 		
 		Vida= new JLabel();
 		Vida.setForeground(Color.WHITE);
-		lblNewLabel.add(Vida);
+		l_fondo.add(Vida);
 		Vida.setBounds(0,-30,130,100);
 	}
 	
 	public JLabel getlabel() {
-		return lblNewLabel;
+		return l_fondo;
 	}
 
 	public void agregarOyenteTeclas(KeyListener kl) {
@@ -81,11 +82,13 @@ public class GUI extends JFrame {
 	}
 
 	public void Perder() {
-		JLabel aAgregar= new JLabel("perdistes"); //poner imagen de game over
-		aAgregar.setBounds(50,50,300,300);			//agregar botones de Game Over 
-		aAgregar.setForeground(Color.white);
-		lblNewLabel.add(aAgregar);
 		
+		aAgregar= new JLabel(""); 
+		aAgregar.setIcon(new ImageIcon("img\\perdiste.png"));
+		aAgregar.setBounds(110,120,550,300);//agregar botones de Game Over 
+		l_fondo.add(aAgregar);
+		aAgregar.setVisible(true);
+		this.repaint();
 	}
 	
 }
