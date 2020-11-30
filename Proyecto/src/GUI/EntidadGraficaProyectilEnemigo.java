@@ -11,7 +11,7 @@ public class EntidadGraficaProyectilEnemigo extends EntidadGrafica {
 		miGrafico.setBounds(x,y,5, 10);//buscar el tamaño que convenga
 		e.getNivel().getJuego().getGui().getlabel().add(miGrafico);
 
-		acomodarImagen("img\\disparorojo.png");
+		acomodarImagen("img\\disparoverde.png");
 
 		miGrafico.setVisible(true);
 	}

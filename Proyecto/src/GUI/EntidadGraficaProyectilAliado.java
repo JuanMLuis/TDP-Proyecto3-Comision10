@@ -12,7 +12,7 @@ public class EntidadGraficaProyectilAliado extends EntidadGrafica{
 		miGrafico.setBounds(x,y,5, 10);//buscar el tamaño que convenga
 		e.getNivel().getJuego().getGui().getlabel().add(miGrafico);
 
-		acomodarImagen("img\\disparoverde.png");
+		acomodarImagen("img\\disparorojo.png");
 
 		miGrafico.setVisible(true);
 	}

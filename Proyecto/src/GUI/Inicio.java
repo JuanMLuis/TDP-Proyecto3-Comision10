@@ -56,11 +56,6 @@ public class Inicio extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("img\\cartelInicio.jpg"));
-		lblNewLabel.setBounds(0, 0, 668, 358);
-		contentPane.add(lblNewLabel);
-		
 		JButton Boton_iniciar = new JButton("Iniciar");
 		Boton_iniciar.setBounds(0, 321, 668, 37);
 		contentPane.add(Boton_iniciar);
@@ -78,6 +73,11 @@ public class Inicio extends JFrame {
 				Testeos.empezar();		//esto es temporal
 			}
 		});
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("img\\cartelInicio.jpg"));
+		lblNewLabel.setBounds(0, 0, 668, 358);
+		contentPane.add(lblNewLabel);
 	}
 	
 	public Juego rJ() {
