@@ -5,6 +5,8 @@ import Logica.ProyectilEnemigo;
 
 public abstract class VisitorAbstracto extends Thread{
 	
+	protected Personaje miPj;
+	
 	public void aceptarJugador(Jugador j) {
 		
 	}

@@ -7,18 +7,14 @@ public abstract class Enemigo extends Personaje  {
 		if(cooldown>0)					//reduccion del cooldown
 			cooldown--;
 		estadoActual.movimiento('s',velocidad);
-		
+		Colicion();
 
 	}
 	
-	protected  void Aceptame(Entidad e) {
+	protected  void Aceptame(Personaje e) {
 		e.aceptarEnemigo(this);
 	}
 	
-	public int getRango() {
-		return rango;
-	}
-
 
 	public int getcooldown() {
 		return cooldown;

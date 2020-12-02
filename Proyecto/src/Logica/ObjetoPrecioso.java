@@ -1,6 +1,7 @@
 package Logica;
 
 import LogicaAbstracta.Entidad;
+import LogicaAbstracta.Personaje;
 import LogicaAbstracta.Premio;
 
 public class ObjetoPrecioso extends Premio{
@@ -16,8 +17,12 @@ public class ObjetoPrecioso extends Premio{
 	}
 
 	@Override
-	protected void Aceptame(Entidad e) {
-	e.aceptarPremio(this);
+	protected void Aceptame(Personaje e) {
+		// TODO Auto-generated method stub
+		
 	}
+
+	
+	
 
 }

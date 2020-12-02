@@ -1,7 +1,11 @@
 package LogicaAbstracta;
 
+import Logica.Jugador;
+import Logica.ProyectilEnemigo;
+
 public abstract class Personaje extends Entidad  {
 
+	protected VisitorAbstracto miVisitor;
 	protected int vida;
 	protected int rango;
 	protected int cooldown;
@@ -42,6 +46,29 @@ public abstract class Personaje extends Entidad  {
 
 	public Estado getEstadoActual() { 
 		return estadoActual;
+	}
+	public void aceptarEnemigo(Enemigo e) {
+		miVisitor.aceptarEnemigo(e);
+	}
+	public void aceptarJugador(Jugador j) {
+		miVisitor.aceptarJugador(j);
+	}
+	public void aceptarPremio(Premio p) {
+		miVisitor.aceptarPremio(p);
+	}
+	public void AceptarProyectil(Proyectil p) {
+		miVisitor.aceptarProyectil(p);
+	}
+	public void AceptarProyectilEnemigo(ProyectilEnemigo p) {
+		miVisitor.aceptarProyectilEnemigo(p);
+	}
+	
+	public void aceptarSeñalJugador(Jugador j) {
+		miVisitor.aceptarSeñalJuegador(j);
+	}
+
+	public int getRango() {
+		return rango;
 	}
 
 }

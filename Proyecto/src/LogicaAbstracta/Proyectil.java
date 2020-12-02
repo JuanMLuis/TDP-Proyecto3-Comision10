@@ -9,8 +9,8 @@ public abstract class Proyectil extends Entidad  {
 		return daño;
 	}
 
-	@Override
-	protected void Aceptame(Entidad e) {
+	
+	protected void Aceptame(Personaje e) {
 		
 		e.AceptarProyectil(this);
 	}
@@ -18,7 +18,6 @@ public abstract class Proyectil extends Entidad  {
 	public void ImpactarPersonaje(Personaje pj) {
 		pj.RecibirDaño(daño);
 		this.eliminar();
-		System.out.println("a");
 	}
 	
 	public  void eliminar() {

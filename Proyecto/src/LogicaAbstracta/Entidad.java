@@ -10,7 +10,6 @@ import Logica.ProyectilEnemigo;
 
 public abstract class Entidad {
 
-	protected VisitorAbstracto miVisitor;
 	protected int velocidad;
 	protected EntidadGrafica miGrafico;
 	protected int posX;						//creo que la logica deberia tener su posicion como parametro
@@ -59,38 +58,16 @@ public abstract class Entidad {
 		}break;
 		}
 		miGrafico.ActualizarPosicion(posX, posY);
-		ArrayList<Entidad> aux =miNivel.Colicion(this); 
-		for(Entidad e:aux) {
-			e.Aceptame(this);
-		}
-		//--pedrile al mapa que revise colision
+		
+		
 	}
 	public abstract void turno();
 	
-	public void aceptarEnemigo(Enemigo e) {
-		miVisitor.aceptarEnemigo(e);
-	}
-	public void aceptarJugador(Jugador j) {
-		miVisitor.aceptarJugador(j);
-	}
-	public void aceptarPremio(Premio p) {
-		miVisitor.aceptarPremio(p);
-	}
-	public void AceptarProyectil(Proyectil p) {
-		miVisitor.aceptarProyectil(p);
-	}
-	public void AceptarProyectilEnemigo(ProyectilEnemigo p) {
-		miVisitor.aceptarProyectilEnemigo(p);
-	}
-	
-	public void aceptarSeñalJugador(Jugador j) {
-		miVisitor.aceptarSeñalJuegador(j);
-	}
 	public Rectangle getHitbox() {
 		return miGrafico.hitbox();
 	}
 	
-	protected abstract void Aceptame(Entidad e); 
+	protected abstract void Aceptame(Personaje e); 
 	
 	public int getVelocidad() {
 		return velocidad;
@@ -98,5 +75,12 @@ public abstract class Entidad {
 
 	public void setVelocidad(int v) { 
 		velocidad = v;
+	}
+	
+	protected void Colicion() {
+		ArrayList<Personaje> aux =miNivel.Colicion(this); 
+		for(Personaje e:aux) {
+			Aceptame(e);
+		}
 	}
 }

@@ -42,7 +42,7 @@ public abstract class EfectoTemporal extends Premio{ //cada uno de los metodos s
 	}*/
 
 
-	protected void Aceptame(Entidad e) {
+	protected void Aceptame(Personaje e) {
 		e.aceptarPremio(this);
 
 	}

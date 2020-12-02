@@ -57,14 +57,14 @@ public class Jugador extends Personaje  {
 	}
 
 	@Override
-	protected void Aceptame(Entidad e) {
+	protected void Aceptame(Personaje e) {
 		e.aceptarJugador(this);
 		
 	}
 	
 	public void mandarSeñal() {
-		ArrayList<Entidad> aux=miNivel.mandarSeñal(this);
-		for(Entidad e: aux) {
+		ArrayList<Personaje> aux=miNivel.mandarSeñal(this);
+		for(Personaje e: aux) {
 			e.aceptarSeñalJugador(this);
 		}
 	}
@@ -72,7 +72,7 @@ public class Jugador extends Personaje  {
 	public void moverse(char s) {
 		
 		super.moverse(s);
-		
+		Colicion();
 		mandarSeñal();
 
 	}

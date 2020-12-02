@@ -40,16 +40,15 @@ public abstract class Nivel{
 		
 	}
 	
-	public ArrayList<Entidad> Colicion(Entidad e) {//retorna null si no hay colicion, retona la primera entidad con la que coliciona
-		ArrayList<Entidad> colisiones = new ArrayList<Entidad>();
-		for(Entidad r: Enemigos) {
-			if( r.getHitbox().intersects(e.getHitbox()))
+	public ArrayList<Personaje> Colicion(Entidad e) {//retorna null si no hay colicion, retona la primera entidad con la que coliciona
+		ArrayList<Personaje> colisiones = new ArrayList<Personaje>();
+		if(jugador!=e && jugador.getHitbox().intersects(e.getHitbox()))
+			colisiones.add(jugador);
+		for(Personaje r: Enemigos) {
+			if(e!=r &&  r.getHitbox().intersects(e.getHitbox()))
 				colisiones.add(r);
 		}
-		for(Entidad r: Entidades) {
-			if( r.getHitbox().intersects(e.getHitbox()))
-				colisiones.add(r);
-		}
+		
 		return colisiones;
 	}
 	
@@ -85,9 +84,9 @@ public abstract class Nivel{
 		
 	}
 
-	public ArrayList<Entidad> mandarSeñal(Entidad e) {
-		ArrayList<Entidad> toReturn = new ArrayList<Entidad>();
-		for(Entidad r: Enemigos) {
+	public ArrayList<Personaje> mandarSeñal(Entidad e) {
+		ArrayList<Personaje> toReturn = new ArrayList<Personaje>();
+		for(Personaje r: Enemigos) {
 			if(r.getCorx()<=e.getCorx()&&r.getCorx()+10>=e.getCorx()) {
 				toReturn.add(r);
 			}
