@@ -64,7 +64,7 @@ public abstract class Personaje extends Entidad  {
 	}
 	
 	public void aceptarSeñalJugador(Jugador j) {
-		miVisitor.aceptarSeñalJuegador(j);
+		miVisitor.aceptarSeñalJugador(j);
 	}
 
 	public int getRango() {

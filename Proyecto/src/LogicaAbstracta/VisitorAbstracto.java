@@ -27,7 +27,7 @@ public abstract class VisitorAbstracto extends Thread{
 		
 	}
 	
-	public void aceptarSeñalJuegador(Jugador j) {
+	public void aceptarSeñalJugador(Jugador j) {
 		
 	}
 }

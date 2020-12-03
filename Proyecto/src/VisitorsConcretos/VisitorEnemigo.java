@@ -17,7 +17,7 @@ public class VisitorEnemigo  extends VisitorAbstracto {
 		//haria algo aca?
 	}
 	
-	public void aceptarSeñalJuegador(Jugador j) {
+	public void aceptarSeñalJugador(Jugador j) {
 		if(miPj.getCorY()+miPj.getRango()>=j.getCorY())
 			
 			miPj.disparar();
