@@ -18,7 +18,7 @@ public class EnemigoAlpha extends Enemigo {
 		miGrafico=new EntidadGraficaEnemigoAlpha(x,y,this);
 		miVisitor=new VisitorEnemigo(this);
 		estadoActual= new EstadoEnemigo(this);
-		rango=100;
+		rango=200;
 		cooldown=0;
 		vida=60;
 	}

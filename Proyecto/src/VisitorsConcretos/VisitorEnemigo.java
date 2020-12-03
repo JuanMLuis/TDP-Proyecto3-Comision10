@@ -18,7 +18,7 @@ public class VisitorEnemigo  extends VisitorAbstracto {
 	}
 	
 	public void aceptarSeñalJuegador(Jugador j) {
-		if(miPj.getCorY()+miPj.getRango()*miPj.getVelocidad()>=j.getCorY())
+		if(miPj.getCorY()+miPj.getRango()>=j.getCorY())
 			
 			miPj.disparar();
 			
@@ -27,7 +27,6 @@ public class VisitorEnemigo  extends VisitorAbstracto {
 		
 	} 
 	public void aceptarProyectil(Proyectil L) {
-		System.out.println("hola");
 		L.ImpactarPersonaje(miPj);
 
 	}

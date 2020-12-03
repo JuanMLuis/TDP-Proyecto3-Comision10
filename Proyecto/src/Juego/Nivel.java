@@ -84,10 +84,10 @@ public abstract class Nivel{
 		
 	}
 
-	public ArrayList<Personaje> mandarSeñal(Entidad e) {
+	public ArrayList<Personaje> mandarSeñal(Entidad e) {				//devuelve la lista de las entidades frente a "e"
 		ArrayList<Personaje> toReturn = new ArrayList<Personaje>();
 		for(Personaje r: Enemigos) {
-			if(r.getCorx()<=e.getCorx()&&r.getCorx()+10>=e.getCorx()) {
+			if(r.getCorx()-20<=e.getCorx()&&r.getCorx()+20>=e.getCorx()) { //los 20 son aplitud, para que dispare aunque el enemigo no este 100% centrado
 				toReturn.add(r);
 			}
 		}
