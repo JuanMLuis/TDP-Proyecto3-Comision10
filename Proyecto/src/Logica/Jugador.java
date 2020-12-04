@@ -79,7 +79,7 @@ public class Jugador extends Personaje  {
 	public void RecibirDaño(int dmg) {
 		if(invencibilidad==0) {
 			super.RecibirDaño(dmg);
-			invencibilidad=30;				//30 ciclos, son 3 segundos 
+			invencibilidad=10;				//30 ciclos, son 3 segundos 
 			miNivel.getJuego().getGui().actualizarVida(100-vida);
 		}
 	}
