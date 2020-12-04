@@ -16,11 +16,7 @@ public class ObjetoPrecioso extends Premio{
 			jugador.setVida(0);
 	}
 
-	@Override
-	protected void Aceptame(Personaje e) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	
 	

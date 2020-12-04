@@ -41,9 +41,4 @@ public abstract class EfectoTemporal extends Premio{ //cada uno de los metodos s
 		return arma;
 	}*/
 
-
-	protected void Aceptame(Personaje e) {
-		e.aceptarPremio(this);
-
-	}
 }

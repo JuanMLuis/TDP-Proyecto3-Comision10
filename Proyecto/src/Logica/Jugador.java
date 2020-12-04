@@ -72,7 +72,7 @@ public class Jugador extends Personaje  {
 		
 		super.moverse(s);
 		Colicion();
-		mandarSeñal();
+		//mandarSeñal();
 
 	}
 	

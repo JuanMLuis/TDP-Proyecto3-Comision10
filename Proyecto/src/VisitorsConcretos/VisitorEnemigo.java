@@ -21,9 +21,6 @@ public class VisitorEnemigo  extends VisitorAbstracto {
 		//if(miPj.getCorY()+miPj.getRango()>=j.getCorY())
 			
 		//	miPj.disparar();
-			
-		
-	
 		
 	} 
 	public void aceptarProyectil(Proyectil L) {
