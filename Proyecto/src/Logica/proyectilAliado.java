@@ -2,8 +2,9 @@ package Logica;
 
 import GUI.EntidadGraficaProyectilAliado;
 import Juego.Nivel;
+import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Proyectil;
-import VisitorsConcretos.VisitorProyectil;
+
 
 public class proyectilAliado extends Proyectil {
 	
@@ -14,7 +15,6 @@ public class proyectilAliado extends Proyectil {
 			posX=x;
 			posY=y;
 			miGrafico= new EntidadGraficaProyectilAliado(x,y,this);
-			miVisitor=new VisitorProyectil(this);
 			miNivel=p;
 			miNivel.addEntidad(this);
 		}
@@ -23,7 +23,12 @@ public class proyectilAliado extends Proyectil {
 			for(int i=0;i<velocidad;i++) {
 				moverse('w');
 			}
+			Colicion();
 		}
+
+		
+
+		
 	
 
 }

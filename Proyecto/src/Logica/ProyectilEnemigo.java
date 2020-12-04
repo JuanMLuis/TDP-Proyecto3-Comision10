@@ -3,8 +3,9 @@ package Logica;
 import GUI.EntidadGraficaProyectilEnemigo;
 import Juego.Nivel;
 import LogicaAbstracta.Entidad;
+import LogicaAbstracta.Personaje;
 import LogicaAbstracta.Proyectil;
-import VisitorsConcretos.VisitorProyectilEnemigo;
+
 
 public class ProyectilEnemigo extends Proyectil {
 	
@@ -15,14 +16,13 @@ public class ProyectilEnemigo extends Proyectil {
 		posX=x;
 		posY=y;
 		miGrafico= new EntidadGraficaProyectilEnemigo(x,y,this);
-		miVisitor=new VisitorProyectilEnemigo(this);
 		miNivel=p;
 		miNivel.addEntidad(this);
 
 	}
 	
 	
-	protected void Aceptame(Entidad e) {
+	protected void Aceptame(Personaje e) {
 		e.AceptarProyectilEnemigo(this);
 	}
 	
@@ -34,8 +34,8 @@ public class ProyectilEnemigo extends Proyectil {
 		for(int i=0;i<velocidad;i++) {
 			moverse('s');
 		}
-
 		
+		Colicion();
 
 		
 	}
