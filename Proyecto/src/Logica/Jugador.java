@@ -95,6 +95,5 @@ public  void eliminar() {
 		cooldown=5;
 		
 	}
-	
 }
 
