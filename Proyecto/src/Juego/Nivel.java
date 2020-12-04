@@ -126,7 +126,18 @@ public abstract class Nivel{
 			oleada = new ArrayList<Personaje>();
 			while(oleada.size() < cantEnemigos) { 
 				x++;
-				oleada.add(enemigo.crearEnemigoAlpha(this,( x * 60) + 10, y));
+				
+				int VariacionX= (int)(Math.random()*20)+1;
+				int VariacionY=(int)((Math.random()*6)+1)*-1;
+				
+				
+				int aux=(int)(Math.random()*2+1);
+				if(aux==1)
+				oleada.add(enemigo.crearEnemigoAlpha(this,( x * 60) + VariacionX, y+VariacionY));
+				else
+				oleada.add(enemigo.crearEnemigoBeta(this,( x * 60) + 10, y));
+				
+				
 				if(x >= 10) {
 					y = y - 60;
 					x=1;

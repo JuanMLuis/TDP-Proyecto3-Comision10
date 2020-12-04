@@ -2,6 +2,7 @@ package Factory;
 
 import Juego.Nivel;
 import Logica.EnemigoAlpha;
+import Logica.EnemigoBeta;
 import LogicaAbstracta.Enemigo;
 
 public class FabricaEnemigos extends FabricaEnemigo {
@@ -25,7 +26,8 @@ public class FabricaEnemigos extends FabricaEnemigo {
 
 
 	public Enemigo crearEnemigoBeta(Nivel n, int x, int y) {
-		return null;
+		EnemigoBeta e= new EnemigoBeta(n,x,y);
+		return e;
 	}
 	
 }
