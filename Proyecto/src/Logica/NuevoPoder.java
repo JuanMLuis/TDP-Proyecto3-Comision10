@@ -30,7 +30,5 @@ public class NuevoPoder extends EfectoTemporal{
 		}
 	}
 
-	protected void Aceptame(Personaje e) {
-		
-	}
+	
 }

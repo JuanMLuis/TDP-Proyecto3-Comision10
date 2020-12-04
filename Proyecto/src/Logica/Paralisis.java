@@ -43,7 +43,5 @@ public class Paralisis extends EfectoTemporal{
 		};
 	}
 
-	protected void Aceptame(Personaje e) {
-		
-	}
+	
 }
