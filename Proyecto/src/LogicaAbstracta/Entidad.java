@@ -77,7 +77,7 @@ public abstract class Entidad {
 		velocidad = v;
 	}
 	
-	protected void Colicion() {
+	protected void Colision() {
 		ArrayList<Personaje> aux =miNivel.Colision(this); 
 		for(Personaje e:aux) {
 			Aceptame(e);
