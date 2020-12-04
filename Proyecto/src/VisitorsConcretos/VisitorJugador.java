@@ -21,7 +21,8 @@ public class VisitorJugador extends VisitorAbstracto {
 	}
 	
 	public void aceptarPremio(Premio p) {//aun nada
-		
+		p.activar();
+		p.eliminar(); 
 	}
 	
 	public void aceptarProyectilEnemigo(ProyectilEnemigo p) {

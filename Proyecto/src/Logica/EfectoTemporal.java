@@ -14,7 +14,7 @@ public abstract class EfectoTemporal extends Premio{ //cada uno de los metodos s
 	protected ActionListener acciones; 
 	protected Personaje personaje;
 
-	public EfectoTemporal() { 
+	public EfectoTemporal(int posInicial) { 
 		timer = new Timer(10,acciones);
 	}
 

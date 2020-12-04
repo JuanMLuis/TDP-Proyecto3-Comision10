@@ -11,6 +11,12 @@ public class PoderEspecial extends ObjetoPrecioso{
 			jugador.setVida(0);
 	}
 
+	@Override
+	public void activar() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 	
 }

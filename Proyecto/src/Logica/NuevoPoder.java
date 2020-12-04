@@ -1,6 +1,7 @@
 package Logica;
 
-import javax.swing.Timer;
+
+import java.util.Timer;
 
 import Estados.EstadoAuxiliar;
 import LogicaAbstracta.EfectoTemporal;
@@ -15,18 +16,24 @@ public class NuevoPoder extends EfectoTemporal{
 		posX = personaje.getCorx();
 		posY = personaje.getCorY();
 		miNivel = personaje.getNivel();
-		timer = new Timer(10,acciones);
+		timer = new Timer();
 	}
 
 	public void activar(int t) { 
 		Estado nuevo = new EstadoAuxiliar(personaje); 
 		//de que tipo deria un arma?? Se que lo pregunte mil veces pero no me acuerdo jajaja
-		timer.start(); 
+		//timer.start(); 
 		Proyectil armaNueva = new proyectilAliado(posX, posY, miNivel);
 		for(int i = 0; i < t; i++) { 
 			for(Personaje p: personaje.getNivel().getEnemigos()) {
 				
 			}
 		}
+	}
+
+	@Override
+	public void activar() {
+		// TODO Auto-generated method stub
+		
 	}
 }

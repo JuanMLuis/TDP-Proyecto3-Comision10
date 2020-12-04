@@ -1,6 +1,7 @@
 package LogicaAbstracta;
 
 import Logica.Jugador;
+import Logica.Paralisis;
 
 public abstract class Enemigo extends Personaje  {
 
@@ -28,6 +29,7 @@ public abstract class Enemigo extends Personaje  {
 	public  void eliminar() {			//cuando tengamos oleadas probablemente lo cambiemos un poco
 		miGrafico.eliminar();
 		miNivel.removeEnemigo(this);
+		new Paralisis(posX, posY, miNivel); 
 	}
 	
 	public void ComprobarRango() {

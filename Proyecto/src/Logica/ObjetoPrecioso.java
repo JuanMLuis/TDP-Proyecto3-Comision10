@@ -15,6 +15,11 @@ public class ObjetoPrecioso extends Premio{
 	}
 
 	
+	public void activar() {
+		
+	}
+
+	
 
 	
 	

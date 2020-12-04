@@ -11,4 +11,6 @@ public  void eliminar() {
 	public void Aceptame(Personaje e) {
 		e.aceptarPremio(this);
 	}
+	
+	public abstract void activar();
 }
