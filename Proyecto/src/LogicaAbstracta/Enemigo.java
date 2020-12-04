@@ -11,7 +11,7 @@ public abstract class Enemigo extends Personaje  {
 			cooldown--;
 		estadoActual.movimiento('s',velocidad);
 		ComprobarRango();
-		Colision();
+		colision();
 
 	}
 	

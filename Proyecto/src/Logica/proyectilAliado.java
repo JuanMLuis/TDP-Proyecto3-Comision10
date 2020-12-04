@@ -23,7 +23,7 @@ public class proyectilAliado extends Proyectil {
 			for(int i=0;i<velocidad;i++) {
 				moverse('w');
 			}
-			Colicion();
+			colision();
 		}
 
 		

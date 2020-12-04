@@ -71,7 +71,7 @@ public class Jugador extends Personaje  {
 	public void moverse(char s) {
 		
 		super.moverse(s);
-		Colision();
+		colision();
 		mandarSeñal();
 		//mandarSeñal();
 	}

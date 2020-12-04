@@ -35,7 +35,7 @@ public class ProyectilEnemigo extends Proyectil {
 			moverse('s');
 		}
 		
-		Colicion();
+		colision();
 
 		
 	}
