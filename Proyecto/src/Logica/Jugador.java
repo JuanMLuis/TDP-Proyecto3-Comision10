@@ -73,7 +73,7 @@ public class Jugador extends Personaje  {
 		super.moverse(s);
 		Colision();
 		mandarSeñal();
-
+		//mandarSeñal();
 	}
 	
 	public void RecibirDaño(int dmg) {

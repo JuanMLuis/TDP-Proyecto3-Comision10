@@ -12,7 +12,5 @@ public class PoderEspecial extends ObjetoPrecioso{
 	}
 
 	
-	protected void Aceptame(Personaje e) {
-		
-	}
+	
 }

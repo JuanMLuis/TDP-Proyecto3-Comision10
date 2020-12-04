@@ -16,5 +16,4 @@ public abstract class EfectoTemporal extends Premio{ //cada uno de los metodos s
 	public void turno() {
 
 	}
-
 }
