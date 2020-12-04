@@ -9,8 +9,6 @@ public abstract class ObjetoPrecioso extends Premio{
 		
 	}
 
-	protected void Aceptame(Entidad e) {
-	e.aceptarPremio(this);
-	}
+	
 
 }
