@@ -9,14 +9,13 @@ public abstract class Estado { //estado de los premios y personajes
 		for(int i=0;i<=v;i++) {
 			miEntidad.moverse(c);
 		}
-		
 	}
+	
 	public void recibirDaño(int dmg) {
 		int aux=(miEntidad.getVida()-dmg);
 		if(aux<=0) {
 			miEntidad.eliminar();
 		}else
 			miEntidad.setVida(aux);
-		
 	}
 }

@@ -27,13 +27,13 @@ public class Paralisis extends EfectoTemporal{
 
 	public void activar() { 
 		Estado parailsis; 
-			for(Personaje p: miNivel.getEnemigos()) {
-				parailsis = new EstadoParalisis(p); //les cambio el estado a paraisis 
-				p.cambiarEstado(parailsis);
-			}
-			timer.schedule(new EliminarParalisis(), 5000);
+		for(Personaje p: miNivel.getEnemigos()) {
+			parailsis = new EstadoParalisis(p); //les cambio el estado a paralisis 
+			p.cambiarEstado(parailsis);
 		}
-	
+		timer.schedule(new EliminarParalisis(), 5000);
+	}
+
 	private class EliminarParalisis extends TimerTask{
 
 		public void run() {

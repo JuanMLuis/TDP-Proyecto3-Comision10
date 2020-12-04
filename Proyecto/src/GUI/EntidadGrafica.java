@@ -18,9 +18,8 @@ public abstract class EntidadGrafica {
 		miGrafico.setLocation(posX, posY);
 	}
 	
-	public void setGrafico(ImageIcon i) {
-		miGrafico.setIcon(i);
-		
+	public void setGrafico(String i) {
+		acomodarImagen(i);
 	}
 
 	public void eliminar() {
