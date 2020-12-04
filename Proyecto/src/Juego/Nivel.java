@@ -46,14 +46,18 @@ public abstract class Nivel{
 	}
 
 	public  void  Turno() {
+		if(!enemigos.isEmpty()) {
 		ArrayList<Entidad> aux= new ArrayList<Entidad>();	
-		for(Entidad e: enemigos.get(0))	//este paso extra evita un error que se producia
+		for(Entidad e: enemigos.get(0))								//este paso extra evita un error que se producia
 			aux.add(e);
 		for(Entidad r: Entidades)
 			aux.add(r);
 		MoverEntidades(aux);
 		jugador.turno();
 		comprobarLista();
+		}else {
+			//fin de lvl:
+		}
 	}
 
 	public void addEnemigo(Enemigo e) {
@@ -110,19 +114,23 @@ public abstract class Nivel{
 	public void comprobarLista() { 
 		if(enemigos.get(0).isEmpty())
 			enemigos.remove(0);
+		
 	}
 	
 	protected void crearOleadas(int cantEnemigos) { 
 		ArrayList<Personaje> oleada;
 		int x = 0;
-		int y = -20;
+		int y = -50;
 		FabricaEnemigo enemigo = FabricaEnemigos.getFabricaEnemigos();
 		for(int i = 0; i < cantOleadas; i++) { 
 			oleada = new ArrayList<Personaje>();
 			while(oleada.size() < cantEnemigos) { 
-				oleada.add(enemigo.crearEnemigoAlpha(this, (i * 40) + 10, y));
-				if(i >= 10)
-					y = y - 40;
+				x++;
+				oleada.add(enemigo.crearEnemigoAlpha(this,( x * 60) + 10, y));
+				if(x >= 10) {
+					y = y - 60;
+					x=1;
+				}
 			}
 			enemigos.add(oleada);
 		}
