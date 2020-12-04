@@ -3,6 +3,7 @@ package Logica;
 import javax.swing.Timer;
 
 import Estados.EstadoAuxiliar;
+import LogicaAbstracta.EfectoTemporal;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Personaje;
 import LogicaAbstracta.Proyectil;

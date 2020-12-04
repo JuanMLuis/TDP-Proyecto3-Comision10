@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import javax.swing.Timer;
 
 import Estados.EstadoEnemigo;
+import LogicaAbstracta.EfectoTemporal;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Personaje;
 
