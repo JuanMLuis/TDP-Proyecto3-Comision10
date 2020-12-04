@@ -24,10 +24,7 @@ public abstract class Nivel{
 		Enemigos.remove(entidad);
 		
 	}
-	
-	public boolean comprobarMovimiento(char d) { 
-		return false; //volver a hacer 
-	}
+
 	
 	public Juego getJuego() {
 		return miJuego;
