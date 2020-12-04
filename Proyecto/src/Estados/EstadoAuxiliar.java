@@ -11,7 +11,7 @@ public class EstadoAuxiliar extends Estado {//LR: La hice para probar unas cosas
 	}
 
 	@Override
-	public void disparar(int r) {		//por ahora no lo necesitamos implementado
+	public void disparar() {		//por ahora no lo necesitamos implementado
 		int x = miEntidad.getCorx();
 		int y = miEntidad.getCorY();
 		

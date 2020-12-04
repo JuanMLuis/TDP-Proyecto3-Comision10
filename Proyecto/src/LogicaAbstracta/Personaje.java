@@ -7,7 +7,6 @@ public abstract class Personaje extends Entidad  {
 
 	protected VisitorAbstracto miVisitor;
 	protected int vida;
-	protected int rango;
 	protected int cooldown;
 	protected int cooldownOriginal;   // guardamos el valor orginal para los reset del cooldown
 	protected Estado estadoActual;
@@ -18,7 +17,7 @@ public abstract class Personaje extends Entidad  {
 
 	public void disparar() {
 		if(cooldown==0) {
-			estadoActual.disparar(rango);
+			estadoActual.disparar();
 			resetCooldown();
 		}
 
@@ -67,8 +66,6 @@ public abstract class Personaje extends Entidad  {
 		miVisitor.aceptarSeñalJugador(j);
 	}
 
-	public int getRango() {
-		return rango;
-	}
+	
 
 }

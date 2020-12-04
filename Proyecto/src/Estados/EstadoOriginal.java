@@ -14,7 +14,7 @@ public class EstadoOriginal extends Estado {
 
 
 	@Override
-	public void disparar(int r) {		//por ahora no lo necesitamos implementado
+	public void disparar() {		//por ahora no lo necesitamos implementado
 		int x=miEntidad.getCorx()+10;		 //el proyectil acualmente va a estar corrido (hay que ajustarlo)
 		int y=miEntidad.getCorY()+10;
 		new proyectilAliado(x,y,miEntidad.getNivel());

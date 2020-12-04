@@ -119,6 +119,11 @@ public abstract class Nivel{
 			e.eliminar();
 		
 	}
+
+	public Jugador getJugador() {
+		// TODO Auto-generated method stub
+		return jugador;
+	}
 	
 	
 	

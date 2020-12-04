@@ -1,12 +1,16 @@
 package LogicaAbstracta;
 
+import Logica.Jugador;
+
 public abstract class Enemigo extends Personaje  {
 
+	protected int rango;
 
 	public void turno() {
 		if(cooldown>0)					//reduccion del cooldown
 			cooldown--;
 		estadoActual.movimiento('s',velocidad);
+		ComprobarRango();
 		Colicion();
 
 	}
@@ -26,4 +30,9 @@ public abstract class Enemigo extends Personaje  {
 		miNivel.removeEnemigo(this);
 	}
 	
+	public void ComprobarRango() {
+		Jugador j = miNivel.getJugador();
+		if(posX-20<=j.getCorx()&&posX+20>=j.getCorx() && posY+rango>=j.getCorY())
+			disparar();
+	}
 }
