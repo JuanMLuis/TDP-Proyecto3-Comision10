@@ -40,7 +40,7 @@ public abstract class Nivel{
 		
 	}
 	
-	public ArrayList<Personaje> Colicion(Entidad e) {//retorna null si no hay colicion, retona la primera entidad con la que coliciona
+	public ArrayList<Personaje> Colision(Entidad e) {//retorna null si no hay colicion, retona la primera entidad con la que coliciona
 		ArrayList<Personaje> colisiones = new ArrayList<Personaje>();
 		if(jugador!=e && jugador.getHitbox().intersects(e.getHitbox()))
 			colisiones.add(jugador);

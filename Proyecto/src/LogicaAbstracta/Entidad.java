@@ -78,7 +78,7 @@ public abstract class Entidad {
 	}
 	
 	protected void Colicion() {
-		ArrayList<Personaje> aux =miNivel.Colicion(this); 
+		ArrayList<Personaje> aux =miNivel.Colision(this); 
 		for(Personaje e:aux) {
 			Aceptame(e);
 		}
