@@ -2,38 +2,25 @@ package Juego;
 
 import java.util.ArrayList;
 
-import Logica.EnemigoAlpha;
-import Logica.EnemigoBeta;
 import Logica.Jugador;
-import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Personaje;
 public class Nivel1 extends Nivel{
 	
 	public Nivel1 (Juego j) {
-		miJuego=j;
-		Oleada1= new ArrayList<Personaje>();//Recordar de eliminar los jugadores de los siguientes niveles.
-		Enemigos=Oleada1;
-		CantEnemigosVivos=20;
-		Enemigos.add(new EnemigoAlpha(this, 60, 60));
-		Enemigos.add(new EnemigoAlpha(this,150,60));
-		Enemigos.add(new EnemigoBeta(this,200,60));
-		Enemigos.add(new EnemigoAlpha(this,260,60));
-		Enemigos.add(new EnemigoAlpha(this,310,60));
-		Enemigos.add(new EnemigoBeta(this, 380, 60));
-		Enemigos.add(new EnemigoBeta(this, 460, 60));
-		Enemigos.add(new EnemigoAlpha(this, 530, 60));
-		Enemigos.add(new EnemigoBeta(this, 670, 60));
+		miJuego = j;
 		Entidades = new ArrayList<Entidad>();
-		ganar=false;
+		ganar = false;
+		enemigos = new ArrayList<ArrayList<Personaje>>();
+		cantOleadas = 2;
+		crearOleadas(15); 
 	}
 	
-	
-	
-
 	public Jugador getJugador() {
 		return jugador;
 	}
 	
-
+	public void rellenarLista() { 
+		
+	}
 }

@@ -82,7 +82,6 @@ public class GUI extends JFrame {
 	}
 
 	public void Perder() {
-		
 		aAgregar= new JLabel(""); 
 		aAgregar.setIcon(new ImageIcon("img\\perdiste.png"));
 		aAgregar.setBounds(110,120,550,300);//agregar botones de Game Over 
