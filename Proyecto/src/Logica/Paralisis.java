@@ -37,10 +37,8 @@ public class Paralisis extends EfectoTemporal{
 	private class EliminarParalisis extends TimerTask{
 
 		public void run() {
-			Estado estadoAct; 
 			for(Personaje p: miNivel.getEnemigos()) { //saco la paralisis
-				estadoAct = new EstadoEnemigoAlpha(p); //les cambio el estado a paraisis 
-				p.cambiarEstado(estadoAct);
+				p.resetEstado();
 			}
 		} 
 	}

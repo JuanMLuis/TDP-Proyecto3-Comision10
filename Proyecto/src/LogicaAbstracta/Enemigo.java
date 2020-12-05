@@ -39,4 +39,6 @@ public abstract class Enemigo extends Personaje  {
 		if(posX-20<=j.getCorx()&&posX+20>=j.getCorx() && posY+rango>=j.getCorY())
 			disparar();
 	}
+	
+	
 }

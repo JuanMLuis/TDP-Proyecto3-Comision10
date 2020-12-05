@@ -65,6 +65,7 @@ public abstract class Personaje extends Entidad  {
 		miVisitor.aceptarSeñalJugador(j);
 	}
 
+	public abstract void resetEstado();
 	
 
 }

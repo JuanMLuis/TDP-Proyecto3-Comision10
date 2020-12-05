@@ -37,9 +37,7 @@ public class NuevoPoder extends EfectoTemporal{
 	private class SacarPoder extends TimerTask{
 
 		public void run() {
-			Estado estadoAct; 
-			estadoAct = new EstadoJugador(miNivel.getJugador()); 
-			miNivel.getJugador().cambiarEstado(estadoAct);
+			miNivel.getJugador().resetEstado();
 		}
 	} 
 }

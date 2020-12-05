@@ -1,6 +1,7 @@
 package Logica;
 
 import Estados.EstadoEnemigoAlpha;
+import Estados.EstadoEnemigoBeta;
 import GUI.EntidadGraficaEnemigoAlpha;
 import GUI.EntidadGraficaEnemigoBeta;
 import Juego.Nivel;
@@ -17,7 +18,7 @@ public class EnemigoBeta extends Enemigo {
 		velocidad=2;
 		miGrafico=new EntidadGraficaEnemigoBeta(x,y,this);
 		miVisitor=new VisitorEnemigo(this);
-		estadoActual= new EstadoEnemigoAlpha(this);
+		estadoActual= new EstadoEnemigoBeta(this);
 		rango=600;
 		cooldown=0;
 		vida=175;
@@ -27,6 +28,11 @@ public class EnemigoBeta extends Enemigo {
 	public void resetCooldown() {
 		cooldown=40;
 		
+	}
+
+	
+	public void resetEstado() {
+		estadoActual=new EstadoEnemigoBeta(this);
 	}
 
 	

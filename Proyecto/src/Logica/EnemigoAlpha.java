@@ -37,6 +37,12 @@ public class EnemigoAlpha extends Enemigo {
 			System.out.println("Hols");
 		}
 	}
+
+	@Override
+	public void resetEstado() {
+		estadoActual= new EstadoEnemigoAlpha(this);
+		
+	}
 	
 	
 

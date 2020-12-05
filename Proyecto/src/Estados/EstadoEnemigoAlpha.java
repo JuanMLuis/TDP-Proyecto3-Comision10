@@ -1,5 +1,6 @@
 package Estados;
 
+import Logica.ProyectilEnemigoAlpha;
 import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Personaje;
@@ -14,7 +15,7 @@ public class EstadoEnemigoAlpha extends Estado{
 	public void disparar() {
 		int x= miEntidad.getCorx()+10;		 //el proyectil acualmente va a estar corrido (hay que ajustarlo)
 		int y=miEntidad.getCorY()+10;
-		new ProyectilEnemigo(x,y,miEntidad.getNivel());
+		new ProyectilEnemigoAlpha(x,y,miEntidad.getNivel());
 	}
 
 

@@ -97,5 +97,11 @@ public class Jugador extends Personaje  {
 	public void setNivel(Nivel n) {
 		miNivel=n;
 	}
+
+
+	@Override
+	public void resetEstado() {
+		estadoActual=new EstadoJugador(this);
+	}
 }
 
