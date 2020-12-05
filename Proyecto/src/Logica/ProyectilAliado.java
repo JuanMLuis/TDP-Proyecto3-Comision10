@@ -6,9 +6,9 @@ import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Proyectil;
 
 
-public class proyectilAliado extends Proyectil {
+public class ProyectilAliado extends Proyectil {
 	
-		public proyectilAliado(int x,int y,Nivel p) {
+		public ProyectilAliado(int x,int y,Nivel p) {
 			daño=20;
 			velocidad=14;					//de lo posible la velocidad deve ser mayor que la del que disparo
 			miNivel=p;

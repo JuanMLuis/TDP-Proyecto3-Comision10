@@ -46,7 +46,7 @@ public class GUI extends JFrame {
 	 * Create the frame.
 	 */
 	public GUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("img\\hiclipart.com (2).png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("icono.png"));
 		setResizable(false);
 		setTitle("Star Wars: Rise of the empire");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -57,7 +57,7 @@ public class GUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		l_fondo = new JLabel("");
-		l_fondo.setIcon(new ImageIcon("img\\fondoNivel2 .jpg"));
+		l_fondo.setIcon(new ImageIcon("img\\fondoNivel1.jpg"));
 		l_fondo.setBounds(0, 0, 770, 540);
 		contentPane.add(l_fondo);
 				
@@ -84,7 +84,7 @@ public class GUI extends JFrame {
 	public void Perder() {
 		aAgregar= new JLabel(""); 
 		aAgregar.setIcon(new ImageIcon("img\\perdiste.png"));
-		aAgregar.setBounds(110,120,550,300);//agregar botones de Game Over 
+		aAgregar.setBounds(110,120,550,300);
 		l_fondo.add(aAgregar);
 		aAgregar.setVisible(true);
 		this.repaint();

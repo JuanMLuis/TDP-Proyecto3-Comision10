@@ -17,7 +17,7 @@ public abstract class Enemigo extends Personaje  {
 
 	}
 	
-	protected  void Aceptame(Personaje e) {
+	protected  void aceptame(Personaje e) {
 		e.aceptarEnemigo(this);
 	}
 	

@@ -25,7 +25,7 @@ public class MovimientoDelJuego extends Thread{	//esta clase no esta en el UML, 
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			miJuego.TurnoEnemigos();
+			miJuego.turnoEnemigos();
 			
 			
 		}

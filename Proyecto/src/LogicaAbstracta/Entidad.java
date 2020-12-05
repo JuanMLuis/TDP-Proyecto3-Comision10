@@ -67,7 +67,7 @@ public abstract class Entidad {
 		return miGrafico.hitbox();
 	}
 	
-	protected abstract void Aceptame(Personaje e); 
+	protected abstract void aceptame(Personaje e); 
 	
 	public int getVelocidad() {
 		return velocidad;
@@ -78,9 +78,9 @@ public abstract class Entidad {
 	}
 	
 	protected void colision() {
-		ArrayList<Personaje> aux =miNivel.Colision(this); 
+		ArrayList<Personaje> aux =miNivel.colision(this); 
 		for(Personaje e:aux) {
-			Aceptame(e);
+			aceptame(e);
 		}
 	}
 }

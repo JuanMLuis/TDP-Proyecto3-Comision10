@@ -6,7 +6,7 @@ import java.util.TimerTask;
 
 import Estados.EstadoEnemigo;
 import Estados.EstadoNuevoPoder;
-import Estados.EstadoOriginal;
+import Estados.EstadoJugador;
 import GUI.EntidadGraficaNuevoPoder;
 import GUI.EntidadGraficaParalisis;
 import Juego.Nivel;
@@ -38,7 +38,7 @@ public class NuevoPoder extends EfectoTemporal{
 
 		public void run() {
 			Estado estadoAct; 
-			estadoAct = new EstadoOriginal(miNivel.getJugador()); 
+			estadoAct = new EstadoJugador(miNivel.getJugador()); 
 			miNivel.getJugador().cambiarEstado(estadoAct);
 		}
 	} 

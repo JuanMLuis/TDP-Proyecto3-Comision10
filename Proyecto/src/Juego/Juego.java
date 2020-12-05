@@ -35,8 +35,8 @@ public class Juego {
 	}
 
 
-	public void TurnoEnemigos() {
-		miNivel.Turno();
+	public void turnoEnemigos() {
+		miNivel.turno();
 		
 	}
 

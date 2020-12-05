@@ -10,9 +10,9 @@ public abstract class Proyectil extends Entidad  {
 	}
 
 	
-	protected void Aceptame(Personaje e) {
+	protected void aceptame(Personaje e) {
 		
-		e.AceptarProyectil(this);
+		e.aceptarProyectil(this);
 	}
 	
 	public void ImpactarPersonaje(Personaje pj) {

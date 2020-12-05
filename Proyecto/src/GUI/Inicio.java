@@ -46,7 +46,7 @@ public class Inicio extends JFrame {
 	 * Create the frame.
 	 */
 	public Inicio() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("img\\hiclipart.com (2).png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("img\\icono.png"));
 		setTitle("Star Wars: Rise of the empire ");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -70,7 +70,7 @@ public class Inicio extends JFrame {
 				g.setVisible(true);
 				dispose();
 				miJ=new Juego(g);
-				Testeos.empezar();		//esto es temporal
+				Testeos.empezar();		
 			}
 		});
 		

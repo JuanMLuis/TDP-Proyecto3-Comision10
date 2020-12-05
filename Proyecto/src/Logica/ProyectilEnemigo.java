@@ -22,8 +22,8 @@ public class ProyectilEnemigo extends Proyectil {
 	}
 	
 	
-	protected void Aceptame(Personaje e) {
-		e.AceptarProyectilEnemigo(this);
+	protected void aceptame(Personaje e) {
+		e.aceptarProyectilEnemigo(this);
 	}
 	
 	

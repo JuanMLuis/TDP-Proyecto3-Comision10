@@ -8,7 +8,7 @@ public  void eliminar() {
 		miNivel.removeEntidad(this);
 	
 	}
-	public void Aceptame(Personaje e) {
+	public void aceptame(Personaje e) {
 		e.aceptarPremio(this);
 	}
 	

@@ -1,7 +1,7 @@
 package Estados;
 
 import Logica.ProyectilEspecial;
-import Logica.proyectilAliado;
+import Logica.ProyectilAliado;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Personaje;
 

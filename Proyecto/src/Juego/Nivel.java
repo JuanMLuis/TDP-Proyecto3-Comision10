@@ -30,7 +30,7 @@ public abstract class Nivel{
 
 	//quizas se podria hacer el Nivel como un hilo y no tenerlo como clase aparte, nunca hablamos de esto solo lo dejo como idea
 
-	public ArrayList<Personaje> Colision(Entidad e) {//retorna null si no hay colicion, retona la primera entidad con la que coliciona
+	public ArrayList<Personaje> colision(Entidad e) {//retorna null si no hay colicion, retona la primera entidad con la que coliciona
 		ArrayList<Personaje> colisiones = new ArrayList<Personaje>();
 		if(jugador!=e && jugador.getHitbox().intersects(e.getHitbox()))
 			colisiones.add(jugador);
@@ -45,7 +45,7 @@ public abstract class Nivel{
 		jugador=jugador2;
 	}
 
-	public  void  Turno() {
+	public  void  turno() {
 		if(!enemigos.isEmpty()) {
 		ArrayList<Entidad> aux= new ArrayList<Entidad>();	
 		for(Entidad e: enemigos.get(0))								//este paso extra evita un error que se producia

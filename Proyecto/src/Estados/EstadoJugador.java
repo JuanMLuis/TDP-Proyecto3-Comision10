@@ -1,23 +1,23 @@
 package Estados;
 
 import Logica.ProyectilEnemigo;
-import Logica.proyectilAliado;
+import Logica.ProyectilAliado;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Personaje;
 import LogicaAbstracta.Proyectil;
 
-public class EstadoOriginal extends Estado {
+public class EstadoJugador extends Estado {
 	
-	public EstadoOriginal(Personaje e) {
+	public EstadoJugador(Personaje e) {
 		miEntidad=e;
 	}
 
 
 	@Override
-	public void disparar() {		//por ahora no lo necesitamos implementado
+	public void disparar() {		
 		int x=miEntidad.getCorx()+10;		 //el proyectil acualmente va a estar corrido (hay que ajustarlo)
 		int y=miEntidad.getCorY()+10;
-		new proyectilAliado(x,y,miEntidad.getNivel());
+		new ProyectilAliado(x,y,miEntidad.getNivel());
 	}
 
 

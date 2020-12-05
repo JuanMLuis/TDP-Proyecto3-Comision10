@@ -16,9 +16,9 @@ public class FabricaEnemigos extends FabricaEnemigo {
 	}
 
 	public Enemigo crearEnemigoAlpha(Nivel n,int x,int y) {
-		EnemigoAlpha e= new EnemigoAlpha(n,x,y);  //LR: El que hizo la clase EnemigoAlpha escribame pls.
-		return e;							//podiste averlo mandado por discord, pensalo asi, cada enemigo se creara desde el nivel, por lo que eso lo podes pedir por parametro
-	}										//los otros dos enteros son la posicion inicial hacelo de manera aleatoria o como te convenga
+		EnemigoAlpha e= new EnemigoAlpha(n,x,y); 
+		return e;							
+	}										
 	
 	private FabricaEnemigos() {
 		super();

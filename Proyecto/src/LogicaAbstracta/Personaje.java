@@ -55,10 +55,10 @@ public abstract class Personaje extends Entidad  {
 	public void aceptarPremio(Premio p) {
 		miVisitor.aceptarPremio(p);
 	}
-	public void AceptarProyectil(Proyectil p) {
+	public void aceptarProyectil(Proyectil p) {
 		miVisitor.aceptarProyectil(p);
 	}
-	public void AceptarProyectilEnemigo(ProyectilEnemigo p) {
+	public void aceptarProyectilEnemigo(ProyectilEnemigo p) {
 		miVisitor.aceptarProyectilEnemigo(p);
 	}
 	
