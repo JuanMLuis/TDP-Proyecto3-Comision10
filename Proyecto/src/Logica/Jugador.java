@@ -40,9 +40,7 @@ public class Jugador extends Personaje  {
 			cooldown--;
 
 		estadoActual.movimiento(direccionActual,velocidad);
-
 		direccionActual=('+');
-
 	}
 
 
@@ -53,12 +51,12 @@ public class Jugador extends Personaje  {
 
 	public void setVida(int v) { 
 		vida = v;
+		miNivel.getJuego().getGui().actualizarVida(vida);
 	}
 
 	@Override
 	protected void aceptame(Personaje e) {
 		e.aceptarJugador(this);
-
 	}
 
 	public void mandarSeñal() {
@@ -69,7 +67,6 @@ public class Jugador extends Personaje  {
 	}
 
 	public void moverse(char s) {
-
 		super.moverse(s);
 		colision();
 		mandarSeñal();

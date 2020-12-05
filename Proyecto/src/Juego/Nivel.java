@@ -89,7 +89,12 @@ public abstract class Nivel{
 	}
 
 	public ArrayList<Personaje> getEnemigos() { 
-		return enemigos.get(0);
+		ArrayList<Personaje>ene;
+		if(enemigos.size()==0)
+			ene=null;
+		else
+			ene=enemigos.get(0);
+		return ene;
 	}
 
 	public void removeEntidad(Entidad e) {
@@ -160,9 +165,9 @@ public abstract class Nivel{
 		}
 
 	}
-	
+
 	public abstract void cambiarFondo();
-	
+
 	public abstract void cambiarNivel();
 }
 

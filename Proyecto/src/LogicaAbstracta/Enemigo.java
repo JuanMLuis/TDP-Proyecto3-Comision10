@@ -3,13 +3,14 @@ package LogicaAbstracta;
 import Logica.Jugador;
 import Logica.NuevoPoder;
 import Logica.Paralisis;
+import Logica.Pocion;
 
 public abstract class Enemigo extends Personaje  {
 
 	protected int rango;
 
 	public void turno() {
-		if(cooldown>0)					//reduccion del cooldown
+		if(cooldown>0)					//Reduccion del cooldown.
 			cooldown--;
 		estadoActual.movimiento('s',velocidad);
 		ComprobarRango();
@@ -27,11 +28,23 @@ public abstract class Enemigo extends Personaje  {
 	}
 	public abstract void resetCooldown();
 
-	public  void eliminar() {			//cuando tengamos oleadas probablemente lo cambiemos un poco
+	public  void eliminar() {	
 		miGrafico.eliminar();
 		miNivel.removeEnemigo(this);
-		//new Paralisis(posX, posY, miNivel); 
-		new NuevoPoder(posX, posY, miNivel);
+		int random=(int) (Math.random()*10+1);
+		System.out.println(random);
+		switch(random) {
+		case 1:
+			new Paralisis(posX, posY, miNivel); 
+			break;
+		case 2:
+			new NuevoPoder(posX, posY, miNivel);
+			break;
+		case 3:
+			new Pocion(posX,posY,miNivel);
+			break;
+		}
+		
 	}
 	
 	public void ComprobarRango() {

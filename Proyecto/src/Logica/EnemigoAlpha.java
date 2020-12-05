@@ -10,6 +10,7 @@ import VisitorsConcretos.VisitorEnemigo;
 public class EnemigoAlpha extends Enemigo {
 	
 	protected int vidaMaxima;
+	protected boolean velocidadAumentada;
 	
 	public EnemigoAlpha(Nivel n,int x,int y) {//Cuando llega al 20% de la vida duplica su velocidad de movimiento
 		posX=x;  //tienen menos vida pero hacen mas daño
@@ -23,6 +24,7 @@ public class EnemigoAlpha extends Enemigo {
 		cooldown=0;
 		vida=100;
 		vidaMaxima=vida;
+		velocidadAumentada=false;
 	}
 
 	@Override
@@ -32,9 +34,9 @@ public class EnemigoAlpha extends Enemigo {
 	}
 	public void RecibirDaño(int dmg) {
 		super.RecibirDaño(dmg);
-		if(vida<=((vidaMaxima*20)/100)) {//20% de la vida para la velocidad.
+		if(vida<=((vidaMaxima*20)/100)&&!velocidadAumentada) {//20% de la vida para la velocidad.
 			velocidad=velocidad*2;
-			System.out.println("Hols");
+			velocidadAumentada=true;
 		}
 	}
 
