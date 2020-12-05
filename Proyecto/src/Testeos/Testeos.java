@@ -19,7 +19,6 @@ public class Testeos {//se creo con el unico fin de probar cosas, son libres de 
 			}
 		}
 		ini.rJ().startJuego();
-
 	}
 	
 	public static void empezar() {

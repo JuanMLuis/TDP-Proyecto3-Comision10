@@ -18,7 +18,8 @@ public abstract class Nivel{
 	protected Juego miJuego;
 	protected int cantOleadas;
 	protected boolean ganar;
-	
+	protected Nivel siguienteNivel;
+
 
 	public void removeEnemigo(Personaje p) {
 		enemigos.get(0).remove(p);
@@ -47,16 +48,20 @@ public abstract class Nivel{
 
 	public  void  turno() {
 		if(!enemigos.isEmpty()) {
-		ArrayList<Entidad> aux= new ArrayList<Entidad>();	
-		for(Entidad e: enemigos.get(0))								//este paso extra evita un error que se producia
-			aux.add(e);
-		for(Entidad r: Entidades)
-			aux.add(r);
-		MoverEntidades(aux);
-		jugador.turno();
-		comprobarLista();
+			ArrayList<Entidad> aux= new ArrayList<Entidad>();	
+			for(Entidad e: enemigos.get(0))								//este paso extra evita un error que se producia
+				aux.add(e);
+			for(Entidad r: Entidades)
+				aux.add(r);
+			MoverEntidades(aux);
+			jugador.turno();
+			comprobarLista();
 		}else {
-			//fin de lvl:
+			this.reset();		
+			if(siguienteNivel!=null)
+				miJuego.actualizarNivel(siguienteNivel);
+			else
+				System.out.println("TERMINO :d");
 		}
 	}
 
@@ -114,30 +119,35 @@ public abstract class Nivel{
 	public void comprobarLista() { 
 		if(enemigos.get(0).isEmpty())
 			enemigos.remove(0);
-		
+
 	}
-	
-	protected void crearOleadas(int cantEnemigos) { 
+
+	protected void crearOleadas(int cantEnemigosOleada) { 
 		ArrayList<Personaje> oleada;
 		int x = 0;
 		int y = -50;
 		FabricaEnemigo enemigo = FabricaEnemigos.getFabricaEnemigos();
+		int cantEnemigos = 0;
+		int cantEnemigosAnterior;
+
 		for(int i = 0; i < cantOleadas; i++) { 
 			oleada = new ArrayList<Personaje>();
+			cantEnemigosAnterior=cantEnemigos;
+			cantEnemigos = (int) (cantEnemigosOleada -((Math.random()*cantEnemigosOleada)/2+1))+cantEnemigosAnterior;
 			while(oleada.size() < cantEnemigos) { 
 				x++;
-				
+
 				int VariacionX= (int)(Math.random()*20)+1;
 				int VariacionY=(int)((Math.random()*6)+1)*-1;
-				
-				
+
+
 				int aux=(int)(Math.random()*2+1);
 				if(aux==1)
-				oleada.add(enemigo.crearEnemigoAlpha(this,( x * 60) + VariacionX, y+VariacionY));
+					oleada.add(enemigo.crearEnemigoAlpha(this,( x * 60) + VariacionX, y+VariacionY));
 				else
-				oleada.add(enemigo.crearEnemigoBeta(this,( x * 60) + VariacionX, y+VariacionY));
-				
-				
+					oleada.add(enemigo.crearEnemigoBeta(this,( x * 60) + VariacionX, y+VariacionY));
+
+
 				if(x >= 10) {
 					y = y - 60;
 					x=1;
@@ -145,7 +155,11 @@ public abstract class Nivel{
 			}
 			enemigos.add(oleada);
 		}
-			
+
 	}
+	
+	public abstract void cambiarFondo();
+	
+	public abstract void cambiarNivel();
 }
 

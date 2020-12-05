@@ -10,42 +10,46 @@ public class Juego {
 	protected GUI miGui;
 	protected Nivel miNivel;
 	protected Jugador jugador;
-	
-	
+
 	public Juego(GUI g) {
 		miGui=g;
 		miNivel=new Nivel1(this);
 		jugador= new Jugador(miNivel);
 		miNivel.setJugador(jugador);
+		miNivel.cambiarNivel();
 	}
-	
-	
+
 	public void setGUI(GUI g) {
 		miGui=g;
-		
 	}
+
 	public GUI getGui() {
 		return miGui;
 	}
-	
+
 	public void startJuego() {
 		HiloTeclado ht=new HiloTeclado(miGui,jugador);
 		ht.start();
 		new MovimientoDelJuego(this).start();
 	}
 
-
 	public void turnoEnemigos() {
 		miNivel.turno();
-		
-	}
 
+	}
 
 	public void gameOver() {//si esto salta es fin del juego por derrota (aun sin programar)
 		MovimientoDelJuego.GameOver();
 		miNivel.reset();
-		miGui.Perder();
-		
+		miGui.Perder();	
+	}
+
+	public void actualizarNivel(Nivel n) {
+		miNivel=n;
+		miNivel.setJugador(jugador);
+		jugador.setNivel(n);
+		miNivel.cambiarFondo();
+		miNivel.cambiarNivel();
 	}
 
 }

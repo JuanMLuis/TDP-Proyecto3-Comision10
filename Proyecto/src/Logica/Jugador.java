@@ -92,7 +92,10 @@ public class Jugador extends Personaje  {
 
 	protected void resetCooldown() {
 		cooldown=5;
-
+	}
+	
+	public void setNivel(Nivel n) {
+		miNivel=n;
 	}
 }
 

@@ -3,6 +3,7 @@ package GUI;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -21,11 +22,12 @@ import java.awt.event.KeyListener;
 public class GUI extends JFrame {
 
 	private JPanel contentPane;
-	private JLabel l_fondo;
+	private static JLabel l_fondo;
 	private Jugador jugador;
 	private Juego juego;
 	private JLabel Vida;
 	private JLabel aAgregar;
+	private static JLabel l_nivel = new JLabel();
 	/**
 	 * Launch the application.
 	 */
@@ -65,8 +67,15 @@ public class GUI extends JFrame {
 		
 		Vida= new JLabel();
 		Vida.setForeground(Color.WHITE);
+		Vida.setFont(new Font("Microsoft PhagsPa", Font.BOLD, 14));
 		l_fondo.add(Vida);
 		Vida.setBounds(0,-30,130,100);
+		
+		
+		l_fondo.add(l_nivel);
+		l_nivel.setBounds(710,-30,500,100);
+		l_nivel.setForeground(Color.WHITE);
+		l_nivel.setFont(new Font("Microsoft PhagsPa", Font.BOLD, 14));
 	}
 	
 	public JLabel getlabel() {
@@ -88,6 +97,14 @@ public class GUI extends JFrame {
 		l_fondo.add(aAgregar);
 		aAgregar.setVisible(true);
 		this.repaint();
+	}
+	
+	public static void setearNivel(String s) {
+		l_nivel.setText(s);
+	}
+	
+	public static void cambiarFondo(String ruta) {
+		l_fondo.setIcon(new ImageIcon(ruta));
 	}
 	
 }

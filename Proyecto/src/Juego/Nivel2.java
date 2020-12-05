@@ -6,34 +6,33 @@ import GUI.GUI;
 import Logica.Jugador;
 import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Personaje;
-public class Nivel1 extends Nivel{
-	
-	public Nivel1 (Juego j) {
-		siguienteNivel = new Nivel2(j);
+
+public class Nivel2 extends Nivel {
+
+	public Nivel2 (Juego j) {
+		siguienteNivel = null;
 		miJuego = j;
 		Entidades = new ArrayList<Entidad>();
 		ganar = false;
 		enemigos = new ArrayList<ArrayList<Personaje>>();
-		cantOleadas = 1;
-		crearOleadas(5); 
+		cantOleadas = 3;
+		crearOleadas(12); 
 	}
 	
 	public Jugador getJugador() {
 		return jugador;
 	}
-	
-	public void rellenarLista() { 
-		
-	}
 
 	@Override
 	public void cambiarFondo() {
-		GUI.cambiarFondo("img\\fondoNivel1.jpg");
+		GUI.cambiarFondo("img\\fondoNivel2.jpg");
 		
 	}
 
 	@Override
 	public void cambiarNivel() {
-		GUI.setearNivel("Nivel 1");
+		GUI.setearNivel("Nivel 2");
+		
 	}
+	
 }

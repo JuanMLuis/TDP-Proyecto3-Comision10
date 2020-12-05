@@ -22,7 +22,6 @@ public class MovimientoDelJuego extends Thread{	//esta clase no esta en el UML, 
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			miJuego.turnoEnemigos();
