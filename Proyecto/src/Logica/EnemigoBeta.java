@@ -1,12 +1,9 @@
 package Logica;
 
-import Estados.EstadoEnemigoAlpha;
 import Estados.EstadoEnemigoBeta;
-import GUI.EntidadGraficaEnemigoAlpha;
 import GUI.EntidadGraficaEnemigoBeta;
 import Juego.Nivel;
 import LogicaAbstracta.Enemigo;
-import LogicaAbstracta.Entidad;
 import VisitorsConcretos.VisitorEnemigo;
 
 public class EnemigoBeta extends Enemigo {
@@ -21,7 +18,7 @@ public class EnemigoBeta extends Enemigo {
 		estadoActual= new EstadoEnemigoBeta(this);
 		rango=600;
 		cooldown=0;
-		vida=175;
+		vida=150;
 	}
 
 	@Override

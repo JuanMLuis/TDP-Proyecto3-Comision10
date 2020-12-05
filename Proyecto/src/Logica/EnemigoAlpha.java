@@ -21,7 +21,7 @@ public class EnemigoAlpha extends Enemigo {
 		estadoActual= new EstadoEnemigoAlpha(this);
 		rango=200;
 		cooldown=0;
-		vida=125;
+		vida=100;
 		vidaMaxima=vida;
 	}
 

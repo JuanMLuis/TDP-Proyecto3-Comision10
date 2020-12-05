@@ -1,10 +1,8 @@
 package Estados;
 
 import Logica.ProyectilEnemigoBeta;
-import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Personaje;
-import LogicaAbstracta.ProyectilEnemigo;
 
 public class EstadoEnemigoBeta extends Estado{
 	
