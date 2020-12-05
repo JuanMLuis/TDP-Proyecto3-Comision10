@@ -32,7 +32,6 @@ public abstract class Enemigo extends Personaje  {
 		miGrafico.eliminar();
 		miNivel.removeEnemigo(this);
 		int random=(int) (Math.random()*10+1);
-		System.out.println(random);
 		switch(random) {
 		case 1:
 			new Paralisis(posX, posY, miNivel); 
