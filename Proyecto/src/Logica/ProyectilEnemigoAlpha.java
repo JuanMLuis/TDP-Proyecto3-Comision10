@@ -1,16 +1,18 @@
 package Logica;
 
+
 import GUI.EntidadGraficaProyectilEnemigo;
 import Juego.Nivel;
 import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Personaje;
 import LogicaAbstracta.Proyectil;
+import LogicaAbstracta.ProyectilEnemigo;
 
 
-public class ProyectilEnemigo extends Proyectil {
+public class ProyectilEnemigoAlpha extends ProyectilEnemigo {
 	
-	public ProyectilEnemigo(int x,int y,Nivel p){//demaciados parametros quizas?
-		daño=15;
+	public ProyectilEnemigoAlpha(int x,int y,Nivel p){//demaciados parametros quizas?
+		daño=20;
 		velocidad=14;					//de lo posible la velocidad deve ser mayor que la del que disparo
 		miNivel=p;
 		posX=x;

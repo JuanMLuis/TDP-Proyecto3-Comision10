@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import GUI.EntidadGrafica;
 import Juego.Nivel;
 import Logica.Jugador;
-import Logica.ProyectilEnemigo;
 
 public abstract class Entidad {
 

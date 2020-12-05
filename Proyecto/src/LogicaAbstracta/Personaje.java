@@ -1,7 +1,6 @@
 package LogicaAbstracta;
 
 import Logica.Jugador;
-import Logica.ProyectilEnemigo;
 
 public abstract class Personaje extends Entidad  {
 

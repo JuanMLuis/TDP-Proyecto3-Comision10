@@ -4,7 +4,7 @@ package Logica;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import Estados.EstadoEnemigo;
+import Estados.EstadoEnemigoAlpha;
 import Estados.EstadoNuevoPoder;
 import Estados.EstadoJugador;
 import GUI.EntidadGraficaNuevoPoder;

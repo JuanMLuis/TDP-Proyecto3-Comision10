@@ -15,8 +15,8 @@ public class Nivel2 extends Nivel {
 		Entidades = new ArrayList<Entidad>();
 		ganar = false;
 		enemigos = new ArrayList<ArrayList<Personaje>>();
-		cantOleadas = 1;
-		crearOleadas(4); 
+		cantOleadas = 3;
+		crearOleadas(12); 
 	}
 	
 	public Jugador getJugador() {

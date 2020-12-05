@@ -1,9 +1,9 @@
 package VisitorsConcretos;
 
 import Logica.Jugador;
-import Logica.ProyectilEnemigo;
 import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Premio;
+import LogicaAbstracta.ProyectilEnemigo;
 import LogicaAbstracta.VisitorAbstracto;
 
 public class VisitorJugador extends VisitorAbstracto {

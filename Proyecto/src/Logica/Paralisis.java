@@ -2,7 +2,7 @@ package Logica;
 
 import java.util.Timer;
 import java.util.TimerTask; 
-import Estados.EstadoEnemigo;
+import Estados.EstadoEnemigoAlpha;
 import Estados.EstadoParalisis;
 import GUI.EntidadGraficaParalisis;
 import Juego.Nivel;
@@ -39,7 +39,7 @@ public class Paralisis extends EfectoTemporal{
 		public void run() {
 			Estado estadoAct; 
 			for(Personaje p: miNivel.getEnemigos()) { //saco la paralisis
-				estadoAct = new EstadoEnemigo(p); //les cambio el estado a paraisis 
+				estadoAct = new EstadoEnemigoAlpha(p); //les cambio el estado a paraisis 
 				p.cambiarEstado(estadoAct);
 			}
 		} 
