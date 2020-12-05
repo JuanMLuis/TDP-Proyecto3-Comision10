@@ -135,7 +135,7 @@ public abstract class Nivel{
 				if(aux==1)
 				oleada.add(enemigo.crearEnemigoAlpha(this,( x * 60) + VariacionX, y+VariacionY));
 				else
-				oleada.add(enemigo.crearEnemigoBeta(this,( x * 60) + 10, y));
+				oleada.add(enemigo.crearEnemigoBeta(this,( x * 60) + VariacionX, y+VariacionY));
 				
 				
 				if(x >= 10) {
