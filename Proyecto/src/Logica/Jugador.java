@@ -14,7 +14,7 @@ public class Jugador extends Personaje  {
 	protected int invencibilidad;
 
 	public Jugador(Nivel l) { 
-		vida = 100;
+		vida = 10;
 		cooldown=0;
 		estadoActual=new EstadoJugador(this);
 		miVisitor= new VisitorJugador(this);
@@ -24,7 +24,7 @@ public class Jugador extends Personaje  {
 		miNivel=l;
 		miGrafico=new EntidadGraficaJugador(posX,posY,this);
 		invencibilidad=0;
-		miNivel.getJuego().getGui().actualizarVida(0);
+		miNivel.getJuego().getGui().actualizarVida(100);
 	}
 
 
@@ -77,9 +77,9 @@ public class Jugador extends Personaje  {
 
 	public void RecibirDaño(int dmg) {
 		if(invencibilidad==0) {
+			invencibilidad=20;				
+			miNivel.getJuego().getGui().actualizarVida(vida);
 			super.RecibirDaño(dmg);
-			invencibilidad=10;				
-			miNivel.getJuego().getGui().actualizarVida(100-vida);
 		}
 	}
 

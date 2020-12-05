@@ -86,13 +86,22 @@ public class GUI extends JFrame {
 		addKeyListener(kl);
 	}
 	public void actualizarVida(int a) {
-		String aux=("Daño Recibido:"+a+"%");
+		String aux=("Vida:"+a+"%");
 		Vida.setText(aux);
 	}
 
-	public void Perder() {
+	public void perder() {
 		aAgregar= new JLabel(""); 
 		aAgregar.setIcon(new ImageIcon("img\\perdiste.png"));
+		aAgregar.setBounds(110,120,550,300);
+		l_fondo.add(aAgregar);
+		aAgregar.setVisible(true);
+		this.repaint();
+	}
+	
+	public void ganar() {
+		aAgregar= new JLabel(""); 
+		aAgregar.setIcon(new ImageIcon("img\\ganaste.png"));
 		aAgregar.setBounds(110,120,550,300);
 		l_fondo.add(aAgregar);
 		aAgregar.setVisible(true);

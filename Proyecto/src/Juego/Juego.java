@@ -38,10 +38,17 @@ public class Juego {
 
 	}
 
-	public void gameOver() {//si esto salta es fin del juego por derrota (aun sin programar)
-		MovimientoDelJuego.GameOver();
+	public void gameOver() {
+		MovimientoDelJuego.fin();
 		miNivel.reset();
-		miGui.Perder();	
+		miNivel.reset();
+		miGui.perder();
+	}
+	
+	public void ganar() {
+		MovimientoDelJuego.fin();
+		miNivel.reset();
+		miGui.ganar();	
 	}
 
 	public void actualizarNivel(Nivel n) {

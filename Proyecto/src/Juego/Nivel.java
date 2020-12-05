@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import Factory.FabricaEnemigo;
 import Factory.FabricaEnemigos;
+import Hilos.MovimientoDelJuego;
 
 public abstract class Nivel{
 
@@ -60,8 +61,10 @@ public abstract class Nivel{
 			this.reset();		
 			if(siguienteNivel!=null)
 				miJuego.actualizarNivel(siguienteNivel);
-			else
-				System.out.println("TERMINO :d");
+			else {
+				MovimientoDelJuego.fin();
+				miJuego.ganar();
+			}
 		}
 	}
 
