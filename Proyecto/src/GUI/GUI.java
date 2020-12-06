@@ -11,10 +11,20 @@ import Juego.Juego;
 import Logica.Jugador;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Toolkit;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.applet.AudioClip;
 
 public class GUI extends JFrame {
@@ -26,6 +36,7 @@ public class GUI extends JFrame {
 	private JLabel Vida;
 	private JLabel aAgregar;
 	private static JLabel l_nivel = new JLabel();
+	private Clip clip;
 	/**
 	 * Launch the application.
 	 */
@@ -55,12 +66,29 @@ public class GUI extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+
+
+		JButton b_musica= new JButton("Musica ON");
+		b_musica.setBounds(650, 510, 120, 20);
+		contentPane.add(b_musica);
+		b_musica.setFocusable(false);
+		b_musica.setFont(new Font("Microsoft PhagsPa", Font.BOLD, 10));
+
+		
+		JButton b_musicaOff= new JButton("Musica OFF");
+		b_musicaOff.setBounds(525, 510, 120, 20);
+		contentPane.add(b_musicaOff);
+		b_musicaOff.setFocusable(false);
+		b_musicaOff.setFont(new Font("Microsoft PhagsPa", Font.BOLD, 10));
+
 		l_fondo = new JLabel("");
 		l_fondo.setIcon(new ImageIcon("img\\fondoNivel1.jpg"));
 		l_fondo.setBounds(0, 0, 770, 540);
 		contentPane.add(l_fondo);
 
 		requestFocusInWindow();
+
+
 
 		Vida= new JLabel();
 		Vida.setForeground(Color.WHITE);
@@ -74,8 +102,33 @@ public class GUI extends JFrame {
 		l_nivel.setForeground(Color.WHITE);
 		l_nivel.setFont(new Font("Microsoft PhagsPa", Font.BOLD, 14));
 
+		b_musica.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				File musicPath = new File("img\\sonido.wav");
+				try {
+					AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+					clip = AudioSystem.getClip();
+					if(clip.isRunning())
+						clip.stop();
+					else {
+						clip.open(audioInput);
+						clip.start();
+						
+					}
+				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
+					e1.printStackTrace();
+				}
 
-
+			}
+		});
+		
+		b_musicaOff.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				clip.stop();
+			}
+		});
 	}
 
 	public JLabel getlabel() {

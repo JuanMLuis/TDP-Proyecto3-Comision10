@@ -57,6 +57,7 @@ public class Juego {
 		jugador.setNivel(n);
 		miNivel.cambiarFondo();
 		miNivel.cambiarNivel();
+		miNivel.getJugador().setVida(100);
 	}
 
 }
