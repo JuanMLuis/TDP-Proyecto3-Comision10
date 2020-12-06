@@ -6,8 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import InicioDelJuego.InicioDelJuego;
 import Juego.Juego;
-import Testeos.Testeos;
 
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -70,7 +70,7 @@ public class Inicio extends JFrame {
 				g.setVisible(true);
 				dispose();
 				miJ=new Juego(g);
-				Testeos.empezar();		
+				InicioDelJuego.empezar();		
 			}
 		});
 		

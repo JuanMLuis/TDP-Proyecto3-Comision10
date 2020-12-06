@@ -1,9 +1,9 @@
-package Testeos;
+package InicioDelJuego;
 
 import GUI.Inicio;
 
 
-public class Testeos {//se creo con el unico fin de probar cosas, son libres de hacer lo que quieran aca
+public class InicioDelJuego {//se creo con el unico fin de probar cosas, son libres de hacer lo que quieran aca
 
 	protected static boolean empieza;
 	
