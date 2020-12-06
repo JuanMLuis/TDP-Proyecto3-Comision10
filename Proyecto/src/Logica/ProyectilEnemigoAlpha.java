@@ -3,9 +3,7 @@ package Logica;
 
 import GUI.EntidadGraficaProyectilEnemigo;
 import Juego.Nivel;
-import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Personaje;
-import LogicaAbstracta.Proyectil;
 import LogicaAbstracta.ProyectilEnemigo;
 
 

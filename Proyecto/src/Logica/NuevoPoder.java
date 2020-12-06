@@ -3,17 +3,11 @@ package Logica;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
-import Estados.EstadoEnemigoAlpha;
 import Estados.EstadoNuevoPoder;
-import Estados.EstadoJugador;
 import GUI.EntidadGraficaNuevoPoder;
-import GUI.EntidadGraficaParalisis;
 import Juego.Nivel;
 import LogicaAbstracta.EfectoTemporal;
 import LogicaAbstracta.Estado;
-import LogicaAbstracta.Personaje;
-import LogicaAbstracta.Proyectil;
 
 public class NuevoPoder extends EfectoTemporal{
 

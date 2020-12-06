@@ -2,7 +2,6 @@ package Logica;
 
 import GUI.EntidadGraficaProyectilAliado;
 import Juego.Nivel;
-import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Proyectil;
 
 

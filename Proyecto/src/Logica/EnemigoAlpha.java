@@ -4,7 +4,6 @@ import Estados.EstadoEnemigoAlpha;
 import GUI.EntidadGraficaEnemigoAlpha;
 import Juego.Nivel;
 import LogicaAbstracta.Enemigo;
-import LogicaAbstracta.Entidad;
 import VisitorsConcretos.VisitorEnemigo;
 
 public class EnemigoAlpha extends Enemigo {

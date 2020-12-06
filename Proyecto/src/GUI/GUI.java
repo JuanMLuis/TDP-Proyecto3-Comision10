@@ -10,7 +10,6 @@ import javax.swing.border.EmptyBorder;
 import Juego.Juego;
 import Logica.Jugador;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -23,9 +22,7 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.applet.AudioClip;
 
 public class GUI extends JFrame {
 

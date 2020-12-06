@@ -1,7 +1,5 @@
 package VisitorsConcretos;
 
-import Logica.Jugador;
-import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Personaje;
 import LogicaAbstracta.Proyectil;
 import LogicaAbstracta.VisitorAbstracto;

@@ -1,9 +1,6 @@
 package GUI;
 
-import java.awt.Image;
-
 import javax.swing.JLabel;
-
 import LogicaAbstracta.Entidad;
 
 public class EntidadGraficaEnemigoAlpha extends EntidadGrafica {

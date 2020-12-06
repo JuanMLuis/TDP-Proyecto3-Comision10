@@ -2,7 +2,6 @@ package Logica;
 
 import java.util.Timer;
 import java.util.TimerTask; 
-import Estados.EstadoEnemigoAlpha;
 import Estados.EstadoParalisis;
 import GUI.EntidadGraficaParalisis;
 import Juego.Nivel;

@@ -2,11 +2,9 @@ package Hilos;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import javax.swing.JFrame;
 
 import GUI.GUI;
 import Logica.Jugador;
-import LogicaAbstracta.Entidad;
 
 public class HiloTeclado extends Thread implements KeyListener {
 

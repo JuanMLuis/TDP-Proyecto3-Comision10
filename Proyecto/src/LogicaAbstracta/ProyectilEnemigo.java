@@ -1,8 +1,5 @@
 package LogicaAbstracta;
 
-import GUI.EntidadGraficaProyectilEnemigo;
-import Juego.Nivel;
-
 
 public abstract class ProyectilEnemigo extends Proyectil {
 

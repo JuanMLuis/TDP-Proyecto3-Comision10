@@ -2,10 +2,8 @@ package LogicaAbstracta;
 
 import java.awt.Rectangle;
 import java.util.ArrayList;
-
 import GUI.EntidadGrafica;
 import Juego.Nivel;
-import Logica.Jugador;
 
 public abstract class Entidad {
 

@@ -1,12 +1,9 @@
 package Juego;
 
 import Logica.Jugador;
-import LogicaAbstracta.Enemigo;
 import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Personaje;
-
 import java.util.ArrayList;
-
 import Factory.FabricaEnemigo;
 import Factory.FabricaEnemigos;
 import Hilos.MovimientoDelJuego;

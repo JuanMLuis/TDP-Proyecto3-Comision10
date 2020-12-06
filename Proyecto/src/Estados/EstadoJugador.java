@@ -3,8 +3,6 @@ package Estados;
 import Logica.ProyectilAliado;
 import LogicaAbstracta.Estado;
 import LogicaAbstracta.Personaje;
-import LogicaAbstracta.Proyectil;
-import LogicaAbstracta.ProyectilEnemigo;
 
 public class EstadoJugador extends Estado {
 	

@@ -1,11 +1,8 @@
 package Logica;
 
-import java.util.ArrayList;
-
 import Estados.EstadoJugador;
 import GUI.EntidadGraficaJugador;
 import Juego.Nivel;
-import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Personaje;
 import VisitorsConcretos.VisitorJugador;
 
