@@ -22,9 +22,6 @@ public class Nivel1 extends Nivel{
 		return jugador;
 	}
 	
-	public void rellenarLista() { 
-		
-	}
 
 	@Override
 	public void cambiarFondo() {

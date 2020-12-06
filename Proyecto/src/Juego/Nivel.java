@@ -68,10 +68,7 @@ public abstract class Nivel{
 		}
 	}
 
-	public void addEnemigo(Enemigo e) {
-		enemigos.get(0).add(e);
-
-	}
+	
 
 	public void addEntidad(Entidad p) {
 		Entidades.add(p);

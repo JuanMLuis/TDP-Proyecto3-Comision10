@@ -36,12 +36,8 @@ public abstract class EntidadGrafica {
 		
 		//para que esto funcione habria que cambiar el nombre de la imgen con la direccion a esta o traer la imagen a la carpeta donde se le llama
 	}
-	public JLabel getLabel() {
-		return miGrafico;
-	}
 	
 	public Rectangle hitbox() {
 		return miGrafico.getBounds();
-		//miGrafico.getBounds().intersect();
 	}
 }

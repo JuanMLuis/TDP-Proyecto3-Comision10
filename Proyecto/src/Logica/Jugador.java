@@ -43,12 +43,6 @@ public class Jugador extends Personaje  {
 		direccionActual=('+');
 	}
 
-
-
-	public int getVida() { 
-		return vida;
-	}
-
 	public void setVida(int v) { 
 		vida = v;
 		miNivel.getJuego().getGui().actualizarVida(vida);
@@ -59,17 +53,10 @@ public class Jugador extends Personaje  {
 		e.aceptarJugador(this);
 	}
 
-	public void mandarSeñal() {
-		ArrayList<Personaje> aux=miNivel.mandarSeñal(this);
-		for(Personaje e: aux) {
-			e.aceptarSeñalJugador(this);
-		}
-	}
 
 	public void moverse(char s) {
 		super.moverse(s);
 		colision();
-		mandarSeñal();
 	}
 
 	public void RecibirDaño(int dmg) {
