@@ -11,8 +11,5 @@ public abstract class Estado { //estado de los premios y personajes
 		}
 	}
 
-	public void recibirDaño(int dmg) {
-		int aux=(miEntidad.getVida()-dmg);
-		miEntidad.setVida(aux);
-	}
+
 }

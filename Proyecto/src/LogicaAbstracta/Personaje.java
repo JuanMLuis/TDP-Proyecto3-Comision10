@@ -29,7 +29,7 @@ public abstract class Personaje extends Entidad  {
 	}
 
 	public void RecibirDaño(int dmg) {
-		estadoActual.recibirDaño(dmg);
+			vida=vida-dmg;
 		if(vida<=0)
 			eliminar();
 	}
