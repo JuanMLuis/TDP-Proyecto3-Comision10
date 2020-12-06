@@ -23,7 +23,7 @@ public class Juego {
 		miGui=g;
 	}
 
-	public GUI getGui() {
+	public GUI getGUI() {
 		return miGui;
 	}
 

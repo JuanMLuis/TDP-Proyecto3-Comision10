@@ -11,7 +11,7 @@ public class EntidadGraficaParalisis extends EntidadGrafica{
 		miGrafico=new JLabel();
 		miGrafico.setBounds(x,y,40, 40);
 		acomodarImagen("img\\relojblanco.gif");
-		e.getNivel().getJuego().getGui().getlabel().add(miGrafico);
+		e.getNivel().getJuego().getGUI().getlabel().add(miGrafico);
 		miGrafico.setVisible(true);	
 	}
 }

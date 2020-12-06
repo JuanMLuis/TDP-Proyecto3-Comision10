@@ -21,7 +21,7 @@ public class Jugador extends Personaje  {
 		miNivel=l;
 		miGrafico=new EntidadGraficaJugador(posX,posY,this);
 		invencibilidad=0;
-		miNivel.getJuego().getGui().actualizarVida(100);
+		miNivel.getJuego().getGUI().actualizarVida(100);
 	}
 
 
@@ -42,7 +42,7 @@ public class Jugador extends Personaje  {
 
 	public void setVida(int v) { 
 		vida = v;
-		miNivel.getJuego().getGui().actualizarVida(vida);
+		miNivel.getJuego().getGUI().actualizarVida(vida);
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class Jugador extends Personaje  {
 		if(invencibilidad==0) {
 			invencibilidad=20;				
 			super.RecibirDaño(dmg);
-			miNivel.getJuego().getGui().actualizarVida(vida);
+			miNivel.getJuego().getGUI().actualizarVida(vida);
 		}
 	}
 

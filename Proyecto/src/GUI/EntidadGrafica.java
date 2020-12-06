@@ -24,7 +24,7 @@ public abstract class EntidadGrafica {
 
 	public void eliminar() {
 		miGrafico.setIcon(null);
-		miEntidad.getNivel().getJuego().getGui().remove(miGrafico);//borrar toda referencia del label de la grafica (quizas no funcione asi, depende de como funcione la GUI)
+		miEntidad.getNivel().getJuego().getGUI().remove(miGrafico);//borrar toda referencia del label de la grafica (quizas no funcione asi, depende de como funcione la GUI)
 		//redefinir metodo para casos con animaciones
 		
 	}

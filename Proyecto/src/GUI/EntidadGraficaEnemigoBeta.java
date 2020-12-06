@@ -10,7 +10,7 @@ public class EntidadGraficaEnemigoBeta extends EntidadGrafica {
 		miGrafico=new JLabel();
 		miGrafico.setBounds(x,y,40, 40);//buscar el tamaño que convenga
 		acomodarImagen("img\\bombardero.png");
-		e.getNivel().getJuego().getGui().getlabel().add(miGrafico);
+		e.getNivel().getJuego().getGUI().getlabel().add(miGrafico);
 		miGrafico.setVisible(true);
 		
 	}

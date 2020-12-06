@@ -30,7 +30,7 @@ public class GUI extends JFrame {
 	private static JLabel l_fondo;
 	private Jugador jugador;
 	private Juego juego;
-	private JLabel Vida;
+	private JLabel vida;
 	private JLabel aAgregar;
 	private static JLabel l_nivel = new JLabel();
 	private Clip clip;
@@ -87,11 +87,11 @@ public class GUI extends JFrame {
 
 
 
-		Vida= new JLabel();
-		Vida.setForeground(Color.WHITE);
-		Vida.setFont(new Font("Microsoft PhagsPa", Font.BOLD, 14));
-		l_fondo.add(Vida);
-		Vida.setBounds(0,-30,130,100);
+		vida= new JLabel();
+		vida.setForeground(Color.WHITE);
+		vida.setFont(new Font("Microsoft PhagsPa", Font.BOLD, 14));
+		l_fondo.add(vida);
+		vida.setBounds(0,-30,130,100);
 
 
 		l_fondo.add(l_nivel);
@@ -138,8 +138,8 @@ public class GUI extends JFrame {
 	public void actualizarVida(int a) {
 		if(a<0)
 			a=0;
-		String aux=("Vida:"+a+"%");
-		Vida.setText(aux);
+		String aux=("vida:"+a+"%");
+		vida.setText(aux);
 	}
 
 	public void perder() {

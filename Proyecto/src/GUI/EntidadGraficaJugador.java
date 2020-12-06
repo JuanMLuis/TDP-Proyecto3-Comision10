@@ -10,7 +10,7 @@ public class EntidadGraficaJugador extends EntidadGrafica {
 		miGrafico=new JLabel();
 		miGrafico.setBounds(343,400,35, 35);
 		acomodarImagen("img\\nave_jugador.png");
-		e.getNivel().getJuego().getGui().getlabel().add(miGrafico);
+		e.getNivel().getJuego().getGUI().getlabel().add(miGrafico);
 		miGrafico.setVisible(true);
 		miGrafico.setFocusable(true);
 	}

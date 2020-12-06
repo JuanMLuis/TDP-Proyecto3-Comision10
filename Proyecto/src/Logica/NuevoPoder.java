@@ -4,7 +4,7 @@ package Logica;
 import java.util.Timer;
 import java.util.TimerTask;
 import Estados.EstadoNuevoPoder;
-import GUI.EntidadGraficaNuevoPoder;
+import GUI.EntidadGraficaSuperArma;
 import Juego.Nivel;
 import LogicaAbstracta.EfectoTemporal;
 import LogicaAbstracta.Estado;
@@ -17,7 +17,7 @@ public class NuevoPoder extends EfectoTemporal{
 		posY = corY;
 		miNivel = n;
 		timer = new Timer();
-		miGrafico = new EntidadGraficaNuevoPoder(corX, corY, this);
+		miGrafico = new EntidadGraficaSuperArma(corX, corY, this);
 		miNivel.addEntidad(this);
 	}
 
