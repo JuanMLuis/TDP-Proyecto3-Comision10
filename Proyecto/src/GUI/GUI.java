@@ -1,23 +1,21 @@
 package GUI;
 
-import java.awt.BorderLayout;
+
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import Juego.Juego;
-import Juego.Nivel;
 import Logica.Jugador;
-
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import java.awt.Toolkit;
-import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.applet.AudioClip;
 
 public class GUI extends JFrame {
 
@@ -57,7 +55,6 @@ public class GUI extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
 		l_fondo = new JLabel("");
 		l_fondo.setIcon(new ImageIcon("img\\fondoNivel1.jpg"));
 		l_fondo.setBounds(0, 0, 770, 540);
@@ -76,6 +73,9 @@ public class GUI extends JFrame {
 		l_nivel.setBounds(710,-30,500,100);
 		l_nivel.setForeground(Color.WHITE);
 		l_nivel.setFont(new Font("Microsoft PhagsPa", Font.BOLD, 14));
+
+
+
 	}
 
 	public JLabel getlabel() {
@@ -99,6 +99,17 @@ public class GUI extends JFrame {
 		l_fondo.add(aAgregar);
 		aAgregar.setVisible(true);
 		this.repaint();
+		String[] opciones = new String[] {"Jugar de nuevo","Salir"};
+		int x=JOptionPane.showOptionDialog(null, "Has perdido!, ¿que deseas hacer?", "Información adicional",JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,null, opciones, opciones[0]);
+		switch(x){
+		case 1://Ayuda en este caso no se como conectarlo con el hilo para que arranque de nuevo :C
+			this.dispose();
+			juego= new Juego(this);
+			juego.startJuego();
+			break;
+		case 2:
+			this.dispose();
+		}
 	}
 
 	public void ganar() {
@@ -108,6 +119,17 @@ public class GUI extends JFrame {
 		l_fondo.add(aAgregar);
 		aAgregar.setVisible(true);
 		this.repaint();
+		String[] opciones = new String[] {"Jugar de nuevo","Salir"};
+		int x=JOptionPane.showOptionDialog(null, "Felicidades! Has ganado, ¿que deseas hacer?", "Información adicional",JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,null, opciones, opciones[0]);
+		switch(x){
+		case 1://Ayuda en este caso no se como conectarlo con el hilo para que arranque de nuevo :C
+			this.dispose();
+			juego= new Juego(this);
+			juego.startJuego();
+			break;
+		case 2:
+			this.dispose();
+		}
 	}
 
 	public static void setearNivel(String s) {
