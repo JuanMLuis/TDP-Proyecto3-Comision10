@@ -99,17 +99,6 @@ public class GUI extends JFrame {
 		l_fondo.add(aAgregar);
 		aAgregar.setVisible(true);
 		this.repaint();
-		String[] opciones = new String[] {"Jugar de nuevo","Salir"};
-		int x=JOptionPane.showOptionDialog(null, "Has perdido!, ¿que deseas hacer?", "Información adicional",JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,null, opciones, opciones[0]);
-		switch(x){
-		case 1://Ayuda en este caso no se como conectarlo con el hilo para que arranque de nuevo :C
-			this.dispose();
-			juego= new Juego(this);
-			juego.startJuego();
-			break;
-		case 2:
-			this.dispose();
-		}
 	}
 
 	public void ganar() {
@@ -119,17 +108,6 @@ public class GUI extends JFrame {
 		l_fondo.add(aAgregar);
 		aAgregar.setVisible(true);
 		this.repaint();
-		String[] opciones = new String[] {"Jugar de nuevo","Salir"};
-		int x=JOptionPane.showOptionDialog(null, "Felicidades! Has ganado, ¿que deseas hacer?", "Información adicional",JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,null, opciones, opciones[0]);
-		switch(x){
-		case 1://Ayuda en este caso no se como conectarlo con el hilo para que arranque de nuevo :C
-			this.dispose();
-			juego= new Juego(this);
-			juego.startJuego();
-			break;
-		case 2:
-			this.dispose();
-		}
 	}
 
 	public static void setearNivel(String s) {
