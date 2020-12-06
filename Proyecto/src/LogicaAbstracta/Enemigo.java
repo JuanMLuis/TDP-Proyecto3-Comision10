@@ -23,9 +23,6 @@ public abstract class Enemigo extends Personaje  {
 	}
 	
 
-	public int getcooldown() {
-		return cooldown;
-	}
 	public abstract void resetCooldown();
 
 	public  void eliminar() {	
