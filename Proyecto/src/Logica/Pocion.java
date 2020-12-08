@@ -8,7 +8,7 @@ public class Pocion extends ObjetoPrecioso{
 
 
 	public Pocion(int corX, int corY, Nivel n) {
-		velocidad = 4; //ponerlo con un random
+		velocidad = 4; 
 		posX =corX;
 		posY = corY;
 		miNivel = n;
@@ -24,9 +24,5 @@ public class Pocion extends ObjetoPrecioso{
 			vida=vida+50;
 		miNivel.getJugador().setVida(vida);
 	}
-
-
-
-
 
 }

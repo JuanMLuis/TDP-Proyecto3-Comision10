@@ -7,12 +7,12 @@ import LogicaAbstracta.Enemigo;
 import VisitorsConcretos.VisitorEnemigo;
 
 public class EnemigoAlpha extends Enemigo {
-	
+
 	protected int vidaMaxima;
 	protected boolean velocidadAumentada;
-	
-	public EnemigoAlpha(Nivel n,int x,int y) {//Cuando llega al 20% de la vida duplica su velocidad de movimiento
-		posX=x;  //tienen menos vida pero hacen mas daño
+
+	public EnemigoAlpha(Nivel n,int x,int y) {
+		posX=x; 
 		posY=y;
 		miNivel=n;
 		velocidad=3;
@@ -28,12 +28,12 @@ public class EnemigoAlpha extends Enemigo {
 
 	@Override
 	public void resetCooldown() {
-		cooldown=50;
-		
+		cooldown=50;	
 	}
+
 	public void RecibirDaño(int dmg) {
 		super.RecibirDaño(dmg);
-		if(vida<=((vidaMaxima*20)/100)&&!velocidadAumentada) {//20% de la vida para la velocidad.
+		if(vida<=((vidaMaxima*20)/100)&&!velocidadAumentada) {
 			velocidad=velocidad*2;
 			velocidadAumentada=true;
 		}
@@ -42,10 +42,5 @@ public class EnemigoAlpha extends Enemigo {
 	@Override
 	public void resetEstado() {
 		estadoActual= new EstadoEnemigoAlpha(this);
-		
 	}
-	
-	
-
-
 }

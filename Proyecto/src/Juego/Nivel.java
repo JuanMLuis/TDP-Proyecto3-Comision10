@@ -11,13 +11,12 @@ import Hilos.MovimientoDelJuego;
 public abstract class Nivel{
 
 	protected ArrayList<ArrayList<Personaje>> enemigos;	
-	protected  ArrayList<Entidad> Entidades;		//dira de poner aca a todas las entidades menos Enemigos y al jugador
-	protected Jugador jugador  ;//Poner get y mandarlo a Juego y de ahi mandarlo a la GUI
+	protected  ArrayList<Entidad> Entidades;		
+	protected Jugador jugador  ;
 	protected Juego miJuego;
 	protected int cantOleadas;
 	protected boolean ganar;
 	protected Nivel siguienteNivel;
-
 
 	public void removeEnemigo(Personaje p) {
 		enemigos.get(0).remove(p);
@@ -27,9 +26,7 @@ public abstract class Nivel{
 		return miJuego;
 	}
 
-	//quizas se podria hacer el Nivel como un hilo y no tenerlo como clase aparte, nunca hablamos de esto solo lo dejo como idea
-
-	public ArrayList<Personaje> colision(Entidad e) {//retorna null si no hay colicion, retona la primera entidad con la que coliciona
+	public ArrayList<Personaje> colision(Entidad e) {
 		ArrayList<Personaje> colisiones = new ArrayList<Personaje>();
 		if(jugador!=e && jugador.getHitbox().intersects(e.getHitbox()))
 			colisiones.add(jugador);
@@ -47,7 +44,7 @@ public abstract class Nivel{
 	public  void  turno() {
 		if(!enemigos.isEmpty()) {
 			ArrayList<Entidad> aux= new ArrayList<Entidad>();	
-			for(Entidad e: enemigos.get(0))								//este paso extra evita un error que se producia
+			for(Entidad e: enemigos.get(0))					
 				aux.add(e);
 			for(Entidad r: Entidades)
 				aux.add(r);
@@ -65,17 +62,14 @@ public abstract class Nivel{
 		}
 	}
 
-	
-
 	public void addEntidad(Entidad p) {
 		Entidades.add(p);
-
 	}
 
-	public ArrayList<Personaje> mandarSeñal(Entidad e) {				//devuelve la lista de las entidades frente a "e"
+	public ArrayList<Personaje> mandarSeñal(Entidad e) {	
 		ArrayList<Personaje> toReturn = new ArrayList<Personaje>();
 		for(Personaje r: enemigos.get(0)) {
-			if(r.getCorx()-20<=e.getCorx()&&r.getCorx()+20>=e.getCorx()) { //los 20 son aplitud, para que dispare aunque el enemigo no este 100% centrado
+			if(r.getCorx()-20<=e.getCorx()&&r.getCorx()+20>=e.getCorx()) {
 				toReturn.add(r);
 			}
 		}
@@ -121,7 +115,6 @@ public abstract class Nivel{
 	public void comprobarLista() { 
 		if(enemigos.get(0).isEmpty())
 			enemigos.remove(0);
-
 	}
 
 	protected void crearOleadas(int cantEnemigosOleada) { 
@@ -131,25 +124,19 @@ public abstract class Nivel{
 		FabricaEnemigo enemigo = FabricaEnemigos.getFabricaEnemigos();
 		int cantEnemigos = 0;
 		int cantEnemigosAnterior;
-
 		for(int i = 0; i < cantOleadas; i++) { 
 			oleada = new ArrayList<Personaje>();
 			cantEnemigosAnterior=cantEnemigos;
 			cantEnemigos = (int) (cantEnemigosOleada -((Math.random()*cantEnemigosOleada)/2+1))+cantEnemigosAnterior;
 			while(oleada.size() < cantEnemigos) { 
 				x++;
-
 				int VariacionX= (int)(Math.random()*20)+1;
 				int VariacionY=(int)((Math.random()*6)+1)*-1;
-
-
 				int aux=(int)(Math.random()*2+1);
 				if(aux==1)
 					oleada.add(enemigo.crearEnemigoAlpha(this,( x * 60) + VariacionX, y+VariacionY));
 				else
 					oleada.add(enemigo.crearEnemigoBeta(this,( x * 60) + VariacionX, y+VariacionY));
-
-
 				if(x >= 10) {
 					y = y - 60;
 					x=1;
@@ -157,7 +144,6 @@ public abstract class Nivel{
 			}
 			enemigos.add(oleada);
 		}
-
 	}
 
 	public abstract void cambiarFondo();

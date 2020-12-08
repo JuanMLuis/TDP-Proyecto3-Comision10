@@ -3,7 +3,7 @@ package InicioDelJuego;
 import GUI.Inicio;
 
 
-public class InicioDelJuego {//se creo con el unico fin de probar cosas, son libres de hacer lo que quieran aca
+public class InicioDelJuego {
 
 	protected static boolean empieza;
 	
@@ -12,7 +12,7 @@ public class InicioDelJuego {//se creo con el unico fin de probar cosas, son lib
 		Inicio ini= new Inicio();
 		ini.setVisible(true);
 		while(!empieza) {
-			try {		//si no pones nada en el medio no podes parar el ciclo
+			try {		
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();

@@ -19,7 +19,7 @@ public class FabricaEnemigos extends FabricaEnemigo {
 		EnemigoAlpha e= new EnemigoAlpha(n,x,y); 
 		return e;							
 	}										
-	
+
 	private FabricaEnemigos() {
 		super();
 	}
@@ -29,5 +29,5 @@ public class FabricaEnemigos extends FabricaEnemigo {
 		EnemigoBeta e= new EnemigoBeta(n,x,y);
 		return e;
 	}
-	
+
 }

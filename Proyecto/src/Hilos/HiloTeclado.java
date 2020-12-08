@@ -10,8 +10,7 @@ public class HiloTeclado extends Thread implements KeyListener {
 
 	private Jugador jugador;
 	private GUI GUI;
-	
-	
+
 	public HiloTeclado(GUI GUI,Jugador jugador) {
 		this.jugador=jugador;
 		this.GUI=GUI;
@@ -19,11 +18,7 @@ public class HiloTeclado extends Thread implements KeyListener {
 		GUI.requestFocus();
 	}
 
-	
-
 	@Override
-	
-
 	public void run() {
 		boolean fin=false;
 		jugador.setDireccion('d');
@@ -31,17 +26,10 @@ public class HiloTeclado extends Thread implements KeyListener {
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
-
-			//jugador.turno();
-			
-				
+			}			
 		}
 	}
-	
-	
 
 	@Override
 	public void keyPressed(KeyEvent e) {
@@ -57,24 +45,15 @@ public class HiloTeclado extends Thread implements KeyListener {
 		case KeyEvent.VK_W:jugador.disparar();
 		break;
 		case KeyEvent.VK_UP:jugador.disparar();
-	        }
+		}
 	}
-
-
 
 	@Override
-	public void keyReleased(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		
+	public void keyReleased(KeyEvent arg0) {	
 	}
-
-
 
 	@Override
 	public void keyTyped(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		
 	}
-	
-	    
+
 }

@@ -9,31 +9,28 @@ public abstract class Entidad {
 
 	protected int velocidad;
 	protected EntidadGrafica miGrafico;
-	protected int posX;						//creo que la logica deberia tener su posicion como parametro
+	protected int posX;					
 	protected int posY;	
 	protected Nivel miNivel;
-										//protected int tamaño?
-	public abstract void eliminar();	//se elimina a si mismo junto con la parte grafica
-	
-	
-	
+	public abstract void eliminar();
+
 	public Nivel getNivel() {
 		return miNivel;
 	}
-	
+
 	public int getCorx() {
 		return posX;
 	}
-	
+
 	public int getCorY() {
 		return posY;
 	}
-	
-	public void moverse(char s) {//hacer controles de direccion para actualizar posC y posY
-		switch(s) {					//en general si no estamos en el limite, aumento en la direccion, en casos verticales vuelo a origen
+
+	public void moverse(char s) {
+		switch(s) {					
 		case('a'):
 		{
-			if(posX>0)				//limite izquierdo es 0, creo
+			if(posX>0)				
 				posX--;
 		}break;
 		case('s'):
@@ -44,28 +41,26 @@ public abstract class Entidad {
 		}break;
 		case('d'):
 		{
-			if(posX<735)			//limite derecho es 780(creo)
+			if(posX<735)			
 				posX++;
 		}break;
-		case('w'):					//no creo que lo usemos nunca, pero para completar con la 4 direcciones posibles lo dejo
+		case('w'):					
 		{
 			if(posY>0) {
 				posY--;
 			}else posY=550;
 		}break;
 		}
-		miGrafico.ActualizarPosicion(posX, posY);
-		
-		
+		miGrafico.ActualizarPosicion(posX, posY);	
 	}
 	public abstract void turno();
-	
+
 	public Rectangle getHitbox() {
 		return miGrafico.hitbox();
 	}
-	
+
 	protected abstract void aceptame(Personaje e); 
-	
+
 	public int getVelocidad() {
 		return velocidad;
 	}
@@ -73,7 +68,7 @@ public abstract class Entidad {
 	public void setVelocidad(int v) { 
 		velocidad = v;
 	}
-	
+
 	protected void colision() {
 		ArrayList<Personaje> aux =miNivel.colision(this); 
 		for(Personaje e:aux) {

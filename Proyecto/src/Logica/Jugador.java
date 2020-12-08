@@ -7,6 +7,7 @@ import LogicaAbstracta.Personaje;
 import VisitorsConcretos.VisitorJugador;
 
 public class Jugador extends Personaje  {
+
 	protected boolean puedeMoverse;
 	protected int invencibilidad;
 
@@ -24,11 +25,9 @@ public class Jugador extends Personaje  {
 		miNivel.getJuego().getGUI().actualizarVida(100);
 	}
 
-
 	public void setDireccion(char d) { 
 		direccionActual=d;
 	}
-
 
 	public void turno() {
 		if(invencibilidad>0)
@@ -69,16 +68,13 @@ public class Jugador extends Personaje  {
 		miNivel.getJuego().gameOver();
 	}
 
-
-
 	protected void resetCooldown() {
 		cooldown=5;
 	}
-	
+
 	public void setNivel(Nivel n) {
 		miNivel=n;
 	}
-
 
 	@Override
 	public void resetEstado() {

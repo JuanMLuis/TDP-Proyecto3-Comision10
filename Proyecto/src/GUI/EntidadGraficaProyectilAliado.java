@@ -11,9 +11,7 @@ public class EntidadGraficaProyectilAliado extends EntidadGrafica{
 		miGrafico=new JLabel();
 		miGrafico.setBounds(x,y,5, 10);
 		e.getNivel().getJuego().getGUI().getlabel().add(miGrafico);
-
 		acomodarImagen("img\\disparorojo.png");
-
 		miGrafico.setVisible(true);
 	}
 }

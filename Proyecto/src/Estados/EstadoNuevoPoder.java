@@ -11,7 +11,7 @@ public class EstadoNuevoPoder extends Estado{
 	}
 
 	public void disparar() {
-		int x=miEntidad.getCorx()+10;		 //el proyectil acualmente va a estar corrido (hay que ajustarlo)
+		int x=miEntidad.getCorx()+10;		 
 		int y=miEntidad.getCorY()+10;
 		new ProyectilEspecial(x,y,miEntidad.getNivel());
 	}

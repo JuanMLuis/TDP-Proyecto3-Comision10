@@ -9,9 +9,9 @@ public class EstadoParalisis extends Estado{
 		miEntidad = p;
 	}
 	public void disparar() {
-		
+
 	}
-	
+
 	public void movimiento(char c, int v) {
 
 	}

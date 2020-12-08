@@ -1,15 +1,13 @@
 package LogicaAbstracta;
 
-public abstract class Estado { //estado de los premios y personajes
+public abstract class Estado { 
 	protected Personaje miEntidad;
 
-	public abstract void disparar();//recibe el rango
+	public abstract void disparar();
 
 	public void movimiento(char c, int v) {
 		for(int i=0;i<=v;i++) {
 			miEntidad.moverse(c);
 		}
 	}
-
-
 }

@@ -71,7 +71,7 @@ public class GUI extends JFrame {
 		b_musica.setFocusable(false);
 		b_musica.setFont(new Font("Microsoft PhagsPa", Font.BOLD, 10));
 
-		
+
 		JButton b_musicaOff= new JButton("Musica OFF");
 		b_musicaOff.setBounds(525, 510, 120, 20);
 		contentPane.add(b_musicaOff);
@@ -111,7 +111,7 @@ public class GUI extends JFrame {
 					else {
 						clip.open(audioInput);
 						clip.start();
-						
+
 					}
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
 					e1.printStackTrace();
@@ -119,7 +119,7 @@ public class GUI extends JFrame {
 
 			}
 		});
-		
+
 		b_musicaOff.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {

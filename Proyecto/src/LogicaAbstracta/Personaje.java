@@ -9,16 +9,12 @@ public abstract class Personaje extends Entidad  {
 	protected int cooldown;
 	protected Estado estadoActual;
 	protected char direccionActual;
-											
-
-
 
 	public void disparar() {
 		if(cooldown==0) {
 			estadoActual.disparar();
 			resetCooldown();
 		}
-
 	}
 
 	protected abstract void resetCooldown();
@@ -28,7 +24,7 @@ public abstract class Personaje extends Entidad  {
 	}
 
 	public void RecibirDaño(int dmg) {
-			vida=vida-dmg;
+		vida=vida-dmg;
 		if(vida<=0)
 			eliminar();
 	}
@@ -59,9 +55,7 @@ public abstract class Personaje extends Entidad  {
 	public void aceptarProyectilEnemigo(ProyectilEnemigo p) {
 		miVisitor.aceptarProyectilEnemigo(p);
 	}
-	
 
 	public abstract void resetEstado();
-	
 
 }

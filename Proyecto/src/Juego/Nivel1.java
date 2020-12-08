@@ -7,7 +7,7 @@ import Logica.Jugador;
 import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Personaje;
 public class Nivel1 extends Nivel{
-	
+
 	public Nivel1 (Juego j) {
 		siguienteNivel = new Nivel2(j);
 		miJuego = j;
@@ -17,16 +17,16 @@ public class Nivel1 extends Nivel{
 		cantOleadas = 2;
 		crearOleadas(8); 
 	}
-	
+
 	public Jugador getJugador() {
 		return jugador;
 	}
-	
+
 
 	@Override
 	public void cambiarFondo() {
 		GUI.cambiarFondo("img\\fondoNivel1.jpg");
-		
+
 	}
 
 	@Override

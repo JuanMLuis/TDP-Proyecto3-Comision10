@@ -12,7 +12,7 @@ import LogicaAbstracta.Estado;
 public class NuevoPoder extends EfectoTemporal{
 
 	public NuevoPoder(int corX, int corY, Nivel n) { 
-		velocidad = 4; //ponerlo con un random
+		velocidad = 4;
 		posX = corX;
 		posY = corY;
 		miNivel = n;
@@ -21,7 +21,6 @@ public class NuevoPoder extends EfectoTemporal{
 		miNivel.addEntidad(this);
 	}
 
-
 	public void activar() {
 		Estado NuevoPoder = new EstadoNuevoPoder(miNivel.getJugador()); 
 		miNivel.getJugador().cambiarEstado(NuevoPoder);
@@ -29,7 +28,6 @@ public class NuevoPoder extends EfectoTemporal{
 	}
 
 	private class SacarPoder extends TimerTask{
-
 		public void run() {
 			miNivel.getJugador().resetEstado();
 		}

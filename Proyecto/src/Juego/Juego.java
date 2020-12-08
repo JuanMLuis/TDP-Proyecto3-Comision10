@@ -5,7 +5,6 @@ import Hilos.HiloTeclado;
 import Hilos.MovimientoDelJuego;
 import Logica.Jugador;
 
-
 public class Juego {
 	protected GUI miGui;
 	protected Nivel miNivel;
@@ -44,7 +43,7 @@ public class Juego {
 		miNivel.reset();
 		miGui.perder();
 	}
-	
+
 	public void ganar() {
 		MovimientoDelJuego.fin();
 		miNivel.reset();

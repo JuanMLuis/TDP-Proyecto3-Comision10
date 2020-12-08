@@ -14,7 +14,7 @@ public class Paralisis extends EfectoTemporal{
 	protected int segundos; 
 
 	public Paralisis(int corX, int corY, Nivel n) {
-		velocidad = 4; //ponerlo con un random
+		velocidad = 4; 
 		posX =corX;
 		posY = corY;
 		miNivel = n;
@@ -27,7 +27,7 @@ public class Paralisis extends EfectoTemporal{
 	public void activar() { 
 		Estado parailsis; 
 		for(Personaje p: miNivel.getEnemigos()) {
-			parailsis = new EstadoParalisis(p); //les cambio el estado a paralisis 
+			parailsis = new EstadoParalisis(p);
 			p.cambiarEstado(parailsis);
 		}
 		timer.schedule(new EliminarParalisis(), 5000);
@@ -37,7 +37,7 @@ public class Paralisis extends EfectoTemporal{
 
 		public void run() {
 			if(miNivel.getEnemigos()!=null)
-				for(Personaje p: miNivel.getEnemigos()) { //saco la paralisis
+				for(Personaje p: miNivel.getEnemigos()) { //Saco la paralisis.
 					p.resetEstado();
 				}
 		} 

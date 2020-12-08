@@ -18,7 +18,7 @@ public class Nivel2 extends Nivel {
 		cantOleadas = 3;
 		crearOleadas(12); 
 	}
-	
+
 	public Jugador getJugador() {
 		return jugador;
 	}
@@ -26,13 +26,13 @@ public class Nivel2 extends Nivel {
 	@Override
 	public void cambiarFondo() {
 		GUI.cambiarFondo("img\\fondoNivel2.jpg");
-		
+
 	}
 
 	@Override
 	public void cambiarNivel() {
 		GUI.setearNivel("Nivel 2");
-		
+
 	}
-	
+
 }
