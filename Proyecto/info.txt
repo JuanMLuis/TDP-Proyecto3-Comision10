@@ -1,0 +1,1 @@
+la carpeta img, debe encontrase en el mismo directorio que el ejecutable, para que este funcione correctamente

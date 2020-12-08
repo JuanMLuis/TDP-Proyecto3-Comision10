@@ -3,6 +3,5 @@
 *.class
 *.prefs
 *.metadata
-*.jar
 *.zip
 /bin/
