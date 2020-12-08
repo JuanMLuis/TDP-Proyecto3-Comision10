@@ -138,7 +138,7 @@ public class GUI extends JFrame {
 	public void actualizarVida(int a) {
 		if(a<0)
 			a=0;
-		String aux=("vida:"+a+"%");
+		String aux=("Vida:"+a+"%");
 		vida.setText(aux);
 	}
 
