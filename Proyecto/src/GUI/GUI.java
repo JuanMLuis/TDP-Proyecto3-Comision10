@@ -23,6 +23,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 public class GUI extends JFrame {
 
@@ -102,17 +103,15 @@ public class GUI extends JFrame {
 		b_musica.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				File musicPath = new File("src/img/sonido.wav");
+				URL path=this.getClass().getResource("/img/sonido.wav");
 				try {
-					AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+					AudioInputStream audioInput = AudioSystem.getAudioInputStream(path);
 					clip = AudioSystem.getClip();
-					if(clip.isRunning())
-						clip.stop();
-					else {
-						clip.open(audioInput);
-						clip.start();
 
-					}
+					clip.open(audioInput);
+					clip.start();
+
+
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
 					e1.printStackTrace();
 				}
@@ -144,7 +143,7 @@ public class GUI extends JFrame {
 
 	public void perder() {
 		aAgregar= new JLabel(""); 
-		aAgregar.setIcon(new ImageIcon("img\\perdiste.png"));
+		aAgregar.setIcon(new ImageIcon(this.getClass().getResource("/img/perdiste.png")));
 		aAgregar.setBounds(110,120,550,300);
 		l_fondo.add(aAgregar);
 		aAgregar.setVisible(true);
@@ -153,7 +152,7 @@ public class GUI extends JFrame {
 
 	public void ganar() {
 		aAgregar= new JLabel(""); 
-		aAgregar.setIcon(new ImageIcon("img\\ganaste.png"));
+		aAgregar.setIcon(new ImageIcon(this.getClass().getResource("/img/ganaste.png")));
 		aAgregar.setBounds(110,120,550,300);
 		l_fondo.add(aAgregar);
 		aAgregar.setVisible(true);
