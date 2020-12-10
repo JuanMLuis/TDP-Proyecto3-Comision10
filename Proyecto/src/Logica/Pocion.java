@@ -17,12 +17,7 @@ public class Pocion extends Premio{
 	}
 	@Override
 	public void activar() {
-		int vida=miNivel.getJugador().getVida();
-		if(vida>50)
-			vida=100;
-		else
-			vida=vida+50;
-		miNivel.getJugador().setVida(vida);
+		miNivel.getJugador().setVida(100);
 	}
 
 }

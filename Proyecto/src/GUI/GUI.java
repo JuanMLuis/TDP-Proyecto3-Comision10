@@ -92,7 +92,7 @@ public class GUI extends JFrame {
 		vida.setForeground(Color.WHITE);
 		vida.setFont(new Font("Microsoft PhagsPa", Font.BOLD, 14));
 		l_fondo.add(vida);
-		vida.setBounds(0,-30,130,100);
+		vida.setBounds(10,-30,130,100);
 
 
 		l_fondo.add(l_nivel);
