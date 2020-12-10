@@ -27,7 +27,7 @@ import java.io.IOException;
 public class GUI extends JFrame {
 
 	private JPanel contentPane;
-	private static JLabel l_fondo;
+	private JLabel l_fondo;
 	private Jugador jugador;
 	private Juego juego;
 	private JLabel vida;
@@ -79,7 +79,7 @@ public class GUI extends JFrame {
 		b_musicaOff.setFont(new Font("Microsoft PhagsPa", Font.BOLD, 10));
 
 		l_fondo = new JLabel("");
-		l_fondo.setIcon(new ImageIcon("img\\fondoNivel1.jpg"));
+		l_fondo.setIcon(new ImageIcon(this.getClass().getResource("/img/fondoNivel1.jpg")));
 		l_fondo.setBounds(0, 0, 770, 540);
 		contentPane.add(l_fondo);
 
@@ -102,7 +102,7 @@ public class GUI extends JFrame {
 		b_musica.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				File musicPath = new File("img\\sonido.wav");
+				File musicPath = new File("src/img/sonido.wav");
 				try {
 					AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
 					clip = AudioSystem.getClip();
@@ -164,8 +164,8 @@ public class GUI extends JFrame {
 		l_nivel.setText(s);
 	}
 
-	public static void cambiarFondo(String ruta) {
-		l_fondo.setIcon(new ImageIcon(ruta));
+	public void cambiarFondo(String ruta) {
+		l_fondo.setIcon(new ImageIcon(this.getClass().getResource(ruta)));
 	}
 
 }

@@ -25,7 +25,7 @@ public class Nivel1 extends Nivel{
 
 	@Override
 	public void cambiarFondo() {
-		GUI.cambiarFondo("img\\fondoNivel1.jpg");
+		miJuego.getGUI().cambiarFondo("img\\fondoNivel1.jpg");
 
 	}
 

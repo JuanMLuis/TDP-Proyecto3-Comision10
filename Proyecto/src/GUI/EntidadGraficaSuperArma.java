@@ -10,7 +10,7 @@ public class EntidadGraficaSuperArma extends EntidadGrafica{
 		miEntidad=e;
 		miGrafico=new JLabel();
 		miGrafico.setBounds(x,y,40, 40);
-		acomodarImagen("img\\premioArma.png");
+		acomodarImagen("/img/premioArma.png");
 		e.getNivel().getJuego().getGUI().getlabel().add(miGrafico);
 		miGrafico.setVisible(true);	
 	}

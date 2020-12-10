@@ -2,9 +2,9 @@ package Logica;
 
 import GUI.EntidadGraficaPocion;
 import Juego.Nivel;
-import LogicaAbstracta.ObjetoPrecioso;
+import LogicaAbstracta.Premio;
 
-public class Pocion extends ObjetoPrecioso{
+public class Pocion extends Premio{
 
 
 	public Pocion(int corX, int corY, Nivel n) {

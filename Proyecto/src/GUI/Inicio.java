@@ -47,7 +47,7 @@ public class Inicio extends JFrame {
 	 */
 	public Inicio() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("img\\icono.png"));
-		setTitle("Star Wars: Rise of the empire ");
+		setTitle("src/img/Star Wars: Rise of the empire ");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 674, 393);
@@ -75,7 +75,7 @@ public class Inicio extends JFrame {
 		});
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("img\\cartelInicio.jpg"));
+		lblNewLabel.setIcon(new ImageIcon(this.getClass().getResource("/img/cartelInicio.jpg")));
 		lblNewLabel.setBounds(0, 0, 668, 358);
 		contentPane.add(lblNewLabel);
 	}

@@ -9,7 +9,7 @@ public class EntidadGraficaEnemigoAlpha extends EntidadGrafica {
 		miEntidad=e;
 		miGrafico=new JLabel();
 		miGrafico.setBounds(x,y,40, 40);
-		acomodarImagen("img\\interceptor.png");
+		acomodarImagen("/img/interceptor.png");
 		e.getNivel().getJuego().getGUI().getlabel().add(miGrafico);
 		miGrafico.setVisible(true);
 	}
