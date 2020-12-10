@@ -47,7 +47,7 @@ public class Inicio extends JFrame {
 	 */
 	public Inicio() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(this.getClass().getResource("/img/icono.png")));
-		setTitle("src/img/Star Wars: Rise of the empire ");
+		setTitle("Star Wars: Rise of the empire ");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 674, 393);
