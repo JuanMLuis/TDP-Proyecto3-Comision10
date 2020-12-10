@@ -55,7 +55,7 @@ public class GUI extends JFrame {
 	 * Create the frame.
 	 */
 	public GUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("img\\icono.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(this.getClass().getResource("/img/icono.png")));
 		setResizable(false);
 		setTitle("Star Wars: Rise of the empire");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
