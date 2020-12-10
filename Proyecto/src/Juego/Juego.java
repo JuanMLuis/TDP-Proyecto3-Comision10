@@ -76,7 +76,6 @@ public class Juego {
 		int random=(int) (Math.random()*10);
 		if(random<premios.size()) {	
 			Premio p=premios.get(random).nuevoPremio(e.getCorx(),e.getCorY(), miNivel);
-			miNivel.addEntidad(p);
 		}
 		
 	}
