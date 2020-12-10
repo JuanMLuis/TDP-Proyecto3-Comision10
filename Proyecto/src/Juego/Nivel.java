@@ -5,7 +5,9 @@ import LogicaAbstracta.Entidad;
 import LogicaAbstracta.Personaje;
 import java.util.ArrayList;
 import Factory.FabricaEnemigo;
-import Factory.FabricaEnemigos;
+import Factory.FabricaEnemigoAlpha;
+import Factory.FabricaEnemigoBeta;
+import Factory.FabricaPremio;
 import Hilos.MovimientoDelJuego;
 
 public abstract class Nivel{
@@ -66,15 +68,7 @@ public abstract class Nivel{
 		Entidades.add(p);
 	}
 
-	public ArrayList<Personaje> mandarSeñal(Entidad e) {	
-		ArrayList<Personaje> toReturn = new ArrayList<Personaje>();
-		for(Personaje r: enemigos.get(0)) {
-			if(r.getCorx()-20<=e.getCorx()&&r.getCorx()+20>=e.getCorx()) {
-				toReturn.add(r);
-			}
-		}
-		return toReturn;
-	}
+	
 
 	public ArrayList<Personaje> getEnemigos() { 
 		ArrayList<Personaje>ene;
@@ -121,7 +115,8 @@ public abstract class Nivel{
 		ArrayList<Personaje> oleada;
 		int x = 0;
 		int y = -50;
-		FabricaEnemigo enemigo = FabricaEnemigos.getFabricaEnemigos();
+		FabricaEnemigo enemigoA = new FabricaEnemigoAlpha();
+		FabricaEnemigo enemigoB =new FabricaEnemigoBeta();
 		int cantEnemigos = 0;
 		int cantEnemigosAnterior;
 		for(int i = 0; i < cantOleadas; i++) { 
@@ -134,9 +129,9 @@ public abstract class Nivel{
 				int VariacionY=(int)((Math.random()*6)+1)*-1;
 				int aux=(int)(Math.random()*2+1);
 				if(aux==1)
-					oleada.add(enemigo.crearEnemigoAlpha(this,( x * 60) + VariacionX, y+VariacionY));
+					oleada.add(enemigoA.crearEnemigo(this,( x * 60) + VariacionX, y+VariacionY));
 				else
-					oleada.add(enemigo.crearEnemigoBeta(this,( x * 60) + VariacionX, y+VariacionY));
+					oleada.add(enemigoB.crearEnemigo(this,( x * 60) + VariacionX, y+VariacionY));
 				if(x >= 10) {
 					y = y - 60;
 					x=1;

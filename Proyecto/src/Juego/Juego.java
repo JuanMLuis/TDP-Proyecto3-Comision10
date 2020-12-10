@@ -1,14 +1,23 @@
 package Juego;
 
+import java.util.ArrayList;
+
+import Factory.FabricaNuevoPoder;
+import Factory.FabricaParalisis;
+import Factory.FabricaPocion;
+import Factory.FabricaPremio;
 import GUI.GUI;
 import Hilos.HiloTeclado;
 import Hilos.MovimientoDelJuego;
 import Logica.Jugador;
+import LogicaAbstracta.Entidad;
+import LogicaAbstracta.Premio;
 
 public class Juego {
 	protected GUI miGui;
 	protected Nivel miNivel;
 	protected Jugador jugador;
+	protected ArrayList<FabricaPremio> premios;
 
 	public Juego(GUI g) {
 		miGui=g;
@@ -16,6 +25,10 @@ public class Juego {
 		jugador= new Jugador(miNivel);
 		miNivel.setJugador(jugador);
 		miNivel.cambiarNivel();
+		premios=new  ArrayList<FabricaPremio>();
+		premios.add(new FabricaPocion());
+		premios.add(new FabricaParalisis());
+		premios.add(new FabricaNuevoPoder());
 	}
 
 	public void setGUI(GUI g) {
@@ -57,6 +70,15 @@ public class Juego {
 		miNivel.cambiarFondo();
 		miNivel.cambiarNivel();
 		miNivel.getJugador().setVida(100);
+	}
+	
+	public void agregarPremio(Entidad e) {
+		int random=(int) (Math.random()*10);
+		if(random<premios.size()) {	
+			Premio p=premios.get(random).nuevoPremio(e.getCorx(),e.getCorY(), miNivel);
+			miNivel.addEntidad(p);
+		}
+		
 	}
 
 }
