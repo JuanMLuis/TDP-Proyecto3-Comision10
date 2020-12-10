@@ -4,4 +4,4 @@
 *.prefs
 *.metadata
 *.zip
-/bin/
+*bin/
